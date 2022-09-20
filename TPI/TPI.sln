@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPI", "TPI.csproj", "{22FE6C1E-ADE5-4B52-8979-1589E7803B48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22FE6C1E-ADE5-4B52-8979-1589E7803B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22FE6C1E-ADE5-4B52-8979-1589E7803B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22FE6C1E-ADE5-4B52-8979-1589E7803B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22FE6C1E-ADE5-4B52-8979-1589E7803B48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7D88F21-CD66-4800-BF0A-A19D9C122FAE}
+	EndGlobalSection
+EndGlobal
