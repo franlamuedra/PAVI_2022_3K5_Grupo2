@@ -9,20 +9,26 @@ namespace TPI
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmEmpleados frmEmpleados = new FrmEmpleados();
-            frmEmpleados.ShowDialog();
+            MessageBox.Show("Clase sin implementar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            return;
         }
 
         private void herramientasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmHerramientas frmHerramientas = new FrmHerramientas();
-            frmHerramientas.ShowDialog();
+            MessageBox.Show("Clase sin implementar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            return;
         }
 
-        private void materialesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void consultarMaterialesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmConsultarMaterial frmMateriales = new FrmConsultarMaterial();  
+            FrmConsultarMaterial frmMateriales = new FrmConsultarMaterial();
             frmMateriales.ShowDialog();
+        }
+
+        private void nuevoMaterialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // FrmAltaMaterial frmAltaMaterial = new FrmAltaMaterial();
+            // frmAltaMaterial.ShowDialog();
         }
     }
 }

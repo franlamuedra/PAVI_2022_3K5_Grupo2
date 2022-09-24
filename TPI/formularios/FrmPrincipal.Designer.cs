@@ -29,10 +29,14 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tsmArchivo = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmSoporte = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarMaterialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoMaterialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmOperaciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAyuda = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -40,7 +44,9 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmArchivo,
+            this.tsmSoporte,
+            this.tsmOperaciones,
+            this.tsmReportes,
             this.tsmAyuda});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -48,15 +54,15 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // tsmArchivo
+            // tsmSoporte
             // 
-            this.tsmArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmSoporte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.empleadosToolStripMenuItem,
             this.herramientasToolStripMenuItem,
             this.materialesToolStripMenuItem});
-            this.tsmArchivo.Name = "tsmArchivo";
-            this.tsmArchivo.Size = new System.Drawing.Size(60, 20);
-            this.tsmArchivo.Text = "Archivo";
+            this.tsmSoporte.Name = "tsmSoporte";
+            this.tsmSoporte.Size = new System.Drawing.Size(60, 20);
+            this.tsmSoporte.Text = "Soporte";
             // 
             // empleadosToolStripMenuItem
             // 
@@ -74,10 +80,38 @@
             // 
             // materialesToolStripMenuItem
             // 
+            this.materialesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarMaterialesToolStripMenuItem,
+            this.nuevoMaterialToolStripMenuItem});
             this.materialesToolStripMenuItem.Name = "materialesToolStripMenuItem";
             this.materialesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.materialesToolStripMenuItem.Text = "Materiales";
-            this.materialesToolStripMenuItem.Click += new System.EventHandler(this.materialesToolStripMenuItem_Click);
+            // 
+            // consultarMaterialesToolStripMenuItem
+            // 
+            this.consultarMaterialesToolStripMenuItem.Name = "consultarMaterialesToolStripMenuItem";
+            this.consultarMaterialesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.consultarMaterialesToolStripMenuItem.Text = "Consultar materiales";
+            this.consultarMaterialesToolStripMenuItem.Click += new System.EventHandler(this.consultarMaterialesToolStripMenuItem_Click);
+            // 
+            // nuevoMaterialToolStripMenuItem
+            // 
+            this.nuevoMaterialToolStripMenuItem.Name = "nuevoMaterialToolStripMenuItem";
+            this.nuevoMaterialToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.nuevoMaterialToolStripMenuItem.Text = "Nuevo material";
+            this.nuevoMaterialToolStripMenuItem.Click += new System.EventHandler(this.nuevoMaterialToolStripMenuItem_Click);
+            // 
+            // tsmOperaciones
+            // 
+            this.tsmOperaciones.Name = "tsmOperaciones";
+            this.tsmOperaciones.Size = new System.Drawing.Size(85, 20);
+            this.tsmOperaciones.Text = "Operaciones";
+            // 
+            // tsmReportes
+            // 
+            this.tsmReportes.Name = "tsmReportes";
+            this.tsmReportes.Size = new System.Drawing.Size(65, 20);
+            this.tsmReportes.Text = "Reportes";
             // 
             // tsmAyuda
             // 
@@ -104,10 +138,14 @@
         #endregion
 
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem tsmArchivo;
+        private ToolStripMenuItem tsmSoporte;
         private ToolStripMenuItem empleadosToolStripMenuItem;
         private ToolStripMenuItem herramientasToolStripMenuItem;
         private ToolStripMenuItem materialesToolStripMenuItem;
         private ToolStripMenuItem tsmAyuda;
+        private ToolStripMenuItem tsmOperaciones;
+        private ToolStripMenuItem tsmReportes;
+        private ToolStripMenuItem consultarMaterialesToolStripMenuItem;
+        private ToolStripMenuItem nuevoMaterialToolStripMenuItem;
     }
 }

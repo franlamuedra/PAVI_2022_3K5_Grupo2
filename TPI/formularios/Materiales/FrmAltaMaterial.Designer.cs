@@ -214,7 +214,7 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // FrmAlta
+            // FrmAltaMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -222,7 +222,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.grbMaterial);
-            this.Name = "FrmAlta";
+            this.Name = "FrmAltaMaterial";
             this.Text = "Registrar Material";
             this.grbMaterial.ResumeLayout(false);
             this.grbMaterial.PerformLayout();

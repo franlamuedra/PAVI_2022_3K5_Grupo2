@@ -1,4 +1,5 @@
-﻿using System;
+﻿using TPI.Servicios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,15 @@ namespace TPI
 {
     public partial class FrmAltaMaterial : Form
     {
-        public FrmAltaMaterial()
+        private int accion; //1-2-3
+        private Material oMaterial;
+        // private Gestor gestor;
+        public FrmAltaMaterial(int accion, Material oMaterial)
         {
             InitializeComponent();
+            this.accion = accion;
+            this.oMaterial = oMaterial;
+            // gestor = new GestorProductos();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -26,15 +33,15 @@ namespace TPI
                 return;
             }
 
+            if (cboUnidadMedida.Text.Equals(String.Empty))
+            {
+                MessageBox.Show("Debe elegir la unidad de Medida", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             else
             {
-                int cod = (int)nudCodMaterial.Value;
-                string nom = txtNombre.Text;
-                double cant = (double)nudCantidad.Value;
-                string uni = "s";
-                DateTime fecIng = DateTime.Now;
-                Proveedor prov = new Proveedor();
-                Material material = new Material(cod, nom, cant, uni, fecIng, prov);
+                return;
             }
 
             
@@ -44,5 +51,6 @@ namespace TPI
         {
             this.Dispose();
         }
+
     }
 }

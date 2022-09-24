@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="formularios\Materiales\FrmAltaMaterial.cs">
+    <Compile Update="formularios\base\FrmBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="formularios\FrmEmpleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="formularios\Materiales\FrmConsultarMaterial.cs">
+    <Compile Update="formularios\Empleados\FrmEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="formularios\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="formularios\base\FrmBase.cs">
+    <Compile Update="formularios\Herramientas\FrmHerramientas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="formularios\FrmHerramientas.cs">
+    <Compile Update="formularios\Materiales\FrmAltaMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="formularios\Materiales\FrmConsultarMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
