@@ -37,13 +37,13 @@
             this.txtPatron = new System.Windows.Forms.TextBox();
             this.lblPatron = new System.Windows.Forms.Label();
             this.dgvMaterial = new System.Windows.Forms.DataGridView();
+            this.lblMateriales = new System.Windows.Forms.Label();
+            this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ColCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColUnidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColFec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblMateriales = new System.Windows.Forms.Label();
-            this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -139,8 +139,23 @@
             this.dgvMaterial.Size = new System.Drawing.Size(535, 242);
             this.dgvMaterial.TabIndex = 13;
             // 
+            // lblMateriales
+            // 
+            this.lblMateriales.AutoSize = true;
+            this.lblMateriales.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMateriales.Location = new System.Drawing.Point(21, 13);
+            this.lblMateriales.Name = "lblMateriales";
+            this.lblMateriales.Size = new System.Drawing.Size(133, 32);
+            this.lblMateriales.TabIndex = 12;
+            this.lblMateriales.Text = "Materiales";
+            // 
+            // materialBindingSource
+            // 
+            this.materialBindingSource.DataSource = typeof(TPI.Material);
+            // 
             // ColCodigo
             // 
+            this.ColCodigo.DataPropertyName = "Codigo_Material";
             this.ColCodigo.HeaderText = "Codigo";
             this.ColCodigo.Name = "ColCodigo";
             this.ColCodigo.ReadOnly = true;
@@ -173,20 +188,6 @@
             this.ColProveedor.HeaderText = "Proveedor";
             this.ColProveedor.Name = "ColProveedor";
             this.ColProveedor.ReadOnly = true;
-            // 
-            // lblMateriales
-            // 
-            this.lblMateriales.AutoSize = true;
-            this.lblMateriales.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMateriales.Location = new System.Drawing.Point(21, 13);
-            this.lblMateriales.Name = "lblMateriales";
-            this.lblMateriales.Size = new System.Drawing.Size(133, 32);
-            this.lblMateriales.TabIndex = 12;
-            this.lblMateriales.Text = "Materiales";
-            // 
-            // materialBindingSource
-            // 
-            this.materialBindingSource.DataSource = typeof(TPI.Material);
             // 
             // FrmConsultarMaterial
             // 
@@ -221,11 +222,11 @@
         private Label lblPatron;
         private DataGridView dgvMaterial;
         private Label lblMateriales;
+        private BindingSource materialBindingSource;
         private DataGridViewTextBoxColumn ColCodigo;
         private DataGridViewTextBoxColumn ColCantidad;
         private DataGridViewTextBoxColumn ColUnidad;
         private DataGridViewTextBoxColumn ColFec;
         private DataGridViewTextBoxColumn ColProveedor;
-        private BindingSource materialBindingSource;
     }
 }

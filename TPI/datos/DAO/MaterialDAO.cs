@@ -46,7 +46,7 @@ namespace TPI.datos.DAO
             foreach (DataRow row in resultado.Rows)
             {
                 Material aux = new Material();
-                aux.Nombre = row["Nombre"].ToString();
+               // aux.Nombre = row["Nombre"].ToString();
                 aux.UnidadMedida = row["Unidad_Medida"].ToString();
                 aux.Cantidad = double.Parse(row["Cantidad"].ToString());
                 aux.FechaIngreso = DateTime.Parse(row["Fecha_Ingreso"].ToString());
@@ -62,7 +62,7 @@ namespace TPI.datos.DAO
                     prov.Nombre = filaProv["Nombre"].ToString();
                     prov.Mail = filaProv["Mail"].ToString();
                     prov.Direccion = filaProv["Direccion"].ToString();
-                    aux.ProveedorMa = prov;
+                    // aux.ProveedorMa = prov;
                 }
                 
                 

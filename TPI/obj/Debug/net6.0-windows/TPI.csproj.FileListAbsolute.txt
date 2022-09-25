@@ -43,3 +43,11 @@ C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\De
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\TPI.pdb
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.genruntimeconfig.cache
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\ref\TPI.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.csproj.CopyComplete
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.FrmLogin.resources

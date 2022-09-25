@@ -31,7 +31,7 @@ namespace TPI
             DataGridViewRow fila = dgvMaterial.CurrentRow;
             if (fila != null)
             {
-                new FrmAltaMaterial(2, mapper(fila)).ShowDialog();
+                new FrmAltaMaterial(2, Mapper(fila)).ShowDialog();
                 this.btnConsultar_Click(null, null); // falta agregar boton
 
             }
@@ -79,12 +79,12 @@ namespace TPI
             DataGridViewRow fila = dgvMaterial.CurrentRow;
             if (fila != null)
             {
-                new FrmAltaMaterial(3, mapper(fila)).ShowDialog();
+                new FrmAltaMaterial(3, Mapper(fila)).ShowDialog();
                 this.btnConsultar_Click(null, null); // falta agregar boton
             }
         }
 
-        private Material mapper(DataGridViewRow fila)
+        private Material Mapper(DataGridViewRow fila)
         {
             Material oSelected = new Material();
             oSelected.Codigo = (int)fila.Cells["Codigo_Material"].Value;
