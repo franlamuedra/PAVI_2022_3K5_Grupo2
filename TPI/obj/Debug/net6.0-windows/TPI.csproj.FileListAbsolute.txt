@@ -20,3 +20,18 @@ C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\TPI\obj\Debug\net6.0-windows\TP
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\TPI\obj\Debug\net6.0-windows\ref\TPI.dll
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\TPI\obj\Debug\net6.0-windows\TPI.FrmMateriales.resources
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\TPI\obj\Debug\net6.0-windows\TPI.FrmAlta.resources
+C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.csproj.AssemblyReference.cache
+C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmBase.resources
+C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmEmpleados.resources
+C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmHerramientas.resources
+C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmPrincipal.resources
+C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmAltaMaterial.resources
+C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmConsultarMaterial.resources
+C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.csproj.GenerateResource.cache
+C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.AssemblyInfoInputs.cache
+C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.AssemblyInfo.cs
+C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.csproj.CoreCompileInputs.cache
+C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.dll
+C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\refint\TPI.dll
+C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.pdb

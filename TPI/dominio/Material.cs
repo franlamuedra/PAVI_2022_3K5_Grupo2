@@ -16,6 +16,11 @@ namespace TPI
         public DateTime FechaIngreso { get; set; }
         public Proveedor ProveedorMa { get; set; }
 
+        public Material()
+        {
+
+        }
+
         public Material(int cod, string nom, double cant, string uni, DateTime fecIng, Proveedor prov)
         {
             Codigo = cod;
