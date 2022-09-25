@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TPI.dominio;
+using TPI.Servicios;
 
 namespace TPI
 {
@@ -19,20 +20,52 @@ namespace TPI
             InitializeComponent();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-        }
-
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-
+            new FrmAltaMaterial(1, new Material()).ShowDialog();
+            this.btnConsultar_Click(null, null);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            DataGridViewRow fila = dgvMaterial.CurrentRow;
+            if (fila != null)
+            {
+                new FrmAltaMaterial(3, mapper(fila)).ShowDialog();
+                this.btnConsultar_Click(null, null); // falta agregar boton
 
+            }
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Seguro que desea salir?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Dispose();
+            }
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            GestorMateriales gestor = new GestorMateriales();
+
+            // List<Productos> lista = gestor.ConsultarProductoFiltro();
+            List<Material> lista = new List<Material>();
+            
+            dgvMaterial.Rows.Clear();
+            if (lista.Count > 0)
+            {
+                
+                foreach (Material oMaterial in lista)
+                {
+                    dgvMaterial.Rows.Add(new object[] { oMaterial.Codigo, oMaterial.Cantidad, oMaterial.UnidadMedida, oMaterial.FechaIngreso, oMaterial.ProveedorMa });
+                }               
+            }
+            else
+            {
+                return;
+            }
+        }     
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -40,14 +73,8 @@ namespace TPI
             if (fila != null)
             {
                 new FrmAltaMaterial(3, mapper(fila)).ShowDialog();
-                this.btnConsultar_Click(null, null);
+                this.btnConsultar_Click(null, null); // falta agregar boton
             }
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            //FrmAltaMaterial frmAlta = new FrmAltaMaterial();
-            //frmAlta.ShowDialog();
         }
 
         private Material mapper(DataGridViewRow fila)
@@ -57,7 +84,7 @@ namespace TPI
             oSelected.Cantidad = (double)fila.Cells["Cantidad"].Value;
             oSelected.UnidadMedida = fila.Cells["Unidad_Medida"].Value.ToString();
             oSelected.FechaIngreso = (DateTime)fila.Cells["Fecha_Ingreso"].Value;
-            //oSelected.ProveedorMa = (int)fila.Cells["Cod_Proveedor"].Value;
+            // oSelected.ProveedorMa = (int)fila.Cells["Cod_Proveedor"].Value;  *no toma el tipo de variable int
 
             return oSelected;
 
