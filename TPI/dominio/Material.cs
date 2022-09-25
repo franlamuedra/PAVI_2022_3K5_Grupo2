@@ -10,7 +10,7 @@ namespace TPI
     public class Material
     {
         public int Codigo { get; set; }
-        public string Nombre { get; set; }
+        // public string Nombre { get; set; }
         public double Cantidad { get; set; }
         public string UnidadMedida { get; set; }
         public DateTime FechaIngreso { get; set; }
@@ -21,10 +21,10 @@ namespace TPI
 
         }
 
-        public Material(int cod, string nom, double cant, string uni, DateTime fecIng, Proveedor prov)
+        public Material(int cod, double cant, string uni, DateTime fecIng, Proveedor prov)
         {
             Codigo = cod;
-            Nombre = nom;
+            // Nombre = nom; atributo no creado en DB
             Cantidad = cant;
             UnidadMedida = uni;
             FechaIngreso = fecIng;

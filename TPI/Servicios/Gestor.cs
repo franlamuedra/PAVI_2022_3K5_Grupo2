@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TPI.Servicios
 {
-    /*public class GestorMateriales
+    public class GestorMateriales
     {
-        private IMaterialDao dao;
+        /*private IMaterialDao dao;
 
         public GestorMateriales()
         {
@@ -24,7 +24,7 @@ namespace TPI.Servicios
         public int CrearMaterial(Material oMaterial)
         {
             return dao.Create(oMaterial);
-        }
+        }*/
 
-    }*/
+    }
 }
