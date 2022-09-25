@@ -19,5 +19,4 @@ namespace TPI
         }
 
     }
-    SqlConnection
 }

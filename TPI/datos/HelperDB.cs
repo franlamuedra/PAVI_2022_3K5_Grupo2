@@ -13,6 +13,7 @@ namespace TPI.datos
     {
         private static HelperDB instance;
 
+        private string string_conexion;
         public HelperDB()
         {
             String string_conexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTracker;Integrated Security=true;";//acceso a BD
@@ -33,7 +34,7 @@ namespace TPI.datos
             try
             {
 
-                dbConnection.ConnectionString = string_conexion;
+                dbConnection.ConnectionString = string_conexion;               
                 dbConnection.Open();
                 cmd.Connection = dbConnection;
                 cmd.CommandType = CommandType.Text;

@@ -41,7 +41,7 @@ namespace TPI
                 return;
             }
 
-            if (txtProveedor.Text.Equals(String.Empty))
+            if (cboProveedor.Text.Equals(String.Empty))
             {
                 MessageBox.Show("Debe seleccionar el proveedor", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -70,16 +70,15 @@ namespace TPI
 
             else if (accion == 2)
             {
-                if (chkCompuesto.Checked == true)
-                {
-                    List<Parametro> lista = new List<Parametro>();
-                    lista.Add(new Parametro("@codigo", oMaterial.Codigo));
-                    lista.Add(new Parametro("@cantidad", oMaterial.Cantidad));
-                    lista.Add(new Parametro("@unidad", oMaterial.UnidadMedida));
-                    lista.Add(new Parametro("@fecha", oMaterial.FechaIngreso));
-                    lista.Add(new Parametro("@proveedor", oMaterial.ProveedorMa));
+              
+                List<Parametro> lista = new List<Parametro>();
+                lista.Add(new Parametro("@codigo", oMaterial.Codigo));
+                lista.Add(new Parametro("@cantidad", oMaterial.Cantidad));
+                lista.Add(new Parametro("@unidad", oMaterial.UnidadMedida));
+                lista.Add(new Parametro("@fecha", oMaterial.FechaIngreso));
+                lista.Add(new Parametro("@proveedor", oMaterial.ProveedorMa));
 
-                    string update = "UPDATE Materiales SET Codigo_Material = @codigo, Cantidad = @cantidad, Unidad_Medidad = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha";
+                string update = "UPDATE Materiales SET Codigo_Material = @codigo, Cantidad = @cantidad, Unidad_Medidad = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha";
 
                     // int res = new HelperDB().EjecutarSQL(update, lista);
                     int res = 1;
@@ -94,7 +93,7 @@ namespace TPI
                     {
                         MessageBox.Show("Ocurrio un error al modificar el material", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
+                
             }
 
             else
@@ -130,7 +129,7 @@ namespace TPI
                 nudCodMaterial.Value = oMaterial.Codigo;
                 nudCantidad.Value = (decimal)oMaterial.Cantidad;
                 cboUnidadMedida.Text = oMaterial.UnidadMedida;
-                txtProveedor.Text = oMaterial.ProveedorMa;
+                // txtProveedor.Text = oMaterial.ProveedorMa;
                 dtmFechaIngreso.Value = oMaterial.FechaIngreso;
                 
                 if (accion == 2)
