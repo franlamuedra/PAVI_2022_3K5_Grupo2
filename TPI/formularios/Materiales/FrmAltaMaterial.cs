@@ -1,4 +1,5 @@
 ﻿using TPI.Servicios;
+using TPI.dominio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TPI.dominio;
+using TPI.datos;
 
 namespace TPI
 {
@@ -16,7 +18,8 @@ namespace TPI
     {
         private int accion; //1-2-3
         private Material oMaterial;
-        // private Gestor gestor;
+        private GestorMateriales gestor;
+
         public FrmAltaMaterial(int accion, Material oMaterial)
         {
             InitializeComponent();
@@ -27,15 +30,20 @@ namespace TPI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if(txtNombre.Text.Equals(String.Empty))
+            /*if(nudCodMaterial.Value.Equals())
             {
-                MessageBox.Show("Debe escribir el nombre del material", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
+                
+            }*/
 
             if (cboUnidadMedida.Text.Equals(String.Empty))
             {
                 MessageBox.Show("Debe elegir la unidad de Medida", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (txtProveedor.Text.Equals(String.Empty))
+            {
+                MessageBox.Show("Debe seleccionar el proveedor", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -44,13 +52,99 @@ namespace TPI
                 return;
             }
 
-            
+            if (accion == 1)
+            {
+                int res = gestor.CrearMaterial(oMaterial);
+
+                if (res == 1)
+                {
+                    MessageBox.Show("Material agregado", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ocurrio un error al agregar el material", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+
+            else if (accion == 2)
+            {
+                if (chkCompuesto.Checked == true)
+                {
+                    List<Parametro> lista = new List<Parametro>();
+                    lista.Add(new Parametro("@codigo", oMaterial.Codigo));
+                    lista.Add(new Parametro("@cantidad", oMaterial.Cantidad));
+                    lista.Add(new Parametro("@unidad", oMaterial.UnidadMedida));
+                    lista.Add(new Parametro("@fecha", oMaterial.FechaIngreso));
+                    lista.Add(new Parametro("@proveedor", oMaterial.ProveedorMa));
+
+                    string update = "UPDATE Materiales SET Codigo_Material = @codigo, Cantidad = @cantidad, Unidad_Medidad = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha";
+
+                    // int res = new HelperDB().EjecutarSQL(update, lista);
+                    int res = 1;
+
+                    if (res == 1)
+                    {
+                        MessageBox.Show("Material modificado", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+
+                    else 
+                    {
+                        MessageBox.Show("Ocurrio un error al modificar el material", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+            else
+            {
+                List<Parametro> lista = new List<Parametro>();
+                lista.Add(new Parametro("@cod", oMaterial.Codigo));
+
+                // no se puede hacer baja logica pq no tenemos atributo ACTIVO
+
+                /* int res = new HelperDB().EjecutarSQL(delete, lista);
+                if (res == 1)
+                {
+                    MessageBox.Show("Producto eliminado", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ocurrio un error al eliminar el material", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } */
+            }
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
         }
 
+        private void FrmAltaMaterial_Load(object sender, EventArgs e)
+        {
+            if (accion != 1)
+            {
+                nudCodMaterial.Value = oMaterial.Codigo;
+                nudCantidad.Value = (decimal)oMaterial.Cantidad;
+                cboUnidadMedida.Text = oMaterial.UnidadMedida;
+                txtProveedor.Text = oMaterial.ProveedorMa;
+                dtmFechaIngreso.Value = oMaterial.FechaIngreso;
+                
+                if (accion == 2)
+                {
+                    this.Text = "Modificar Material";
+                }
+
+                else
+                {
+                    grbMaterial.Enabled = false;
+                    this.Text = "Registrar baja de Material";
+                }
+                
+            }
+        }
     }
 }

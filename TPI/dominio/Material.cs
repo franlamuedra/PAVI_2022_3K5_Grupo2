@@ -14,14 +14,14 @@ namespace TPI
         public double Cantidad { get; set; }
         public string UnidadMedida { get; set; }
         public DateTime FechaIngreso { get; set; }
-        public Proveedor ProveedorMa { get; set; }
+        public string ProveedorMa { get; set; }
         
         public Material()
         {
 
         }
 
-        public Material(int cod, double cant, string uni, DateTime fecIng, Proveedor prov)
+        public Material(int cod, double cant, string uni, DateTime fecIng, string prov)
         {
             Codigo = cod;
             // Nombre = nom; atributo no creado en DB
