@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rbtnModelo = new System.Windows.Forms.RadioButton();
-            this.rbtnMarca = new System.Windows.Forms.RadioButton();
+            this.components = new System.ComponentModel.Container();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -39,41 +38,20 @@
             this.lblPatron = new System.Windows.Forms.Label();
             this.dgvMaterial = new System.Windows.Forms.DataGridView();
             this.ColCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColUnidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColFec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblMateriales = new System.Windows.Forms.Label();
+            this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // rbtnModelo
-            // 
-            this.rbtnModelo.AutoSize = true;
-            this.rbtnModelo.Location = new System.Drawing.Point(482, 144);
-            this.rbtnModelo.Name = "rbtnModelo";
-            this.rbtnModelo.Size = new System.Drawing.Size(66, 19);
-            this.rbtnModelo.TabIndex = 22;
-            this.rbtnModelo.TabStop = true;
-            this.rbtnModelo.Text = "Modelo";
-            this.rbtnModelo.UseVisualStyleBackColor = true;
-            // 
-            // rbtnMarca
-            // 
-            this.rbtnMarca.AutoSize = true;
-            this.rbtnMarca.Location = new System.Drawing.Point(482, 119);
-            this.rbtnMarca.Name = "rbtnMarca";
-            this.rbtnMarca.Size = new System.Drawing.Size(58, 19);
-            this.rbtnMarca.TabIndex = 21;
-            this.rbtnMarca.TabStop = true;
-            this.rbtnMarca.Text = "Marca";
-            this.rbtnMarca.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSalir.Location = new System.Drawing.Point(556, 457);
+            this.btnSalir.Location = new System.Drawing.Point(465, 426);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(82, 38);
             this.btnSalir.TabIndex = 20;
@@ -84,7 +62,7 @@
             // btnConsultar
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnConsultar.Location = new System.Drawing.Point(554, 130);
+            this.btnConsultar.Location = new System.Drawing.Point(458, 114);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(89, 33);
             this.btnConsultar.TabIndex = 19;
@@ -95,7 +73,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEditar.Location = new System.Drawing.Point(109, 456);
+            this.btnEditar.Location = new System.Drawing.Point(109, 426);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(82, 38);
             this.btnEditar.TabIndex = 18;
@@ -106,7 +84,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEliminar.Location = new System.Drawing.Point(197, 456);
+            this.btnEliminar.Location = new System.Drawing.Point(197, 426);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(82, 38);
             this.btnEliminar.TabIndex = 17;
@@ -117,7 +95,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAgregar.Location = new System.Drawing.Point(21, 456);
+            this.btnAgregar.Location = new System.Drawing.Point(21, 426);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(82, 38);
             this.btnAgregar.TabIndex = 16;
@@ -145,41 +123,41 @@
             // 
             // dgvMaterial
             // 
+            this.dgvMaterial.AllowUserToAddRows = false;
+            this.dgvMaterial.AllowUserToDeleteRows = false;
             this.dgvMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMaterial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColCodigo,
-            this.ColNombre,
             this.ColCantidad,
             this.ColUnidad,
             this.ColFec,
             this.ColProveedor});
-            this.dgvMaterial.Location = new System.Drawing.Point(12, 169);
+            this.dgvMaterial.Location = new System.Drawing.Point(12, 168);
             this.dgvMaterial.Name = "dgvMaterial";
+            this.dgvMaterial.ReadOnly = true;
             this.dgvMaterial.RowTemplate.Height = 25;
-            this.dgvMaterial.Size = new System.Drawing.Size(631, 242);
+            this.dgvMaterial.Size = new System.Drawing.Size(535, 242);
             this.dgvMaterial.TabIndex = 13;
             // 
             // ColCodigo
             // 
             this.ColCodigo.HeaderText = "Codigo";
             this.ColCodigo.Name = "ColCodigo";
+            this.ColCodigo.ReadOnly = true;
             this.ColCodigo.Width = 60;
-            // 
-            // ColNombre
-            // 
-            this.ColNombre.HeaderText = "Nombre";
-            this.ColNombre.Name = "ColNombre";
             // 
             // ColCantidad
             // 
             this.ColCantidad.HeaderText = "Cantidad";
             this.ColCantidad.Name = "ColCantidad";
+            this.ColCantidad.ReadOnly = true;
             this.ColCantidad.Width = 70;
             // 
             // ColUnidad
             // 
             this.ColUnidad.HeaderText = "Unidad de Medida";
             this.ColUnidad.Name = "ColUnidad";
+            this.ColUnidad.ReadOnly = true;
             this.ColUnidad.Width = 130;
             // 
             // ColFec
@@ -187,12 +165,14 @@
             this.ColFec.DataPropertyName = "FecIng";
             this.ColFec.HeaderText = "Fecha de Ingreso";
             this.ColFec.Name = "ColFec";
+            this.ColFec.ReadOnly = true;
             this.ColFec.Width = 130;
             // 
             // ColProveedor
             // 
             this.ColProveedor.HeaderText = "Proveedor";
             this.ColProveedor.Name = "ColProveedor";
+            this.ColProveedor.ReadOnly = true;
             // 
             // lblMateriales
             // 
@@ -204,13 +184,15 @@
             this.lblMateriales.TabIndex = 12;
             this.lblMateriales.Text = "Materiales";
             // 
-            // FrmMateriales
+            // materialBindingSource
+            // 
+            this.materialBindingSource.DataSource = typeof(TPI.Material);
+            // 
+            // FrmConsultarMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 507);
-            this.Controls.Add(this.rbtnModelo);
-            this.Controls.Add(this.rbtnMarca);
+            this.ClientSize = new System.Drawing.Size(555, 473);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnEditar);
@@ -220,18 +202,16 @@
             this.Controls.Add(this.lblPatron);
             this.Controls.Add(this.dgvMaterial);
             this.Controls.Add(this.lblMateriales);
-            this.Name = "FrmMateriales";
+            this.Name = "FrmConsultarMaterial";
             this.Text = "ABMC Materiales";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private RadioButton rbtnModelo;
-        private RadioButton rbtnMarca;
         private Button btnSalir;
         private Button btnConsultar;
         private Button btnEditar;
@@ -242,10 +222,10 @@
         private DataGridView dgvMaterial;
         private Label lblMateriales;
         private DataGridViewTextBoxColumn ColCodigo;
-        private DataGridViewTextBoxColumn ColNombre;
         private DataGridViewTextBoxColumn ColCantidad;
         private DataGridViewTextBoxColumn ColUnidad;
         private DataGridViewTextBoxColumn ColFec;
         private DataGridViewTextBoxColumn ColProveedor;
+        private BindingSource materialBindingSource;
     }
 }

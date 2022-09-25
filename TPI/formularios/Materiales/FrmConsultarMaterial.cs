@@ -31,7 +31,7 @@ namespace TPI
             DataGridViewRow fila = dgvMaterial.CurrentRow;
             if (fila != null)
             {
-                new FrmAltaMaterial(3, mapper(fila)).ShowDialog();
+                new FrmAltaMaterial(2, mapper(fila)).ShowDialog();
                 this.btnConsultar_Click(null, null); // falta agregar boton
 
             }
@@ -49,7 +49,7 @@ namespace TPI
         {
             GestorMateriales gestor = new GestorMateriales();
 
-            // List<Productos> lista = gestor.ConsultarProductoFiltro();
+            // List<Productos> lista = gestor.ConsultarProductosxFiltro();
             List<Material> lista = new List<Material>();
             
             dgvMaterial.Rows.Clear();
@@ -59,13 +59,20 @@ namespace TPI
                 foreach (Material oMaterial in lista)
                 {
                     dgvMaterial.Rows.Add(new object[] { oMaterial.Codigo, oMaterial.Cantidad, oMaterial.UnidadMedida, oMaterial.FechaIngreso, oMaterial.ProveedorMa });
-                }               
+                }
+                habilitarControles(true);
             }
             else
             {
-                return;
+                habilitarControles(false);
             }
         }     
+
+        private void habilitarControles(bool v)
+        {
+            btnEditar.Enabled = v;
+            btnEliminar.Enabled = v;
+        }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
