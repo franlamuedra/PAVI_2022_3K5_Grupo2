@@ -48,9 +48,10 @@ namespace TPI
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             GestorMateriales gestor = new GestorMateriales();
+            String nombre = txtNombre.Text;
+            bool activo = chkActivo.Checked;
 
-            // List<Productos> lista = gestor.ConsultarProductosxFiltro();
-            List<Material> lista = new List<Material>();
+            List<Material> lista = gestor.ConsultarMaterialFiltro(nombre, activo);
             
             dgvMaterial.Rows.Clear();
             if (lista.Count > 0)
@@ -80,18 +81,19 @@ namespace TPI
             if (fila != null)
             {
                 new FrmAltaMaterial(3, Mapper(fila)).ShowDialog();
-                this.btnConsultar_Click(null, null); // falta agregar boton
+                this.btnConsultar_Click(null, null);
             }
         }
 
         private Material Mapper(DataGridViewRow fila)
         {
             Material oSelected = new Material();
-            oSelected.Codigo = (int)fila.Cells["Codigo_Material"].Value;
-            oSelected.Cantidad = (double)fila.Cells["Cantidad"].Value;
-            oSelected.UnidadMedida = fila.Cells["Unidad_Medida"].Value.ToString();
-            oSelected.FechaIngreso = (DateTime)fila.Cells["Fecha_Ingreso"].Value;
-            // oSelected.ProveedorMa = (int)fila.Cells["Cod_Proveedor"].Value;  *no toma el tipo de variable int
+            oSelected.Nombre = fila.Cells["ColNombre"].Value.ToString();
+            oSelected.Codigo = (int)fila.Cells["ColCodigo"].Value;
+            oSelected.Cantidad = (double)fila.Cells["ColCantidad"].Value;
+            oSelected.UnidadMedida = fila.Cells["ColUnidad"].Value.ToString();
+            oSelected.FechaIngreso = (DateTime)fila.Cells["ColFec"].Value;
+            oSelected.ProveedorMa = fila.Cells["ColProveedor"].Value.ToString();  
 
             return oSelected;
 

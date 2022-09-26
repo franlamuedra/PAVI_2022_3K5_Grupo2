@@ -157,11 +157,13 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Materiales](
+	[Nombre] [nvarchar] (20) NOT NULL,
 	[Codigo_Material] [nvarchar](20) NOT NULL,
 	[Cantidad] [int] NULL,
 	[Unidad_Medida] [nvarchar](50) NULL,
 	[Cod_Proveedor] [nvarchar](50) NULL,
 	[Fecha_Ingreso] [datetime] NULL,
+	[Activo] [varchar] (1) NOT NULL
  CONSTRAINT [PK_Materiales] PRIMARY KEY CLUSTERED 
 (
 	[Codigo_Material] ASC
@@ -289,6 +291,17 @@ CREATE TABLE [dbo].[Tipos_Herramientas](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 24/9/2022 17:41:20 ******/
+CREATE TABLE [Usuarios](
+	[Usuario] [varchar](50) NOT NULL,
+	[Password] [varchar](10) NOT NULL,
+ CONSTRAINT [PK_Usuarios] PRIMARY KEY CLUSTERED 
+(
+	[Usuario] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
 ALTER TABLE [dbo].[Alquileres]  WITH CHECK ADD  CONSTRAINT [FK_Alquileres_Herramientas] FOREIGN KEY([Marca_Herramienta], [Modelo_Herramienta])
 REFERENCES [dbo].[Herramientas] ([Marca_Herramienta], [Modelo_Herramienta])
 GO

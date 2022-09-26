@@ -19,22 +19,20 @@ namespace TPI.datos.DAO
         {
             List<Material> list = new List<Material>();
 
-            string query = "Select * From Materiales " +//Poner Nombre de la Tabla
-                " Where 1=1";
+            string query = "SELECT * FROM Materiales WHERE 1=1";
 
             if (!string.IsNullOrEmpty(nombre))
             {
-                query += " AND " + //Completar con el nombre
-                    " Like '%@nombre%'";
+                query += " AND Nombre Like '%" + nombre + "%'";
             }
 
             if (activo)
             {
-                query += " AND @activo = 'S'";
+                query += " AND @Activo = 'S'";
             }
             else
             {
-                query += " AND @activo = 'N'";
+                query += " AND @Activo = 'N'";
             }
 
             Dictionary<string, object> parametros = new Dictionary<string, object>();
@@ -46,13 +44,16 @@ namespace TPI.datos.DAO
             foreach (DataRow row in resultado.Rows)
             {
                 Material aux = new Material();
-               // aux.Nombre = row["Nombre"].ToString();
+                aux.Nombre = row["Nombre"].ToString();
                 aux.UnidadMedida = row["Unidad_Medida"].ToString();
                 aux.Cantidad = double.Parse(row["Cantidad"].ToString());
                 aux.FechaIngreso = DateTime.Parse(row["Fecha_Ingreso"].ToString());
-                int nroProv = int.Parse(row["Cod_Proveedor"].ToString());
+                aux.Activo = row["Activo"].ToString().Equals("S");
+                // int nroProv = int.Parse(row["Cod_Proveedor"].ToString());
+                aux.ProveedorMa = row["Cod_Proveedor"].ToString();
+                list.Add(aux);
 
-                string queryProv = "Select * From Proveedores Where Cod_Proveedor = @nroProv";
+                /*string queryProv = "Select * From Proveedores Where Cod_Proveedor = @nroProv";
                 parametros.Add("nroProv", nroProv);
                 DataTable resProv = HelperDB.GetInstance().ConsultaSQL(queryProv, parametros);
                 foreach (DataRow filaProv in resProv.Rows)
@@ -63,7 +64,7 @@ namespace TPI.datos.DAO
                     prov.Mail = filaProv["Mail"].ToString();
                     prov.Direccion = filaProv["Direccion"].ToString();
                     // aux.ProveedorMa = prov;
-                }
+                }*/
                 
                 
             }

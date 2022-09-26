@@ -25,7 +25,7 @@ namespace TPI
             InitializeComponent();
             this.accion = accion;
             this.oMaterial = oMaterial;
-            // gestor = new GestorProductos();
+            gestor = new GestorMateriales();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -44,11 +44,6 @@ namespace TPI
             if (cboProveedor.Text.Equals(String.Empty))
             {
                 MessageBox.Show("Debe seleccionar el proveedor", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-
-            else
-            {
                 return;
             }
 

@@ -37,6 +37,11 @@ namespace TPI
         {
             new FrmAltaMaterial(1, new Material()).ShowDialog();          
         }
-    
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("App Ferreteria Industrial V1.0", "PAVI2022", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Dispose();
+        }
     }
 }
