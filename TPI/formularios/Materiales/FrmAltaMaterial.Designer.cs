@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.grbMaterial = new System.Windows.Forms.GroupBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.cboProveedor = new System.Windows.Forms.ComboBox();
             this.nudCodMaterial = new System.Windows.Forms.NumericUpDown();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.dtmFechaIngreso = new System.Windows.Forms.DateTimePicker();
@@ -40,12 +44,11 @@
             this.lblUnidadMedida = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.cboProveedor = new System.Windows.Forms.ComboBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grbMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCodMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -77,6 +80,30 @@
             this.grbMaterial.TabIndex = 1;
             this.grbMaterial.TabStop = false;
             this.grbMaterial.Text = "Material";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(120, 25);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(121, 23);
+            this.txtNombre.TabIndex = 20;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(63, 28);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(51, 15);
+            this.lblNombre.TabIndex = 19;
+            this.lblNombre.Text = "Nombre";
+            // 
+            // cboProveedor
+            // 
+            this.cboProveedor.FormattingEnabled = true;
+            this.cboProveedor.Location = new System.Drawing.Point(119, 160);
+            this.cboProveedor.Name = "cboProveedor";
+            this.cboProveedor.Size = new System.Drawing.Size(211, 23);
+            this.cboProveedor.TabIndex = 18;
             // 
             // nudCodMaterial
             // 
@@ -179,29 +206,9 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // cboProveedor
+            // materialBindingSource
             // 
-            this.cboProveedor.FormattingEnabled = true;
-            this.cboProveedor.Location = new System.Drawing.Point(119, 160);
-            this.cboProveedor.Name = "cboProveedor";
-            this.cboProveedor.Size = new System.Drawing.Size(211, 23);
-            this.cboProveedor.TabIndex = 18;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(63, 28);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(51, 15);
-            this.lblNombre.TabIndex = 19;
-            this.lblNombre.Text = "Nombre";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(120, 25);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(121, 23);
-            this.txtNombre.TabIndex = 20;
+            this.materialBindingSource.DataSource = typeof(TPI.Material);
             // 
             // FrmAltaMaterial
             // 
@@ -219,6 +226,7 @@
             this.grbMaterial.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCodMaterial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,5 +248,6 @@
         private ComboBox cboProveedor;
         private TextBox txtNombre;
         private Label lblNombre;
+        private BindingSource materialBindingSource;
     }
 }

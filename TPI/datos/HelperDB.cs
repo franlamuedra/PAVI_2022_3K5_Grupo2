@@ -16,7 +16,7 @@ namespace TPI.datos
         private string string_conexion;
         public HelperDB()
         {
-            String string_conexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTracker;Integrated Security=true;";//acceso a BD
+            string_conexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=Ferreteria_Industrial;Integrated Security=True";//acceso a BD
         }
         public static HelperDB GetInstance()
         {

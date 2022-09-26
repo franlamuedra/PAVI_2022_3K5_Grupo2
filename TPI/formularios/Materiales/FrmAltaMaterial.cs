@@ -70,7 +70,7 @@ namespace TPI
 
             else if (accion == 2)
             {
-              
+
                 List<Parametro> lista = new List<Parametro>();
                 lista.Add(new Parametro("@codigo", oMaterial.Codigo));
                 lista.Add(new Parametro("@cantidad", oMaterial.Cantidad));
@@ -80,20 +80,20 @@ namespace TPI
 
                 string update = "UPDATE Materiales SET Codigo_Material = @codigo, Cantidad = @cantidad, Unidad_Medidad = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha";
 
-                    // int res = new HelperDB().EjecutarSQL(update, lista);
-                    int res = 1;
+                // int res = new HelperDB().EjecutarSQL(update, lista);
+                int res = 1;
 
-                    if (res == 1)
-                    {
-                        MessageBox.Show("Material modificado", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
+                if (res == 1)
+                {
+                    MessageBox.Show("Material modificado", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
 
-                    else 
-                    {
-                        MessageBox.Show("Ocurrio un error al modificar el material", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                
+                else
+                {
+                    MessageBox.Show("Ocurrio un error al modificar el material", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
 
             else
@@ -124,6 +124,7 @@ namespace TPI
 
         private void FrmAltaMaterial_Load(object sender, EventArgs e)
         {
+            LlenarCombo(cboProveedor, HelperDB.GetInstance().ConsultaSQL("Select * from Proveedores"), "Nombre", "Cod_Proveedor");
             if (accion != 1)
             {
                 nudCodMaterial.Value = oMaterial.Codigo;
@@ -132,6 +133,7 @@ namespace TPI
                 // txtProveedor.Text = oMaterial.ProveedorMa;
                 dtmFechaIngreso.Value = oMaterial.FechaIngreso;
                 
+
                 if (accion == 2)
                 {
                     this.Text = "Modificar Material";
@@ -142,8 +144,21 @@ namespace TPI
                     grbMaterial.Enabled = false;
                     this.Text = "Registrar baja de Material";
                 }
-                
+
             }
         }
+
+        private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
+        {
+            // Datasource: establece el origen de datos de este objeto.
+            cbo.DataSource = source;
+            // DisplayMember: establece la propiedad que se va a mostrar para este ListControl.
+            cbo.DisplayMember = display;
+            // ValueMember: establece la ruta de acceso de la propiedad que se utilizará como valor real para los elementos de ListControl.
+            cbo.ValueMember = value;
+            //SelectedIndex: establece el índice que especifica el elemento seleccionado actualmente.
+            cbo.SelectedIndex = -1;
+        }
+        
     }
 }
