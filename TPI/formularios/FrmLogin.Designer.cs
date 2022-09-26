@@ -90,8 +90,10 @@
             // 
             // FrmLogin
             // 
+            this.AcceptButton = this.btnIngresar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(381, 186);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.btnCancelar);
@@ -99,9 +101,13 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsuario);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(397, 225);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(397, 225);
             this.Name = "FrmLogin";
-            this.Text = "FrmLogin";
+            this.Text = "Inicio de Sesión";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -119,6 +119,7 @@ namespace TPI
 
         private void FrmAltaMaterial_Load(object sender, EventArgs e)
         {
+            LlenarCombo(cboProveedor, HelperDB.GetInstance().ConsultaSQL("Select * from Proveedores"), "Nombre", "Cod_Proveedor");
             if (accion != 1)
             {
                 nudCodMaterial.Value = oMaterial.Codigo;
@@ -139,6 +140,17 @@ namespace TPI
                 }
                 
             }
+        }
+        private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
+        {
+            // Datasource: establece el origen de datos de este objeto.
+            cbo.DataSource = source;
+            // DisplayMember: establece la propiedad que se va a mostrar para este ListControl.
+            cbo.DisplayMember = display;
+            // ValueMember: establece la ruta de acceso de la propiedad que se utilizará como valor real para los elementos de ListControl.
+            cbo.ValueMember = value;
+            //SelectedIndex: establece el índice que especifica el elemento seleccionado actualmente.
+            cbo.SelectedIndex = -1;
         }
     }
 }

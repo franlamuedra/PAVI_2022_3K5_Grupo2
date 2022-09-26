@@ -47,16 +47,26 @@ namespace TPI
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            Dictionary<string, object> parametros = new Dictionary<String, object>();
             GestorMateriales gestor = new GestorMateriales();
             String nombre = txtNombre.Text;
             bool activo = chkActivo.Checked;
 
-            List<Material> lista = gestor.ConsultarMaterialFiltro(nombre, activo);
-            
+            if (!string.IsNullOrEmpty(nombre))
+                parametros.Add("Nombre", nombre);
+
+            if (activo)
+                parametros.Add("Activo", "S");
+            else
+                parametros.Add("Activo", "N");
+
+
+            List<Material> lista = gestor.ConsultarMaterialFiltro(parametros);
+
             dgvMaterial.Rows.Clear();
             if (lista.Count > 0)
             {
-                
+                dgvMaterial.DataSource = lista;
                 foreach (Material oMaterial in lista)
                 {
                     dgvMaterial.Rows.Add(new object[] { oMaterial.Codigo, oMaterial.Cantidad, oMaterial.UnidadMedida, oMaterial.FechaIngreso, oMaterial.ProveedorMa });
@@ -67,7 +77,7 @@ namespace TPI
             {
                 habilitarControles(false);
             }
-        }     
+        }
 
         private void habilitarControles(bool v)
         {
@@ -93,7 +103,7 @@ namespace TPI
             oSelected.Cantidad = (double)fila.Cells["ColCantidad"].Value;
             oSelected.UnidadMedida = fila.Cells["ColUnidad"].Value.ToString();
             oSelected.FechaIngreso = (DateTime)fila.Cells["ColFec"].Value;
-            oSelected.ProveedorMa = fila.Cells["ColProveedor"].Value.ToString();  
+            //oSelected.ProveedorMa = fila.Cells["ColProveedor"].Value.ToString();
 
             return oSelected;
 

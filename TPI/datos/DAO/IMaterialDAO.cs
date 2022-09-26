@@ -10,5 +10,7 @@ namespace TPI.datos.DAO
     {
         List<Material> GetByFilter(string nombre, bool activo);
         int Create(Material nuevo);
+
+        List<Material> GetMaterialByFilters(Dictionary<string, object> parametros);
     }
 }
