@@ -16,9 +16,9 @@ namespace TPI.Servicios
             dao = new MaterialDAO();
         }
 
-        public List<Material> ConsultarMaterialFiltro(String nombre, bool activo)
+        public List<Material> ConsultarMaterialFiltro(Dictionary<string, object> parametros)
         {
-            List<Material> lista = dao.GetByFilter(nombre, activo);
+            List<Material> lista = dao.GetMaterialByFilters(parametros);
             return lista;
         }
 

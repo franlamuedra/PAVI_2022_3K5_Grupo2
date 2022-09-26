@@ -53,12 +53,12 @@ namespace TPI.formularios
             try
             {
 
-                String consultaSql = string.Concat(" SELECT * ", "   FROM Usuarios ", "  WHERE usuario =  '", oUsuario, "'");           
+                String consultaSql = string.Concat(" SELECT * ", "   FROM Usuarios ", "  WHERE Usuario =  '", oUsuario, "'");           
                 DataTable res = HelperDB.GetInstance().ConsultaSQL(consultaSql);
 
                 if (res.Rows.Count >= 1)
                 {                 
-                    if (res.Rows[0]["password"].ToString() == oPassword)
+                    if (res.Rows[0]["Password"].ToString() == oPassword)
                     {
                         usuarioValido = true;
                     }
