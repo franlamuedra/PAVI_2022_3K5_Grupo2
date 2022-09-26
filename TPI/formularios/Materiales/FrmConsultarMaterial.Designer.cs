@@ -34,16 +34,19 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.txtPatron = new System.Windows.Forms.TextBox();
-            this.lblPatron = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.dgvMaterial = new System.Windows.Forms.DataGridView();
             this.lblMateriales = new System.Windows.Forms.Label();
             this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chkActivo = new System.Windows.Forms.CheckBox();
+            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColUnidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColFec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColFec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +54,7 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSalir.Location = new System.Drawing.Point(465, 426);
+            this.btnSalir.Location = new System.Drawing.Point(626, 426);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(82, 38);
             this.btnSalir.TabIndex = 20;
@@ -62,7 +65,7 @@
             // btnConsultar
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnConsultar.Location = new System.Drawing.Point(458, 114);
+            this.btnConsultar.Location = new System.Drawing.Point(621, 80);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(89, 33);
             this.btnConsultar.TabIndex = 19;
@@ -103,23 +106,23 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // txtPatron
+            // txtNombre
             // 
-            this.txtPatron.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPatron.Location = new System.Drawing.Point(82, 65);
-            this.txtPatron.Name = "txtPatron";
-            this.txtPatron.Size = new System.Drawing.Size(289, 29);
-            this.txtPatron.TabIndex = 15;
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNombre.Location = new System.Drawing.Point(95, 65);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(289, 29);
+            this.txtNombre.TabIndex = 15;
             // 
-            // lblPatron
+            // lblNombre
             // 
-            this.lblPatron.AutoSize = true;
-            this.lblPatron.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPatron.Location = new System.Drawing.Point(21, 68);
-            this.lblPatron.Name = "lblPatron";
-            this.lblPatron.Size = new System.Drawing.Size(55, 21);
-            this.lblPatron.TabIndex = 14;
-            this.lblPatron.Text = "Patron";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNombre.Location = new System.Drawing.Point(21, 68);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(68, 21);
+            this.lblNombre.TabIndex = 14;
+            this.lblNombre.Text = "Nombre";
             // 
             // dgvMaterial
             // 
@@ -127,16 +130,18 @@
             this.dgvMaterial.AllowUserToDeleteRows = false;
             this.dgvMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMaterial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColNombre,
             this.ColCodigo,
             this.ColCantidad,
             this.ColUnidad,
+            this.ColProveedor,
             this.ColFec,
-            this.ColProveedor});
-            this.dgvMaterial.Location = new System.Drawing.Point(12, 168);
+            this.ColActivo});
+            this.dgvMaterial.Location = new System.Drawing.Point(23, 140);
             this.dgvMaterial.Name = "dgvMaterial";
             this.dgvMaterial.ReadOnly = true;
             this.dgvMaterial.RowTemplate.Height = 25;
-            this.dgvMaterial.Size = new System.Drawing.Size(535, 242);
+            this.dgvMaterial.Size = new System.Drawing.Size(687, 257);
             this.dgvMaterial.TabIndex = 13;
             // 
             // lblMateriales
@@ -153,6 +158,23 @@
             // 
             this.materialBindingSource.DataSource = typeof(TPI.Material);
             // 
+            // chkActivo
+            // 
+            this.chkActivo.AutoSize = true;
+            this.chkActivo.Location = new System.Drawing.Point(403, 68);
+            this.chkActivo.Name = "chkActivo";
+            this.chkActivo.Size = new System.Drawing.Size(65, 19);
+            this.chkActivo.TabIndex = 21;
+            this.chkActivo.Text = "Activo?";
+            this.chkActivo.UseVisualStyleBackColor = true;
+            // 
+            // ColNombre
+            // 
+            this.ColNombre.DataPropertyName = "Nombre";
+            this.ColNombre.HeaderText = "Nombre";
+            this.ColNombre.Name = "ColNombre";
+            this.ColNombre.ReadOnly = true;
+            // 
             // ColCodigo
             // 
             this.ColCodigo.DataPropertyName = "Codigo_Material";
@@ -163,6 +185,7 @@
             // 
             // ColCantidad
             // 
+            this.ColCantidad.DataPropertyName = "Cantidad";
             this.ColCantidad.HeaderText = "Cantidad";
             this.ColCantidad.Name = "ColCantidad";
             this.ColCantidad.ReadOnly = true;
@@ -170,37 +193,47 @@
             // 
             // ColUnidad
             // 
+            this.ColUnidad.DataPropertyName = "Unidad_Medida";
             this.ColUnidad.HeaderText = "Unidad de Medida";
             this.ColUnidad.Name = "ColUnidad";
             this.ColUnidad.ReadOnly = true;
             this.ColUnidad.Width = 130;
             // 
+            // ColProveedor
+            // 
+            this.ColProveedor.DataPropertyName = "Cod_Proveedor";
+            this.ColProveedor.HeaderText = "Proveedor";
+            this.ColProveedor.Name = "ColProveedor";
+            this.ColProveedor.ReadOnly = true;
+            // 
             // ColFec
             // 
-            this.ColFec.DataPropertyName = "FecIng";
+            this.ColFec.DataPropertyName = "Fecha_Ingreso";
             this.ColFec.HeaderText = "Fecha de Ingreso";
             this.ColFec.Name = "ColFec";
             this.ColFec.ReadOnly = true;
             this.ColFec.Width = 130;
             // 
-            // ColProveedor
+            // ColActivo
             // 
-            this.ColProveedor.HeaderText = "Proveedor";
-            this.ColProveedor.Name = "ColProveedor";
-            this.ColProveedor.ReadOnly = true;
+            this.ColActivo.DataPropertyName = "Activo";
+            this.ColActivo.HeaderText = "Activo?";
+            this.ColActivo.Name = "ColActivo";
+            this.ColActivo.ReadOnly = true;
             // 
             // FrmConsultarMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 473);
+            this.ClientSize = new System.Drawing.Size(722, 473);
+            this.Controls.Add(this.chkActivo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.txtPatron);
-            this.Controls.Add(this.lblPatron);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dgvMaterial);
             this.Controls.Add(this.lblMateriales);
             this.Name = "FrmConsultarMaterial";
@@ -218,15 +251,18 @@
         private Button btnEditar;
         private Button btnEliminar;
         private Button btnAgregar;
-        private TextBox txtPatron;
-        private Label lblPatron;
+        private TextBox txtNombre;
+        private Label lblNombre;
         private DataGridView dgvMaterial;
         private Label lblMateriales;
         private BindingSource materialBindingSource;
+        private CheckBox chkActivo;
+        private DataGridViewTextBoxColumn ColNombre;
         private DataGridViewTextBoxColumn ColCodigo;
         private DataGridViewTextBoxColumn ColCantidad;
         private DataGridViewTextBoxColumn ColUnidad;
-        private DataGridViewTextBoxColumn ColFec;
         private DataGridViewTextBoxColumn ColProveedor;
+        private DataGridViewTextBoxColumn ColFec;
+        private DataGridViewTextBoxColumn ColActivo;
     }
 }

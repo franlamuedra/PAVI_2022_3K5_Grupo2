@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TPI.datos.DAO;
 
 namespace TPI.Servicios
 {
     public class GestorMateriales
     {
-        /*private IMaterialDao dao;
+        private IMaterialDAO dao;
 
         public GestorMateriales()
         {
-            dao = new MaterialDao();
+            dao = new MaterialDAO();
         }
 
-        public List<Material> ConsultarMaterialFiltro(string nombre, bool activo)
+        public List<Material> ConsultarMaterialFiltro(String nombre, bool activo)
         {
             List<Material> lista = dao.GetByFilter(nombre, activo);
             return lista;
@@ -24,12 +25,6 @@ namespace TPI.Servicios
         public int CrearMaterial(Material oMaterial)
         {
             return dao.Create(oMaterial);
-        }*/
-
-        public int CrearMaterial(Material oMaterial)
-        {
-            // return dao.Create(oMaterial);
-            return 1;
         }
     }
 }
