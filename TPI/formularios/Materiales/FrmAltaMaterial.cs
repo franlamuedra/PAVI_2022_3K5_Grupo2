@@ -69,7 +69,7 @@ namespace TPI
                 lista.Add(new Parametro("@fecha", oMaterial.FechaIngreso));
                 lista.Add(new Parametro("@proveedor", oMaterial.ProveedorMa));
 
-                string update = "UPDATE Materiales SET Nombre = @nombre, Codigo_Material = @codigo, Cantidad = @cantidad, Unidad_Medida = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha WHERE Codigo_Material = @codigo";
+                string update = "UPDATE Materiales SET nombre = @nombre, Codigo_Material = @codigo, Cantidad = @cantidad, Unidad_Medida = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha WHERE Codigo_Material = @codigo";
 
                 int res = new HelperDB().EjecutarSQL(update, lista);
 
