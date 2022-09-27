@@ -89,8 +89,9 @@ namespace TPI
             oSelected.Codigo = (int)fila.Cells["ColCodigo"].Value;
             oSelected.Cantidad = (double)fila.Cells["ColCantidad"].Value;
             oSelected.UnidadMedida = fila.Cells["ColUnidad"].Value.ToString();
-            oSelected.FechaIngreso = (DateTime)fila.Cells["ColFec"].Value;
-            //oSelected.ProveedorMa = fila.Cells["ColProveedor"].Value.ToString();
+            oSelected.FechaIngreso = fila.Cells["ColFec"].Value.ToString();
+            oSelected.ProveedorMa = fila.Cells["ColProveedor"].Value.ToString();
+            oSelected.Activo = (bool)fila.Cells["ColActivo"].Value;
 
             return oSelected;
 

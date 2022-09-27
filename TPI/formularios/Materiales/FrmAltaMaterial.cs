@@ -30,10 +30,11 @@ namespace TPI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            /*if(nudCodMaterial.Value.Equals())
+            if (txtNombre.Text.Equals(String.Empty))
             {
-                
-            }*/
+                MessageBox.Show("Debe escribir el nombre del material", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
             if (cboUnidadMedida.Text.Equals(String.Empty))
             {
@@ -68,7 +69,7 @@ namespace TPI
                 lista.Add(new Parametro("@fecha", oMaterial.FechaIngreso));
                 lista.Add(new Parametro("@proveedor", oMaterial.ProveedorMa));
 
-                string update = "UPDATE Materiales SET Nombre = @nombre, Codigo_Material = @codigo, Cantidad = @cantidad, Unidad_Medidad = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha";
+                string update = "UPDATE Materiales SET Nombre = @nombre, Codigo_Material = @codigo, Cantidad = @cantidad, Unidad_Medida = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha WHERE Codigo_Material = @codigo";
 
                 int res = new HelperDB().EjecutarSQL(update, lista);
 
@@ -119,8 +120,8 @@ namespace TPI
                 nudCodMaterial.Value = oMaterial.Codigo;
                 nudCantidad.Value = (decimal)oMaterial.Cantidad;
                 cboUnidadMedida.Text = oMaterial.UnidadMedida;
-                nudProveedor.Value = oMaterial.ProveedorMa;
-                dtmFechaIngreso.Value = oMaterial.FechaIngreso;
+                txtProveedor.Text = oMaterial.ProveedorMa;
+                txtFechaIngreso.Text = oMaterial.FechaIngreso;
                 
                 if (accion == 2)
                 {

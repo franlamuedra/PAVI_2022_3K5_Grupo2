@@ -24,7 +24,7 @@ namespace TPI.datos.DAO
             parametros.Add(new Parametro("@Cod_Proveedor", mat.ProveedorMa));
             parametros.Add(new Parametro("@Fecha_Ingreso", mat.FechaIngreso));
 
-            string insert = "INSERT INTO Materiales VALUES ('" + mat.Nombre + "'," + mat.Codigo + "," + mat.Cantidad + ",'" + mat.UnidadMedida + "'," + mat.ProveedorMa + "," + mat.FechaIngreso + "," + mat.Activo + ")";
+            string insert = "INSERT INTO Materiales VALUES ('" + mat.Nombre + "','" + mat.Codigo + "'," + mat.Cantidad + ",'" + mat.UnidadMedida + "','" + mat.ProveedorMa + "','" + mat.FechaIngreso + "')";
 
             int res = HelperDB.GetInstance().EjecutarSQL(insert, parametros);
             return res;
@@ -61,12 +61,12 @@ namespace TPI.datos.DAO
             {
                 Material aux = new Material();
                 aux.Nombre = row["Nombre"].ToString();
-                aux.Codigo = (int)row["Codigo"];
+                aux.Codigo = int.Parse(row["Codigo_Material"].ToString());
                 aux.UnidadMedida = row["Unidad_Medida"].ToString();
                 aux.Cantidad = double.Parse(row["Cantidad"].ToString());
-                aux.FechaIngreso = DateTime.Parse(row["Fecha_Ingreso"].ToString());
+                aux.FechaIngreso = row["Fecha_Ingreso"].ToString();
                 aux.Activo = row["Activo"].ToString().Equals("S");
-                aux.ProveedorMa = (int)row["Cod_Proveedor"];
+                aux.ProveedorMa = row["Cod_Proveedor"].ToString();
                 list.Add(aux);                            
 
             }
@@ -74,68 +74,5 @@ namespace TPI.datos.DAO
             return list;
         }
 
-        /*public List<Material> GetMaterialByFilters(Dictionary<string, object> parametros)
-        {
-            var strSql = string.Concat("" +
-                "Select Mat.Codigo_Material, " +
-                "       Mat.Nombre, " +
-                "       Mat.Cantidad, " +
-                "       Mat.Unidad_Medida, " +
-                "       Mat.Cod_Proveedor, " +
-                "       Pr.Nombre as Proveedor, " +
-                "       Mat.Fecha_Ingreso, " +
-                "       Mat.Activo " +
-                "From Materiales as Mat " +
-                "Left Join Proveedores as Pr ON Pr.Cod_Proveedor = Mat.Cod_Proveedor " +
-                "Where 1=1 ");
-
-            if (parametros.ContainsKey("Nombre"))
-                strSql += "And (Mat.Nombre like '%@Nombre%') ";
-
-            if (parametros.ContainsKey("Activo"))
-                strSql += "And (Mat.Activo like '@Activo') ";
-
-            strSql += "Order by Mat.Codigo_Material Desc";
-
-            List<Material> resultado = new List<Material>();
-
-            DataTable dt = HelperDB.GetInstance().ConsultaSQL(strSql, parametros);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                resultado.Add(MappingMaterial(row));
-            }
-
-            return resultado;
-        }*/
-
-       /* private Material MappingMaterial(DataRow row)
-        {
-            Material oMaterial = new Material();
-            oMaterial.Codigo = Convert.ToInt32(row["Codigo_Material"].ToString());
-            oMaterial.Cantidad = Convert.ToDouble(row["Cantidad"].ToString());
-
-            if (row["Activo"].ToString() == "S")
-                oMaterial.Activo = true;
-            else
-                oMaterial.Activo = false;
-
-            oMaterial.UnidadMedida = row["Unidad_Medida"].ToString();
-            oMaterial.FechaIngreso = Convert.ToDateTime(row["Fecha_Ingreso"].ToString());
-            oMaterial.Nombre = row["Nombre"].ToString();
-
-            Proveedor prov = new();
-            prov.Codigo = 2;
-            oMaterial.ProveedorMa = prov.Codigo; 
-
-            oMaterial.ProveedorMa = new Proveedor();
-            oMaterial.ProveedorMa.Codigo = Convert.ToInt32(row["Cod_Proveedor"].ToString());
-            oMaterial.ProveedorMa.Telefono = Convert.ToInt32(row["Telefono"].ToString());
-            oMaterial.ProveedorMa.Mail = row["Mail"].ToString();
-            oMaterial.ProveedorMa.Direccion = row["Direccion"].ToString();
-            oMaterial.ProveedorMa.Nombre = row["Nombre"].ToString();
-
-            return oMaterial;
-        }*/
     }
 }
