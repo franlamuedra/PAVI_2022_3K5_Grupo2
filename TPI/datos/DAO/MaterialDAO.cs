@@ -1,19 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TPI.dominio;
+using TPI.datos;
 
 namespace TPI.datos.DAO
 {
     public class MaterialDAO : IMaterialDAO
     {
-        public int Create(Material nuevo)
+        
+        public int Create(Material mat)
         {
-            throw new NotImplementedException();
+            string strSql = "INSERT INTO Materiales (Nombre, Codigo_Material, Cantidad, Unidad_Medida, Cod_Proveedor, Fecha_Ingreso, Activo)" +
+                "VALUES ('" + mat.Nombre + "'," + mat.Codigo + "," + mat.Cantidad + ",'" + mat.UnidadMedida + "'," + mat.ProveedorMa + "," + mat.FechaIngreso + "," + mat.Activo + ")";        
+
+            List<Parametro> parametros = new List<Parametro>();
+            parametros.Add(new Parametro("@Nombre", mat.Nombre));
+            parametros.Add(new Parametro("@Codigo_Material", mat.Codigo));
+            parametros.Add(new Parametro("@Cantidad", mat.Cantidad));
+            parametros.Add(new Parametro("@Unidad_Medida", mat.UnidadMedida));
+            parametros.Add(new Parametro("@Fecha_Ingreso", mat.FechaIngreso));
+            parametros.Add(new Parametro("@Cod_Proveedor", mat.ProveedorMa));
+            parametros.Add(new Parametro("@Fecha_Ingreso", mat.FechaIngreso));
+
+            int res = HelperDB.GetInstance().EjecutarSQL(strSql, parametros);
+            return res;
         }
+
 
         public List<Material> GetByFilter(string nombre, bool activo)
         {
@@ -64,9 +81,9 @@ namespace TPI.datos.DAO
                     prov.Mail = filaProv["Mail"].ToString();
                     prov.Direccion = filaProv["Direccion"].ToString();
                     // aux.ProveedorMa = prov;
-                }*/
+                }*/               
                 
-                
+
             }
 
 
@@ -124,12 +141,16 @@ namespace TPI.datos.DAO
             oMaterial.FechaIngreso = Convert.ToDateTime(row["Fecha_Ingreso"].ToString());
             oMaterial.Nombre = row["Nombre"].ToString();
 
-            oMaterial.ProveedorMa = new Proveedor();
+            Proveedor prov = new();
+            prov.Codigo = 2;
+            oMaterial.ProveedorMa = prov.Codigo; 
+
+           /* oMaterial.ProveedorMa = new Proveedor();
             oMaterial.ProveedorMa.Codigo = Convert.ToInt32(row["Cod_Proveedor"].ToString());
             oMaterial.ProveedorMa.Telefono = Convert.ToInt32(row["Telefono"].ToString());
             oMaterial.ProveedorMa.Mail = row["Mail"].ToString();
             oMaterial.ProveedorMa.Direccion = row["Direccion"].ToString();
-            oMaterial.ProveedorMa.Nombre = row["Nombre"].ToString();
+            oMaterial.ProveedorMa.Nombre = row["Nombre"].ToString();*/
 
             return oMaterial;
         }

@@ -30,6 +30,9 @@
         {
             this.lblCodigo = new System.Windows.Forms.Label();
             this.grbMaterial = new System.Windows.Forms.GroupBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.cboProveedor = new System.Windows.Forms.ComboBox();
             this.nudCodMaterial = new System.Windows.Forms.NumericUpDown();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.dtmFechaIngreso = new System.Windows.Forms.DateTimePicker();
@@ -40,9 +43,6 @@
             this.lblUnidadMedida = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.cboProveedor = new System.Windows.Forms.ComboBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.grbMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCodMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
@@ -78,6 +78,30 @@
             this.grbMaterial.TabStop = false;
             this.grbMaterial.Text = "Material";
             // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(120, 25);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(121, 23);
+            this.txtNombre.TabIndex = 20;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(63, 28);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(51, 15);
+            this.lblNombre.TabIndex = 19;
+            this.lblNombre.Text = "Nombre";
+            // 
+            // cboProveedor
+            // 
+            this.cboProveedor.FormattingEnabled = true;
+            this.cboProveedor.Location = new System.Drawing.Point(119, 160);
+            this.cboProveedor.Name = "cboProveedor";
+            this.cboProveedor.Size = new System.Drawing.Size(211, 23);
+            this.cboProveedor.TabIndex = 18;
+            // 
             // nudCodMaterial
             // 
             this.nudCodMaterial.Location = new System.Drawing.Point(119, 56);
@@ -104,10 +128,13 @@
             // 
             // dtmFechaIngreso
             // 
+            this.dtmFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtmFechaIngreso.Location = new System.Drawing.Point(120, 197);
+            this.dtmFechaIngreso.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             this.dtmFechaIngreso.Name = "dtmFechaIngreso";
             this.dtmFechaIngreso.Size = new System.Drawing.Size(210, 23);
             this.dtmFechaIngreso.TabIndex = 12;
+            this.dtmFechaIngreso.Value = new System.DateTime(2022, 9, 26, 21, 17, 31, 0);
             // 
             // cboUnidadMedida
             // 
@@ -178,30 +205,6 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // cboProveedor
-            // 
-            this.cboProveedor.FormattingEnabled = true;
-            this.cboProveedor.Location = new System.Drawing.Point(119, 160);
-            this.cboProveedor.Name = "cboProveedor";
-            this.cboProveedor.Size = new System.Drawing.Size(211, 23);
-            this.cboProveedor.TabIndex = 18;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(63, 28);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(51, 15);
-            this.lblNombre.TabIndex = 19;
-            this.lblNombre.Text = "Nombre";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(120, 25);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(121, 23);
-            this.txtNombre.TabIndex = 20;
             // 
             // FrmAltaMaterial
             // 

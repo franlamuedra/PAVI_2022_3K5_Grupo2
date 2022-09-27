@@ -22,4 +22,7 @@ namespace TPI.dominio
             Vida_Util = vid;
         }
     }
+
+
+
 }

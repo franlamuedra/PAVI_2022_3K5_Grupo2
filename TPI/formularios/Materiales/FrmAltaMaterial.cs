@@ -152,5 +152,6 @@ namespace TPI
             //SelectedIndex: establece el índice que especifica el elemento seleccionado actualmente.
             cbo.SelectedIndex = -1;
         }
+
     }
 }
