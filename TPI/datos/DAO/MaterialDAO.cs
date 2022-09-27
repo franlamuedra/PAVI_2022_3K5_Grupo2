@@ -11,23 +11,22 @@ using TPI.datos;
 namespace TPI.datos.DAO
 {
     public class MaterialDAO : IMaterialDAO
-    {
-        
+    {   
         public int Create(Material mat)
-        {
-            string strSql = "INSERT INTO Materiales (Nombre, Codigo_Material, Cantidad, Unidad_Medida, Cod_Proveedor, Fecha_Ingreso, Activo)" +
-                "VALUES ('" + mat.Nombre + "'," + mat.Codigo + "," + mat.Cantidad + ",'" + mat.UnidadMedida + "'," + mat.ProveedorMa + "," + mat.FechaIngreso + "," + mat.Activo + ")";        
+        {                  
 
             List<Parametro> parametros = new List<Parametro>();
             parametros.Add(new Parametro("@Nombre", mat.Nombre));
             parametros.Add(new Parametro("@Codigo_Material", mat.Codigo));
             parametros.Add(new Parametro("@Cantidad", mat.Cantidad));
             parametros.Add(new Parametro("@Unidad_Medida", mat.UnidadMedida));
-            parametros.Add(new Parametro("@Fecha_Ingreso", mat.FechaIngreso));
+            parametros.Add(new Parametro("@Activo", mat.Activo));
             parametros.Add(new Parametro("@Cod_Proveedor", mat.ProveedorMa));
             parametros.Add(new Parametro("@Fecha_Ingreso", mat.FechaIngreso));
 
-            int res = HelperDB.GetInstance().EjecutarSQL(strSql, parametros);
+            string insert = "INSERT INTO Materiales VALUES ('" + mat.Nombre + "'," + mat.Codigo + "," + mat.Cantidad + ",'" + mat.UnidadMedida + "'," + mat.ProveedorMa + "," + mat.FechaIngreso + "," + mat.Activo + ")";
+
+            int res = HelperDB.GetInstance().EjecutarSQL(insert, parametros);
             return res;
         }
 
@@ -45,16 +44,16 @@ namespace TPI.datos.DAO
 
             if (activo)
             {
-                query += " AND @Activo = 'S'";
+                query += " AND Activo = 'S'";
             }
             else
             {
-                query += " AND @Activo = 'N'";
+                query += " AND Activo = 'N'";
             }
 
-            Dictionary<string, object> parametros = new Dictionary<string, object>();
-            parametros.Add("nombre", nombre);
-            parametros.Add("activo", activo);
+            List<Parametro> parametros = new List<Parametro>();
+            parametros.Add(new Parametro("@Nombre", nombre));
+            parametros.Add(new Parametro("@Activo", activo));
 
             DataTable resultado = HelperDB.GetInstance().ConsultaSQL(query, parametros);
 
@@ -62,36 +61,20 @@ namespace TPI.datos.DAO
             {
                 Material aux = new Material();
                 aux.Nombre = row["Nombre"].ToString();
+                aux.Codigo = (int)row["Codigo"];
                 aux.UnidadMedida = row["Unidad_Medida"].ToString();
                 aux.Cantidad = double.Parse(row["Cantidad"].ToString());
                 aux.FechaIngreso = DateTime.Parse(row["Fecha_Ingreso"].ToString());
                 aux.Activo = row["Activo"].ToString().Equals("S");
-                //int nroProv = int.Parse(row["Cod_Proveedor"].ToString());
-                //aux.ProveedorMa = row["Cod_Proveedor"].ToString();
-                list.Add(aux);
-
-                /*string queryProv = "Select * From Proveedores Where Cod_Proveedor = @nroProv";
-                parametros.Add("nroProv", nroProv);
-                DataTable resProv = HelperDB.GetInstance().ConsultaSQL(queryProv, parametros);
-                foreach (DataRow filaProv in resProv.Rows)
-                {
-                    Proveedor prov = new Proveedor();
-                    prov.Telefono = int.Parse(filaProv["Telefono"].ToString());
-                    prov.Nombre = filaProv["Nombre"].ToString();
-                    prov.Mail = filaProv["Mail"].ToString();
-                    prov.Direccion = filaProv["Direccion"].ToString();
-                    // aux.ProveedorMa = prov;
-                }*/               
-                
+                aux.ProveedorMa = (int)row["Cod_Proveedor"];
+                list.Add(aux);                            
 
             }
 
-
             return list;
-
         }
 
-        public List<Material> GetMaterialByFilters(Dictionary<string, object> parametros)
+        /*public List<Material> GetMaterialByFilters(Dictionary<string, object> parametros)
         {
             var strSql = string.Concat("" +
                 "Select Mat.Codigo_Material, " +
@@ -124,9 +107,9 @@ namespace TPI.datos.DAO
             }
 
             return resultado;
-        }
+        }*/
 
-        private Material MappingMaterial(DataRow row)
+       /* private Material MappingMaterial(DataRow row)
         {
             Material oMaterial = new Material();
             oMaterial.Codigo = Convert.ToInt32(row["Codigo_Material"].ToString());
@@ -145,14 +128,14 @@ namespace TPI.datos.DAO
             prov.Codigo = 2;
             oMaterial.ProveedorMa = prov.Codigo; 
 
-           /* oMaterial.ProveedorMa = new Proveedor();
+            oMaterial.ProveedorMa = new Proveedor();
             oMaterial.ProveedorMa.Codigo = Convert.ToInt32(row["Cod_Proveedor"].ToString());
             oMaterial.ProveedorMa.Telefono = Convert.ToInt32(row["Telefono"].ToString());
             oMaterial.ProveedorMa.Mail = row["Mail"].ToString();
             oMaterial.ProveedorMa.Direccion = row["Direccion"].ToString();
-            oMaterial.ProveedorMa.Nombre = row["Nombre"].ToString();*/
+            oMaterial.ProveedorMa.Nombre = row["Nombre"].ToString();
 
             return oMaterial;
-        }
+        }*/
     }
 }

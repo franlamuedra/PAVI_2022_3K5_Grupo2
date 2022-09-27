@@ -28,10 +28,10 @@ namespace TPI.datos
             return instance;
         }
         
-        public DataTable ConsultaSQL(string strSql, Dictionary<string, object> prs = null)
+        public DataTable ConsultaSQL(string strSql, List<Parametro> lst = null)
         {
 
-            SqlConnection dbConnection = new SqlConnection();
+            /*SqlConnection dbConnection = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             DataTable tabla = new DataTable();
             try
@@ -63,7 +63,29 @@ namespace TPI.datos
             {
                 if (dbConnection.State != ConnectionState.Closed)
                     dbConnection.Close();
+            }*/
+
+            SqlCommand cmd = new SqlCommand();
+            DataTable tabla = new DataTable();
+
+            cnn.Open();
+            cmd.Connection = cnn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = strSql;
+
+            if (lst != null && lst.Count > 0)
+            {
+                foreach (Parametro p in lst)
+                {
+                    cmd.Parameters.AddWithValue(p.Nombre, p.Valor);
+                }
             }
+
+            tabla.Load(cmd.ExecuteReader());
+            cnn.Close();
+
+            return tabla;
+            
         }
 
         public int EjecutarSQL(string strSql, List<Parametro> lst)

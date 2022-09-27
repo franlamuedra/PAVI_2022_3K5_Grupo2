@@ -47,29 +47,15 @@ namespace TPI
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            Dictionary<string, object> parametros = new Dictionary<String, object>();
+            // Dictionary<string, object> parametros = new Dictionary<String, object>();
             GestorMateriales gestor = new GestorMateriales();
-            String nombre = txtNombre.Text;
-            bool activo = chkActivo.Checked;
-
-            if (!string.IsNullOrEmpty(nombre))
-                parametros.Add("Nombre", nombre);
-
-            if (activo)
-                parametros.Add("Activo", "S");
-            else
-                parametros.Add("Activo", "N");
-
-
-            List<Material> lista = gestor.ConsultarMaterialFiltro(parametros);
-
+            List<Material> lista = gestor.ConsultarMaterialFiltro(txtNombre.Text, chkActivo.Checked);
             dgvMaterial.Rows.Clear();
             if (lista.Count > 0)
             {
-                dgvMaterial.DataSource = lista;
                 foreach (Material oMaterial in lista)
                 {
-                    dgvMaterial.Rows.Add(new object[] { oMaterial.Codigo, oMaterial.Cantidad, oMaterial.UnidadMedida, oMaterial.FechaIngreso, oMaterial.ProveedorMa });
+                    dgvMaterial.Rows.Add(new object[] { oMaterial.Nombre, oMaterial.Codigo, oMaterial.Cantidad, oMaterial.UnidadMedida, oMaterial.FechaIngreso, oMaterial.ProveedorMa, oMaterial.Activo });
                 }
                 habilitarControles(true);
             }
@@ -78,6 +64,7 @@ namespace TPI
                 habilitarControles(false);
             }
         }
+        
 
         private void habilitarControles(bool v)
         {

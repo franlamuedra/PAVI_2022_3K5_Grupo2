@@ -32,7 +32,6 @@
             this.grbMaterial = new System.Windows.Forms.GroupBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.cboProveedor = new System.Windows.Forms.ComboBox();
             this.nudCodMaterial = new System.Windows.Forms.NumericUpDown();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.dtmFechaIngreso = new System.Windows.Forms.DateTimePicker();
@@ -43,9 +42,11 @@
             this.lblUnidadMedida = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.nudProveedor = new System.Windows.Forms.NumericUpDown();
             this.grbMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCodMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudProveedor)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -59,9 +60,9 @@
             // 
             // grbMaterial
             // 
+            this.grbMaterial.Controls.Add(this.nudProveedor);
             this.grbMaterial.Controls.Add(this.txtNombre);
             this.grbMaterial.Controls.Add(this.lblNombre);
-            this.grbMaterial.Controls.Add(this.cboProveedor);
             this.grbMaterial.Controls.Add(this.nudCodMaterial);
             this.grbMaterial.Controls.Add(this.nudCantidad);
             this.grbMaterial.Controls.Add(this.dtmFechaIngreso);
@@ -93,14 +94,6 @@
             this.lblNombre.Size = new System.Drawing.Size(51, 15);
             this.lblNombre.TabIndex = 19;
             this.lblNombre.Text = "Nombre";
-            // 
-            // cboProveedor
-            // 
-            this.cboProveedor.FormattingEnabled = true;
-            this.cboProveedor.Location = new System.Drawing.Point(119, 160);
-            this.cboProveedor.Name = "cboProveedor";
-            this.cboProveedor.Size = new System.Drawing.Size(211, 23);
-            this.cboProveedor.TabIndex = 18;
             // 
             // nudCodMaterial
             // 
@@ -134,7 +127,7 @@
             this.dtmFechaIngreso.Name = "dtmFechaIngreso";
             this.dtmFechaIngreso.Size = new System.Drawing.Size(210, 23);
             this.dtmFechaIngreso.TabIndex = 12;
-            this.dtmFechaIngreso.Value = new System.DateTime(2022, 9, 26, 21, 17, 31, 0);
+            this.dtmFechaIngreso.Value = new System.DateTime(2022, 9, 22, 0, 0, 0, 0);
             // 
             // cboUnidadMedida
             // 
@@ -206,6 +199,18 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // nudProveedor
+            // 
+            this.nudProveedor.Location = new System.Drawing.Point(119, 161);
+            this.nudProveedor.Name = "nudProveedor";
+            this.nudProveedor.Size = new System.Drawing.Size(120, 23);
+            this.nudProveedor.TabIndex = 21;
+            this.nudProveedor.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // FrmAltaMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -222,6 +227,7 @@
             this.grbMaterial.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCodMaterial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudProveedor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,8 +246,8 @@
         private DateTimePicker dtmFechaIngreso;
         private NumericUpDown nudCodMaterial;
         private NumericUpDown nudCantidad;
-        private ComboBox cboProveedor;
         private TextBox txtNombre;
         private Label lblNombre;
+        private NumericUpDown nudProveedor;
     }
 }
