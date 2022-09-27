@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TPI.dominio;
 using TPI.datos;
+using TPI.formularios;
 
 namespace TPI
 {
@@ -42,8 +43,16 @@ namespace TPI
                 return;
             }
 
+            if (txtProveedor.Text.Equals(String.Empty))
+            {
+                MessageBox.Show("Debe elegir la unidad de Medida", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+
             if (accion == 1)
             {
+                
                 int res = gestor.CrearMaterial(oMaterial);
 
                 if (res == 1)
@@ -63,13 +72,13 @@ namespace TPI
               
                 List<Parametro> lista = new List<Parametro>();
                 lista.Add(new Parametro("@nombre", oMaterial.Nombre));
-                lista.Add(new Parametro("@codigo", oMaterial.Codigo));
+                //lista.Add(new Parametro("@codigo", oMaterial.Codigo));
                 lista.Add(new Parametro("@cantidad", oMaterial.Cantidad));
                 lista.Add(new Parametro("@unidad", oMaterial.UnidadMedida));
                 lista.Add(new Parametro("@fecha", oMaterial.FechaIngreso));
                 lista.Add(new Parametro("@proveedor", oMaterial.ProveedorMa));
 
-                string update = "UPDATE Materiales SET nombre = @nombre, Codigo_Material = @codigo, Cantidad = @cantidad, Unidad_Medida = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha WHERE Codigo_Material = @codigo";
+                string update = "UPDATE Materiales SET nombre = @nombre, Cantidad = @cantidad, Unidad_Medida = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha WHERE Codigo_Material = @codigo";
 
                 int res = new HelperDB().EjecutarSQL(update, lista);
 
