@@ -14,9 +14,12 @@ namespace TPI.datos
         private static HelperDB instance;
 
         private string string_conexion;
+
+        private SqlConnection cnn;
         public HelperDB()
         {
-            string_conexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=Ferreteria_Industrial;Integrated Security=True";//acceso a BD
+            cnn = new SqlConnection(Properties.Resources.cnnString);
+            string_conexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=Ferreteria_Industrial;Integrated Security=True";
         }
         public static HelperDB GetInstance()
         {
@@ -24,7 +27,7 @@ namespace TPI.datos
                 instance = new HelperDB();
             return instance;
         }
-
+        
         public DataTable ConsultaSQL(string strSql, Dictionary<string, object> prs = null)
         {
 
@@ -63,45 +66,23 @@ namespace TPI.datos
             }
         }
 
-        public int EjecutarSQL(string strSql, Dictionary<string, object> prs = null)
+        public int EjecutarSQL(string strSql, List<Parametro> lst)
         {
-            // Se utiliza para sentencias SQL del tipo “Insert/Update/Delete”
-            SqlConnection dbConnection = new SqlConnection();
+            int rafc = 0;
             SqlCommand cmd = new SqlCommand();
+            cnn.Open();
+            cmd.Connection = cnn;
+            cmd.CommandText = strSql;
 
-            int rtdo = 0;
-
-            // Try Catch Finally
-            // Trata de ejecutar el código contenido dentro del bloque Try - Catch
-            // Si hay error lo capta a través de una excepción
-            // Si no hubo error
-            try
+            foreach (Parametro p in lst)
             {
-                dbConnection.ConnectionString = string_conexion;
-                dbConnection.Open();
-                cmd.Connection = dbConnection;
-                cmd.CommandType = CommandType.Text;
-                // Establece la instrucción a ejecutar
-                cmd.CommandText = strSql;
-
-                //Agregamos a la colección de parámetros del comando los filtros recibidos
-                if (prs != null)
-                {
-                    foreach (var item in prs)
-                    {
-                        cmd.Parameters.AddWithValue(item.Key, item.Value);
-                    }
-                }
-
-                // Retorna el resultado de ejecutar el comando
-                rtdo = cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                cmd.Parameters.AddWithValue(p.Nombre, p.Valor);
             }
 
-            return rtdo;
+            rafc = cmd.ExecuteNonQuery();
+            cnn.Close();
+
+            return rafc;                    
         }
 
         public object ConsultaSQLScalar(string strSql)
@@ -124,5 +105,9 @@ namespace TPI.datos
             }
         }
 
+        
+
     }
+    
+
 }
