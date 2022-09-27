@@ -52,7 +52,13 @@ namespace TPI
 
             if (accion == 1)
             {
-                
+                txtNombre.Text = oMaterial.Nombre;
+                nudCodMaterial.Value = oMaterial.Codigo;
+                nudCantidad.Value = (decimal)oMaterial.Cantidad;
+                cboUnidadMedida.Text = oMaterial.UnidadMedida;
+                txtProveedor.Text = oMaterial.ProveedorMa;
+                txtFechaIngreso.Text = oMaterial.FechaIngreso;
+
                 int res = gestor.CrearMaterial(oMaterial);
 
                 if (res == 1)
