@@ -63,7 +63,7 @@ namespace TPI.datos
             }
         }
 
-        public int EjecutarSQL(string strSql, Dictionary<string, object> prs = null)
+        public int EjecutarSQL(string strSql, Dictionary <string, object> prs = null)
         {
             // Se utiliza para sentencias SQL del tipo “Insert/Update/Delete”
             SqlConnection dbConnection = new SqlConnection();
