@@ -157,12 +157,12 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Materiales](
-	[Nombre] [nvarchar] (20) NOT NULL,
-	[Codigo_Material] [varchar](20) NOT NULL,
-	[Cantidad] [int] NULL,
-	[Unidad_Medida] [nvarchar](50) NULL,
-	[Cod_Proveedor] [varchar](50) NULL,
-	[Fecha_Ingreso] [nvarchar](12) NULL,
+	[Nombre] [nvarchar] (100) NOT NULL,
+	Codigo_Material int identity (1,1),
+	[Cantidad] [float] NULL,
+	[Unidad_Medida] [nvarchar](100) NULL,
+	Cod_Proveedor int,
+	[Fecha_Ingreso] [nvarchar](100) NULL,
 	[Activo] [varchar] (1) NOT NULL
  CONSTRAINT [PK_Materiales] PRIMARY KEY CLUSTERED 
 (

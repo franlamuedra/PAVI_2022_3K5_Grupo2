@@ -13,18 +13,17 @@ namespace TPI.datos.DAO
     public class MaterialDAO : IMaterialDAO
     {   
         public int Create(Material mat)
-        {                  
-
+        {
+            string activo = "S";
             List<Parametro> parametros = new List<Parametro>();
             parametros.Add(new Parametro("@Nombre", mat.Nombre));
-            parametros.Add(new Parametro("@Codigo_Material", mat.Codigo));
             parametros.Add(new Parametro("@Cantidad", mat.Cantidad));
             parametros.Add(new Parametro("@Unidad_Medida", mat.UnidadMedida));
-            parametros.Add(new Parametro("@Activo", mat.Activo));
             parametros.Add(new Parametro("@Cod_Proveedor", mat.ProveedorMa));
-            parametros.Add(new Parametro("@Fecha_Ingreso", mat.FechaIngreso));
+            parametros.Add(new Parametro("@Fecha_Ingreso", mat.FechaIngreso));    
+            parametros.Add(new Parametro("@Activo", activo));
 
-            string insert = "INSERT INTO Materiales VALUES ('" + mat.Nombre + "','" + mat.Codigo + "'," + mat.Cantidad + ",'" + mat.UnidadMedida + "','" + mat.ProveedorMa + "','" + mat.FechaIngreso + "')";
+            string insert = "INSERT INTO Materiales VALUES ('" + mat.Nombre + "'," + mat.Cantidad + ",'" + mat.UnidadMedida + "'," + mat.ProveedorMa + ",'" + mat.FechaIngreso + "','" + activo + "')";
 
             int res = HelperDB.GetInstance().EjecutarSQL(insert, parametros);
             return res;
@@ -63,10 +62,10 @@ namespace TPI.datos.DAO
                 aux.Nombre = row["Nombre"].ToString();
                 aux.Codigo = int.Parse(row["Codigo_Material"].ToString());
                 aux.UnidadMedida = row["Unidad_Medida"].ToString();
-                aux.Cantidad = double.Parse(row["Cantidad"].ToString());
+                aux.Cantidad = float.Parse(row["Cantidad"].ToString());
                 aux.FechaIngreso = row["Fecha_Ingreso"].ToString();
                 aux.Activo = row["Activo"].ToString().Equals("S");
-                aux.ProveedorMa = row["Cod_Proveedor"].ToString();
+                aux.ProveedorMa = int.Parse(row["Cod_Proveedor"].ToString());
                 list.Add(aux);                            
 
             }

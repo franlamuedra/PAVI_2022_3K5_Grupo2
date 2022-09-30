@@ -43,22 +43,22 @@ namespace TPI
                 return;
             }
 
-            if (txtProveedor.Text.Equals(String.Empty))
+            if (nudProveedor.Value.Equals(String.Empty))
             {
                 MessageBox.Show("Debe elegir la unidad de Medida", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
+            oMaterial.Nombre = txtNombre.Text;
+            oMaterial.Cantidad = (float)nudCantidad.Value;
+            oMaterial.UnidadMedida = cboUnidadMedida.Text;
+            oMaterial.ProveedorMa = (int)nudProveedor.Value;
+            oMaterial.FechaIngreso = txtFechaIngreso.Text;
+            oMaterial.Activo = true;
 
             if (accion == 1)
             {
-                txtNombre.Text = oMaterial.Nombre;
-                nudCodMaterial.Value = oMaterial.Codigo;
-                nudCantidad.Value = (decimal)oMaterial.Cantidad;
-                cboUnidadMedida.Text = oMaterial.UnidadMedida;
-                txtProveedor.Text = oMaterial.ProveedorMa;
-                txtFechaIngreso.Text = oMaterial.FechaIngreso;
-
+               
                 int res = gestor.CrearMaterial(oMaterial);
 
                 if (res == 1)
@@ -78,13 +78,13 @@ namespace TPI
               
                 List<Parametro> lista = new List<Parametro>();
                 lista.Add(new Parametro("@nombre", oMaterial.Nombre));
-                //lista.Add(new Parametro("@codigo", oMaterial.Codigo));
+                lista.Add(new Parametro("@codigo", oMaterial.Codigo));
                 lista.Add(new Parametro("@cantidad", oMaterial.Cantidad));
                 lista.Add(new Parametro("@unidad", oMaterial.UnidadMedida));
                 lista.Add(new Parametro("@fecha", oMaterial.FechaIngreso));
                 lista.Add(new Parametro("@proveedor", oMaterial.ProveedorMa));
 
-                string update = "UPDATE Materiales SET nombre = @nombre, Cantidad = @cantidad, Unidad_Medida = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha WHERE Codigo_Material = @codigo";
+                string update = "UPDATE Materiales SET Nombre = @nombre, Cantidad = @cantidad, Unidad_Medida = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha WHERE Codigo_Material = @codigo";
 
                 int res = new HelperDB().EjecutarSQL(update, lista);
 
@@ -132,10 +132,9 @@ namespace TPI
             if (accion != 1)
             {
                 txtNombre.Text = oMaterial.Nombre;
-                nudCodMaterial.Value = oMaterial.Codigo;
                 nudCantidad.Value = (decimal)oMaterial.Cantidad;
                 cboUnidadMedida.Text = oMaterial.UnidadMedida;
-                txtProveedor.Text = oMaterial.ProveedorMa;
+                nudProveedor.Value = oMaterial.ProveedorMa;
                 txtFechaIngreso.Text = oMaterial.FechaIngreso;
                 
                 if (accion == 2)

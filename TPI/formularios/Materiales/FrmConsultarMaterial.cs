@@ -87,10 +87,10 @@ namespace TPI
             Material oSelected = new Material();
             oSelected.Nombre = fila.Cells["ColNombre"].Value.ToString();
             oSelected.Codigo = (int)fila.Cells["ColCodigo"].Value;
-            oSelected.Cantidad = (double)fila.Cells["ColCantidad"].Value;
+            oSelected.Cantidad = (float)fila.Cells["ColCantidad"].Value;
             oSelected.UnidadMedida = fila.Cells["ColUnidad"].Value.ToString();
             oSelected.FechaIngreso = fila.Cells["ColFec"].Value.ToString();
-            oSelected.ProveedorMa = fila.Cells["ColProveedor"].Value.ToString();
+            oSelected.ProveedorMa = (int)fila.Cells["ColProveedor"].Value;
             oSelected.Activo = (bool)fila.Cells["ColActivo"].Value;
 
             return oSelected;
