@@ -13,13 +13,11 @@ namespace TPI.datos
     {
         private static HelperDB instance;
 
-        private string string_conexion;
-
         private SqlConnection cnn;
         public HelperDB()
         {
             cnn = new SqlConnection(Properties.Resources.cnnString);
-            string_conexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=Ferreteria_Industrial;Integrated Security=True";
+            
         }
         public static HelperDB GetInstance()
         {
@@ -28,42 +26,30 @@ namespace TPI.datos
             return instance;
         }
         
-        public DataTable ConsultaSQL(string strSql, Dictionary<string, object> prs = null)
+        public DataTable ConsultaSQL(string strSql, List<Parametro> lst = null)
         {
 
-            SqlConnection dbConnection = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             DataTable tabla = new DataTable();
-            try
+
+            cnn.Open();
+            cmd.Connection = cnn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = strSql;
+
+            if (lst != null && lst.Count > 0)
             {
-
-                dbConnection.ConnectionString = string_conexion;               
-                dbConnection.Open();
-                cmd.Connection = dbConnection;
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = strSql;
-
-                //Agregamos a la colección de parámetros del comando los filtros recibidos
-                if (prs != null)
+                foreach (Parametro p in lst)
                 {
-                    foreach (var item in prs)
-                    {
-                        cmd.Parameters.AddWithValue(item.Key, item.Value);
-                    }
+                    cmd.Parameters.AddWithValue(p.Nombre, p.Valor);
                 }
+            }
 
-                tabla.Load(cmd.ExecuteReader());
-                return tabla;
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-            }
-            finally
-            {
-                if (dbConnection.State != ConnectionState.Closed)
-                    dbConnection.Close();
-            }
+            tabla.Load(cmd.ExecuteReader());
+            cnn.Close();
+
+            return tabla;
+            
         }
 
         public int EjecutarSQL(string strSql, List<Parametro> lst)
@@ -84,27 +70,6 @@ namespace TPI.datos
 
             return rafc;                    
         }
-
-        public object ConsultaSQLScalar(string strSql)
-        {
-            SqlConnection dbConnection = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            try
-            {
-                dbConnection.ConnectionString = string_conexion;
-                dbConnection.Open();
-                cmd.Connection = dbConnection;
-                cmd.CommandType = CommandType.Text;
-                // Establece la instrucción a ejecutar
-                cmd.CommandText = strSql;
-                return cmd.ExecuteScalar();
-            }
-            catch (SqlException ex)
-            {
-                throw (ex);
-            }
-        }
-
         
 
     }

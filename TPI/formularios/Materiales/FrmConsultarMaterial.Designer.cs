@@ -44,8 +44,8 @@
             this.ColCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColUnidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColFec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
@@ -134,8 +134,8 @@
             this.ColCodigo,
             this.ColCantidad,
             this.ColUnidad,
-            this.ColProveedor,
             this.ColFec,
+            this.ColProveedor,
             this.ColActivo});
             this.dgvMaterial.Location = new System.Drawing.Point(23, 140);
             this.dgvMaterial.Name = "dgvMaterial";
@@ -199,13 +199,6 @@
             this.ColUnidad.ReadOnly = true;
             this.ColUnidad.Width = 130;
             // 
-            // ColProveedor
-            // 
-            this.ColProveedor.DataPropertyName = "Cod_Proveedor";
-            this.ColProveedor.HeaderText = "Proveedor";
-            this.ColProveedor.Name = "ColProveedor";
-            this.ColProveedor.ReadOnly = true;
-            // 
             // ColFec
             // 
             this.ColFec.DataPropertyName = "Fecha_Ingreso";
@@ -213,6 +206,13 @@
             this.ColFec.Name = "ColFec";
             this.ColFec.ReadOnly = true;
             this.ColFec.Width = 130;
+            // 
+            // ColProveedor
+            // 
+            this.ColProveedor.DataPropertyName = "Cod_Proveedor";
+            this.ColProveedor.HeaderText = "Proveedor";
+            this.ColProveedor.Name = "ColProveedor";
+            this.ColProveedor.ReadOnly = true;
             // 
             // ColActivo
             // 
@@ -261,8 +261,8 @@
         private DataGridViewTextBoxColumn ColCodigo;
         private DataGridViewTextBoxColumn ColCantidad;
         private DataGridViewTextBoxColumn ColUnidad;
-        private DataGridViewTextBoxColumn ColProveedor;
         private DataGridViewTextBoxColumn ColFec;
+        private DataGridViewTextBoxColumn ColProveedor;
         private DataGridViewTextBoxColumn ColActivo;
     }
 }

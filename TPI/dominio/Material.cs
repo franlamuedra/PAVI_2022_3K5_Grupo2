@@ -11,9 +11,9 @@ namespace TPI
     {
         public string Nombre { get; set; }
         public int Codigo { get; set; }
-        public double Cantidad { get; set; }
+        public float Cantidad { get; set; }
         public string UnidadMedida { get; set; }
-        public DateTime FechaIngreso { get; set; }
+        public string FechaIngreso { get; set; }
         public int ProveedorMa { get; set; }
         public bool Activo { get; set; }
         
@@ -22,7 +22,7 @@ namespace TPI
 
         }
 
-        public Material(string nom, int cod, double cant, string uni, DateTime fecIng, int prov, bool activo)
+        public Material(string nom, int cod, float cant, string uni, string fecIng, int prov, bool activo)
         {
             Codigo = cod;
             Nombre = nom;
