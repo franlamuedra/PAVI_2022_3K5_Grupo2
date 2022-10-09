@@ -49,7 +49,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Composiciones](
-	[Cod_Material] [nvarchar](20) NOT NULL,
+	[Cod_Material] [varchar](20) NOT NULL,
 	[Cod_Material_Componente] [nvarchar](20) NOT NULL,
 	[Porcentaje] [int] NULL,
  CONSTRAINT [PK_Composiciones] PRIMARY KEY CLUSTERED 
@@ -157,12 +157,12 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Materiales](
-	[Nombre] [nvarchar] (20) NOT NULL,
-	[Codigo_Material] [nvarchar](20) NOT NULL,
-	[Cantidad] [int] NULL,
-	[Unidad_Medida] [nvarchar](50) NULL,
-	[Cod_Proveedor] [nvarchar](50) NULL,
-	[Fecha_Ingreso] [datetime] NULL,
+	[Nombre] [nvarchar] (100) NOT NULL,
+	Codigo_Material int identity (1,1),
+	[Cantidad] [float] NULL,
+	[Unidad_Medida] [nvarchar](100) NULL,
+	Cod_Proveedor int,
+	[Fecha_Ingreso] [nvarchar](100) NULL,
 	[Activo] [varchar] (1) NOT NULL
  CONSTRAINT [PK_Materiales] PRIMARY KEY CLUSTERED 
 (
@@ -176,7 +176,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Proveedores](
-	[Cod_Proveedor] [nvarchar](50) NOT NULL,
+	[Cod_Proveedor] [varchar](50) NOT NULL,
 	[Nombre] [nvarchar](40) NULL,
 	[Telefono] [int] NULL,
 	[Mail] [nvarchar](80) NULL,

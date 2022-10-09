@@ -14,6 +14,7 @@ namespace TPI
             this.WindowState = FormWindowState.Maximized;
             FrmLogin login = new FrmLogin();
             login.ShowDialog();
+ 
         }
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)

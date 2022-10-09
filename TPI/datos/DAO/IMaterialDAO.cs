@@ -9,8 +9,7 @@ namespace TPI.datos.DAO
     public interface IMaterialDAO
     {
         List<Material> GetByFilter(string nombre, bool activo);
-        int Create(Material nuevo);
-
-        List<Material> GetMaterialByFilters(Dictionary<string, object> parametros);
+        int Create(Material mat);
+        
     }
 }

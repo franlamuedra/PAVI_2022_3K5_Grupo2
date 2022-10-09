@@ -21,19 +21,13 @@ namespace TPI.formularios
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "")
+            if (txtUsuario.Text == "" || txtPassword.Text == "")
             {
-                MessageBox.Show("Debe ingresar un usuario", "Control", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Debe ingresar un usuario y contrasena", "Control", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            if (txtPassword.Text == "")
-            {
-                MessageBox.Show("Debe ingresar una contraseña", "Control", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            if (ValidarCredenciales(txtUsuario.Text, txtPassword.Text))
+            else if (ValidarCredenciales(txtUsuario.Text, txtPassword.Text))
             {
                 // Mostramos un mensaje afirmativo en caso de que el usuario sea valido.
                 MessageBox.Show("Usted a ingresado al sistema.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -53,7 +47,7 @@ namespace TPI.formularios
             try
             {
 
-                String consultaSql = string.Concat(" SELECT * ", "   FROM Usuarios ", "  WHERE Usuario =  '", oUsuario, "'");           
+                String consultaSql = string.Concat(" SELECT * FROM Usuarios WHERE Usuario =  '", oUsuario, "'");           
                 DataTable res = HelperDB.GetInstance().ConsultaSQL(consultaSql);
 
                 if (res.Rows.Count >= 1)
