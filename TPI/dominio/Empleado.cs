@@ -6,20 +6,23 @@ using System.Threading.Tasks;
 
 namespace TPI.dominio
 {
-    internal class Empleado
+    public class Empleado
     {
-        public int Codigo { get; set; }
-        public string Nombre { get; set; }
-        public int Telefono { get; set; }
         public int Documento { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public int Telefono { get; set; }
         public string Direccion { get; set; }
-        public Empleado(int codigo, string nombre, int telefono, int documento, string direccion)
+
+        public Empleado( int dni, string nombre,string apellido, int telefono, string direccion)
         {
-            Codigo = codigo;
+            Documento = dni;
             Nombre = nombre;
+            Apellido = apellido;
             Telefono = telefono;
-            Documento = documento;
             Direccion = direccion;
         }
+
+        
     }
 }
