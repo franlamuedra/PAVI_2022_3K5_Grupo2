@@ -52,11 +52,10 @@ namespace TPI.datos
             
         }
 
-<<<<<<< HEAD
-        public int EjecutarSQL(string strSql, Dictionary <string, object> prs = null)
-=======
+
+
         public int EjecutarSQL(string strSql, List<Parametro> lst)
->>>>>>> e645161c7e8a9bb7fd501e394bbd042efd580aa7
+
         {
             int rafc = 0;
             SqlCommand cmd = new SqlCommand();
