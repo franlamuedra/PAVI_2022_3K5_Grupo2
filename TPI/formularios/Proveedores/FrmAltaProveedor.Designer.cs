@@ -44,7 +44,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(250, 198);
+            this.btnCancelar.Location = new System.Drawing.Point(248, 195);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 0;
@@ -64,7 +64,7 @@
             this.grbProveedor.Controls.Add(this.lblNombre);
             this.grbProveedor.Location = new System.Drawing.Point(12, 12);
             this.grbProveedor.Name = "grbProveedor";
-            this.grbProveedor.Size = new System.Drawing.Size(258, 157);
+            this.grbProveedor.Size = new System.Drawing.Size(311, 157);
             this.grbProveedor.TabIndex = 1;
             this.grbProveedor.TabStop = false;
             this.grbProveedor.Text = "Proveedor";
@@ -108,23 +108,22 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(67, 29);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(166, 23);
+            this.txtNombre.Size = new System.Drawing.Size(238, 23);
             this.txtNombre.TabIndex = 3;
             // 
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(66, 87);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(166, 23);
+            this.txtDireccion.Size = new System.Drawing.Size(238, 23);
             this.txtDireccion.TabIndex = 1;
             // 
             // txtMail
             // 
             this.txtMail.Location = new System.Drawing.Point(67, 58);
             this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(165, 23);
+            this.txtMail.Size = new System.Drawing.Size(237, 23);
             this.txtMail.TabIndex = 6;
-      
             // 
             // lblNombre
             // 
@@ -137,7 +136,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(169, 198);
+            this.btnAceptar.Location = new System.Drawing.Point(167, 195);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 2;
@@ -149,10 +148,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 233);
+            this.ClientSize = new System.Drawing.Size(335, 230);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.grbProveedor);
             this.Controls.Add(this.btnCancelar);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(351, 269);
+            this.MinimumSize = new System.Drawing.Size(351, 269);
             this.Name = "FrmAltaProveedor";
             this.Text = "Registrar Proveedor";
             this.Load += new System.EventHandler(this.FrmAltaProveedor_Load);
