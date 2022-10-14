@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.grbMaterial = new System.Windows.Forms.GroupBox();
-            this.txtFechaIngreso = new System.Windows.Forms.TextBox();
+            this.nudProveedor = new System.Windows.Forms.NumericUpDown();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
@@ -40,16 +40,17 @@
             this.lblUnidadMedida = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.nudProveedor = new System.Windows.Forms.NumericUpDown();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.mtxtFechaIngreso = new System.Windows.Forms.MaskedTextBox();
             this.grbMaterial.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudProveedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // grbMaterial
             // 
+            this.grbMaterial.Controls.Add(this.mtxtFechaIngreso);
             this.grbMaterial.Controls.Add(this.nudProveedor);
-            this.grbMaterial.Controls.Add(this.txtFechaIngreso);
             this.grbMaterial.Controls.Add(this.txtNombre);
             this.grbMaterial.Controls.Add(this.lblNombre);
             this.grbMaterial.Controls.Add(this.nudCantidad);
@@ -65,18 +66,24 @@
             this.grbMaterial.TabStop = false;
             this.grbMaterial.Text = "Material";
             // 
-            // txtFechaIngreso
+            // nudProveedor
             // 
-            this.txtFechaIngreso.Location = new System.Drawing.Point(119, 141);
-            this.txtFechaIngreso.Name = "txtFechaIngreso";
-            this.txtFechaIngreso.Size = new System.Drawing.Size(218, 23);
-            this.txtFechaIngreso.TabIndex = 22;
+            this.nudProveedor.Location = new System.Drawing.Point(119, 112);
+            this.nudProveedor.Name = "nudProveedor";
+            this.nudProveedor.Size = new System.Drawing.Size(219, 23);
+            this.nudProveedor.TabIndex = 23;
+            this.nudProveedor.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(120, 25);
+            this.txtNombre.MaxLength = 100;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(216, 23);
+            this.txtNombre.Size = new System.Drawing.Size(218, 23);
             this.txtNombre.TabIndex = 20;
             // 
             // lblNombre
@@ -92,7 +99,7 @@
             // 
             this.nudCantidad.Location = new System.Drawing.Point(120, 54);
             this.nudCantidad.Name = "nudCantidad";
-            this.nudCantidad.Size = new System.Drawing.Size(217, 23);
+            this.nudCantidad.Size = new System.Drawing.Size(218, 23);
             this.nudCantidad.TabIndex = 16;
             this.nudCantidad.Value = new decimal(new int[] {
             1,
@@ -170,17 +177,14 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // nudProveedor
+            // mtxtFechaIngreso
             // 
-            this.nudProveedor.Location = new System.Drawing.Point(119, 112);
-            this.nudProveedor.Name = "nudProveedor";
-            this.nudProveedor.Size = new System.Drawing.Size(217, 23);
-            this.nudProveedor.TabIndex = 23;
-            this.nudProveedor.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.mtxtFechaIngreso.Location = new System.Drawing.Point(120, 141);
+            this.mtxtFechaIngreso.Mask = "00/00/0000";
+            this.mtxtFechaIngreso.Name = "mtxtFechaIngreso";
+            this.mtxtFechaIngreso.Size = new System.Drawing.Size(218, 23);
+            this.mtxtFechaIngreso.TabIndex = 24;
+            this.mtxtFechaIngreso.ValidatingType = typeof(System.DateTime);
             // 
             // FrmAltaMaterial
             // 
@@ -195,8 +199,8 @@
             this.Load += new System.EventHandler(this.FrmAltaMaterial_Load);
             this.grbMaterial.ResumeLayout(false);
             this.grbMaterial.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudProveedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -213,7 +217,8 @@
         private NumericUpDown nudCantidad;
         private TextBox txtNombre;
         private Label lblNombre;
-        private TextBox txtFechaIngreso;
         private NumericUpDown nudProveedor;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private MaskedTextBox mtxtFechaIngreso;
     }
 }

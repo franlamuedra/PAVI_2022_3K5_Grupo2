@@ -52,8 +52,6 @@ namespace TPI.datos
             
         }
 
-
-
         public int EjecutarSQL(string strSql, List<Parametro> lst)
 
         {

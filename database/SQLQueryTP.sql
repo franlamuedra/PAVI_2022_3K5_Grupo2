@@ -337,8 +337,7 @@ REFERENCES [dbo].[Herramientas] ([Marca_Herramienta], [Modelo_Herramienta])
 GO
 ALTER TABLE [dbo].[Mantenimientos] CHECK CONSTRAINT [FK_Mantenimientos_Herramientas]
 GO
-ALTER TABLE [dbo].[Materiales]  WITH CHECK ADD  CONSTRAINT [FK_Materiales_Proveedores] FOREIGN KEY([Cod_Proveedor])
-REFERENCES [dbo].[Proveedores] ([Cod_Proveedor])
+ALTER TABLE [dbo].[Materiales]  WITH CHECK ADD  CONSTRAINT [FK_Materiales] FOREIGN KEY([Cod_Proveedor]) REFERENCES [dbo].[Proveedores] ([Cod_Proveedor])
 GO
 ALTER TABLE [dbo].[Materiales] CHECK CONSTRAINT [FK_Materiales_Proveedores]
 GO

@@ -37,9 +37,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.dgvMaterial = new System.Windows.Forms.DataGridView();
-            this.lblMateriales = new System.Windows.Forms.Label();
-            this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.chkActivo = new System.Windows.Forms.CheckBox();
             this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +44,9 @@
             this.ColFec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblMateriales = new System.Windows.Forms.Label();
+            this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chkActivo = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSalir.Location = new System.Drawing.Point(626, 426);
+            this.btnSalir.Location = new System.Drawing.Point(628, 426);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(82, 38);
             this.btnSalir.TabIndex = 20;
@@ -65,7 +65,7 @@
             // btnConsultar
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnConsultar.Location = new System.Drawing.Point(621, 80);
+            this.btnConsultar.Location = new System.Drawing.Point(621, 79);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(89, 33);
             this.btnConsultar.TabIndex = 19;
@@ -76,7 +76,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEditar.Location = new System.Drawing.Point(109, 426);
+            this.btnEditar.Location = new System.Drawing.Point(94, 426);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(82, 38);
             this.btnEditar.TabIndex = 18;
@@ -87,7 +87,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEliminar.Location = new System.Drawing.Point(197, 426);
+            this.btnEliminar.Location = new System.Drawing.Point(182, 426);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(82, 38);
             this.btnEliminar.TabIndex = 17;
@@ -98,7 +98,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAgregar.Location = new System.Drawing.Point(21, 426);
+            this.btnAgregar.Location = new System.Drawing.Point(7, 426);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(82, 38);
             this.btnAgregar.TabIndex = 16;
@@ -109,7 +109,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNombre.Location = new System.Drawing.Point(95, 65);
+            this.txtNombre.Location = new System.Drawing.Point(86, 72);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(289, 29);
             this.txtNombre.TabIndex = 15;
@@ -118,7 +118,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNombre.Location = new System.Drawing.Point(21, 68);
+            this.lblNombre.Location = new System.Drawing.Point(12, 75);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(68, 21);
             this.lblNombre.TabIndex = 14;
@@ -137,36 +137,12 @@
             this.ColFec,
             this.ColProveedor,
             this.ColActivo});
-            this.dgvMaterial.Location = new System.Drawing.Point(23, 140);
+            this.dgvMaterial.Location = new System.Drawing.Point(12, 140);
             this.dgvMaterial.Name = "dgvMaterial";
             this.dgvMaterial.ReadOnly = true;
             this.dgvMaterial.RowTemplate.Height = 25;
-            this.dgvMaterial.Size = new System.Drawing.Size(687, 257);
+            this.dgvMaterial.Size = new System.Drawing.Size(698, 257);
             this.dgvMaterial.TabIndex = 13;
-            // 
-            // lblMateriales
-            // 
-            this.lblMateriales.AutoSize = true;
-            this.lblMateriales.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMateriales.Location = new System.Drawing.Point(21, 13);
-            this.lblMateriales.Name = "lblMateriales";
-            this.lblMateriales.Size = new System.Drawing.Size(133, 32);
-            this.lblMateriales.TabIndex = 12;
-            this.lblMateriales.Text = "Materiales";
-            // 
-            // materialBindingSource
-            // 
-            this.materialBindingSource.DataSource = typeof(TPI.Material);
-            // 
-            // chkActivo
-            // 
-            this.chkActivo.AutoSize = true;
-            this.chkActivo.Location = new System.Drawing.Point(403, 68);
-            this.chkActivo.Name = "chkActivo";
-            this.chkActivo.Size = new System.Drawing.Size(65, 19);
-            this.chkActivo.TabIndex = 21;
-            this.chkActivo.Text = "Activo?";
-            this.chkActivo.UseVisualStyleBackColor = true;
             // 
             // ColNombre
             // 
@@ -220,6 +196,30 @@
             this.ColActivo.HeaderText = "Activo?";
             this.ColActivo.Name = "ColActivo";
             this.ColActivo.ReadOnly = true;
+            // 
+            // lblMateriales
+            // 
+            this.lblMateriales.AutoSize = true;
+            this.lblMateriales.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMateriales.Location = new System.Drawing.Point(12, 9);
+            this.lblMateriales.Name = "lblMateriales";
+            this.lblMateriales.Size = new System.Drawing.Size(133, 32);
+            this.lblMateriales.TabIndex = 12;
+            this.lblMateriales.Text = "Materiales";
+            // 
+            // materialBindingSource
+            // 
+            this.materialBindingSource.DataSource = typeof(TPI.Material);
+            // 
+            // chkActivo
+            // 
+            this.chkActivo.AutoSize = true;
+            this.chkActivo.Location = new System.Drawing.Point(381, 79);
+            this.chkActivo.Name = "chkActivo";
+            this.chkActivo.Size = new System.Drawing.Size(65, 19);
+            this.chkActivo.TabIndex = 21;
+            this.chkActivo.Text = "Activo?";
+            this.chkActivo.UseVisualStyleBackColor = true;
             // 
             // FrmConsultarMaterial
             // 

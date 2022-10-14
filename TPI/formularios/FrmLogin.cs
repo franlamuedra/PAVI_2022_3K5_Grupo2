@@ -47,7 +47,7 @@ namespace TPI.formularios
             try
             {
 
-                String consultaSql = string.Concat(" SELECT * FROM Usuarios WHERE Usuario =  '", oUsuario, "'");           
+                String consultaSql = string.Concat(" SELECT * FROM t_Usuarios WHERE Usuario =  '", oUsuario, "'");           
                 DataTable res = HelperDB.GetInstance().ConsultaSQL(consultaSql);
 
                 if (res.Rows.Count >= 1)
@@ -56,6 +56,15 @@ namespace TPI.formularios
                     {
                         usuarioValido = true;
                     }
+
+                    else 
+                    {
+                        MessageBox.Show("Contraseña incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else 
+                {
+                    MessageBox.Show("Debe ingresar usuario y contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

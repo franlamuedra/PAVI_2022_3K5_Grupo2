@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TPI.dominio;
 using TPI.datos;
 using TPI.formularios;
 
@@ -53,7 +52,7 @@ namespace TPI
             oMaterial.Cantidad = (float)nudCantidad.Value;
             oMaterial.UnidadMedida = cboUnidadMedida.Text;
             oMaterial.ProveedorMa = (int)nudProveedor.Value;
-            oMaterial.FechaIngreso = txtFechaIngreso.Text;
+            oMaterial.FechaIngreso = mtxtFechaIngreso.Text;
             oMaterial.Activo = true;
 
             if (accion == 1)
@@ -84,7 +83,7 @@ namespace TPI
                 lista.Add(new Parametro("@fecha", oMaterial.FechaIngreso));
                 lista.Add(new Parametro("@proveedor", oMaterial.ProveedorMa));
 
-                string update = "UPDATE Materiales SET Nombre = @nombre, Cantidad = @cantidad, Unidad_Medida = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha WHERE Codigo_Material = @codigo";
+                string update = "UPDATE t_Materiales SET Nombre = @nombre, Cantidad = @cantidad, Unidad_Medida = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha WHERE Codigo_Material = @codigo";
 
                 int res = new HelperDB().EjecutarSQL(update, lista);
 
@@ -106,7 +105,7 @@ namespace TPI
                 List<Parametro> lst = new List<Parametro>();
                 lst.Add(new Parametro("@cod", oMaterial.Codigo));
 
-                string delete = "UPDATE Materiales SET activo = 'N' WHERE Codigo_Material = @cod";
+                string delete = "UPDATE t_Materiales SET activo = 'N' WHERE Codigo_Material = @cod";
 
                 int res = new HelperDB().EjecutarSQL(delete, lst);
                 if (res == 1)
@@ -135,7 +134,7 @@ namespace TPI
                 nudCantidad.Value = (decimal)oMaterial.Cantidad;
                 cboUnidadMedida.Text = oMaterial.UnidadMedida;
                 nudProveedor.Value = oMaterial.ProveedorMa;
-                txtFechaIngreso.Text = oMaterial.FechaIngreso;
+                mtxtFechaIngreso.Text = oMaterial.FechaIngreso;
                 
                 if (accion == 2)
                 {
@@ -150,17 +149,6 @@ namespace TPI
                 
             }
         }
-        /*private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
-        {
-            // Datasource: establece el origen de datos de este objeto.
-            cbo.DataSource = source;
-            // DisplayMember: establece la propiedad que se va a mostrar para este ListControl.
-            cbo.DisplayMember = display;
-            // ValueMember: establece la ruta de acceso de la propiedad que se utilizará como valor real para los elementos de ListControl.
-            cbo.ValueMember = value;
-            //SelectedIndex: establece el índice que especifica el elemento seleccionado actualmente.
-            cbo.SelectedIndex = -1;
-        }*/
 
     }
 }

@@ -30,11 +30,12 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmSoporte = new System.Windows.Forms.ToolStripMenuItem();
-            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarMaterialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoMaterialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarProToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmOperaciones = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAyuda = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,34 +59,19 @@
             // tsmSoporte
             // 
             this.tsmSoporte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.empleadosToolStripMenuItem,
+            this.materialesToolStripMenuItem,
             this.herramientasToolStripMenuItem,
-            this.materialesToolStripMenuItem});
+            this.proveedoresToolStripMenuItem});
             this.tsmSoporte.Name = "tsmSoporte";
             this.tsmSoporte.Size = new System.Drawing.Size(60, 20);
             this.tsmSoporte.Text = "Soporte";
             // 
-            // empleadosToolStripMenuItem
-            // 
-            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.empleadosToolStripMenuItem.Text = "Empleados";
-            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
-            // 
-            // herramientasToolStripMenuItem
-            // 
-            this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
-            this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.herramientasToolStripMenuItem.Text = "Herramientas";
-            this.herramientasToolStripMenuItem.Click += new System.EventHandler(this.herramientasToolStripMenuItem_Click);
-            // 
             // materialesToolStripMenuItem
             // 
             this.materialesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarMaterialesToolStripMenuItem,
-            this.nuevoMaterialToolStripMenuItem});
+            this.consultarMaterialesToolStripMenuItem});
             this.materialesToolStripMenuItem.Name = "materialesToolStripMenuItem";
-            this.materialesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.materialesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.materialesToolStripMenuItem.Text = "Materiales";
             // 
             // consultarMaterialesToolStripMenuItem
@@ -95,12 +81,35 @@
             this.consultarMaterialesToolStripMenuItem.Text = "Consultar materiales";
             this.consultarMaterialesToolStripMenuItem.Click += new System.EventHandler(this.consultarMaterialesToolStripMenuItem_Click);
             // 
-            // nuevoMaterialToolStripMenuItem
+            // herramientasToolStripMenuItem
             // 
-            this.nuevoMaterialToolStripMenuItem.Name = "nuevoMaterialToolStripMenuItem";
-            this.nuevoMaterialToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.nuevoMaterialToolStripMenuItem.Text = "Nuevo material";
-            this.nuevoMaterialToolStripMenuItem.Click += new System.EventHandler(this.nuevoMaterialToolStripMenuItem_Click);
+            this.herramientasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarProToolStripMenuItem});
+            this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
+            this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.herramientasToolStripMenuItem.Text = "Herramientas";
+            this.herramientasToolStripMenuItem.Click += new System.EventHandler(this.herramientasToolStripMenuItem_Click);
+            // 
+            // consultarProToolStripMenuItem
+            // 
+            this.consultarProToolStripMenuItem.Name = "consultarProToolStripMenuItem";
+            this.consultarProToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.consultarProToolStripMenuItem.Text = "Consultar herramientas";
+            // 
+            // proveedoresToolStripMenuItem
+            // 
+            this.proveedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarProveedoresToolStripMenuItem});
+            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proveedoresToolStripMenuItem.Text = "Proveedores";
+            // 
+            // consultarProveedoresToolStripMenuItem
+            // 
+            this.consultarProveedoresToolStripMenuItem.Name = "consultarProveedoresToolStripMenuItem";
+            this.consultarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.consultarProveedoresToolStripMenuItem.Text = "Consultar proveedores";
+            this.consultarProveedoresToolStripMenuItem.Click += new System.EventHandler(this.consultarProveedoresToolStripMenuItem_Click);
             // 
             // tsmOperaciones
             // 
@@ -125,7 +134,7 @@
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
@@ -151,14 +160,15 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem tsmSoporte;
-        private ToolStripMenuItem empleadosToolStripMenuItem;
         private ToolStripMenuItem herramientasToolStripMenuItem;
         private ToolStripMenuItem materialesToolStripMenuItem;
         private ToolStripMenuItem tsmAyuda;
         private ToolStripMenuItem tsmOperaciones;
         private ToolStripMenuItem tsmReportes;
         private ToolStripMenuItem consultarMaterialesToolStripMenuItem;
-        private ToolStripMenuItem nuevoMaterialToolStripMenuItem;
         private ToolStripMenuItem acercaDeToolStripMenuItem;
+        private ToolStripMenuItem consultarProToolStripMenuItem;
+        private ToolStripMenuItem proveedoresToolStripMenuItem;
+        private ToolStripMenuItem consultarProveedoresToolStripMenuItem;
     }
 }

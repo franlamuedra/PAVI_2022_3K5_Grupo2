@@ -1,4 +1,5 @@
 using TPI.formularios;
+using TPI.formularios.Proveedores;
 
 namespace TPI
 {
@@ -34,9 +35,9 @@ namespace TPI
             new FrmConsultarMaterial().ShowDialog();
         }
 
-        private void nuevoMaterialToolStripMenuItem_Click(object sender, EventArgs e)
+        private void consultarProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new FrmAltaMaterial(1, new Material()).ShowDialog();          
+            new FrmConsultarProveedor().ShowDialog();
         }
 
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,5 +45,7 @@ namespace TPI
             MessageBox.Show("App Ferreteria Industrial V1.0", "PAVI2022", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
         }
+
+        
     }
 }
