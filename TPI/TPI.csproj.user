@@ -28,5 +28,8 @@
     <Compile Update="formularios\Proveedores\FrmConsultarProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="formularios\Transacciones\FrmMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
