@@ -11,7 +11,7 @@ namespace TPI.dominio
         public int Numero_Mantenimiento { get; set; }
         public int Codigo_Herramienta { get; set; }
         public string Fecha { get; set; }
-        public int Codigo_Empleado { get; set; }
+        public string Nombre_Empleado { get; set; }
         public string Cambio { get; set; }
 
         public Mantenimiento()

@@ -6,19 +6,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TPI.datos
 {
     class HelperDB
     {
         private static HelperDB instance;
-
         private SqlConnection cnn;
+
         public HelperDB()
         {
             cnn = new SqlConnection(Properties.Resources.cnnString);
             
         }
+
         public static HelperDB GetInstance()
         {
             if (instance == null)
@@ -71,8 +73,30 @@ namespace TPI.datos
 
             return rafc;                    
         }
-        
 
+        public DataTable ConsultaSQLSP(string sp, List<Parametro> values)
+        {
+            DataTable dt = new DataTable();
+            cnn.Open();
+            SqlCommand cmd = new SqlCommand(sp, cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            if (values != null)
+            {
+                foreach (Parametro oParametro in values)
+                {
+                    cmd.Parameters.AddWithValue(oParametro.Nombre, oParametro.Valor);
+                }
+            }
+            dt.Load(cmd.ExecuteReader());
+            cnn.Close();
+
+            return dt;
+        }
+        
+        public SqlConnection GetConnection()
+        {
+            return this.cnn;
+        }
     }
     
 

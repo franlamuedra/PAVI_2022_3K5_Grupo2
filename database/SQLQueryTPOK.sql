@@ -47,3 +47,47 @@ CREATE TABLE t_Materiales(
 )
 GO
 
+CREATE TABLE t_Mantenimientos(
+	Numero_Mantenimiento int identity (1,1) primary key,
+	Codigo_Herramienta int NOT NULL,
+	Fecha nvarchar (100) NOT NULL,
+	Nombre_Empleado nvarchar (100) NOT NULL,
+	Cambio nvarchar (100) NULL,
+	CONSTRAINT fk_t_Mantenimientos FOREIGN KEY (Codigo_Herramienta) REFERENCES t_Herramientas (Cod_Herramienta)
+)
+GO
+
+CREATE PROCEDURE SP_Consultar_Herramientas
+AS
+BEGIN
+	SELECT * from t_Herramientas
+END
+GO
+
+CREATE PROCEDURE SP_Insertar_Mantenimiento
+	@cod int,
+	@fec nvarchar(100),
+	@nom nvarchar (100),
+	@cambio nvarchar (100),
+	@num_man int OUTPUT
+AS
+BEGIN
+	INSERT INTO t_Mantenimientos (Codigo_Herramienta, Fecha, Nombre_Empleado, Cambio) 
+	VALUES (@cod, @fec, @nom, @cambio);
+	SET @num_man = SCOPE_IDENTITY();
+
+END
+GO
+
+CREATE PROCEDURE SP_Modificar_Mantenimiento
+	@cod int,
+	@nom nvarchar (100),
+	@cambio nvarchar (100),
+	@num_man int OUTPUT
+AS
+BEGIN
+	UPDATE t_Mantenimientos SET Codigo_Herramienta = @cod, Nombre_Empleado = @nom, Cambio = @cambio
+	WHERE Numero_Mantenimiento = @num_man;
+END
+GO
+	

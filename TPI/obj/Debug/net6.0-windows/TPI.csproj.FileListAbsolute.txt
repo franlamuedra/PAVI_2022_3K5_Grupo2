@@ -84,3 +84,4 @@ C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\De
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Proveedores.FrmAltaProveedor.resources
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Herramientas.FrmAltaHerramienta.resources
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Herramientas.FrmConsultarHerramienta.resources
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Transacciones.FrmMantenimiento.resources
