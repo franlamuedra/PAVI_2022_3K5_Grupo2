@@ -32,19 +32,25 @@ namespace TPI
         {
             if (txtNombre.Text.Equals(String.Empty))
             {
-                MessageBox.Show("Debe escribir el nombre del material", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe ingresar el nombre del material", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             if (cboUnidadMedida.Text.Equals(String.Empty))
             {
-                MessageBox.Show("Debe elegir la unidad de Medida", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe seleccionar la unidad de medida", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
-            if (nudProveedor.Value.Equals(String.Empty))
+            if (!gestor.ValidarProveedor((int)nudProveedor.Value))
             {
-                MessageBox.Show("Debe elegir la unidad de Medida", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe ingresar un proveedor válido", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (mtxtFechaIngreso.Text.Equals(String.Empty))
+            {
+                MessageBox.Show("Debe ingresar la fecha de ingreso", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 

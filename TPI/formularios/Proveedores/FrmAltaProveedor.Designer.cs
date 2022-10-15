@@ -74,7 +74,7 @@
             this.mtxtTelefono.Location = new System.Drawing.Point(67, 116);
             this.mtxtTelefono.Mask = "000-000-0000";
             this.mtxtTelefono.Name = "mtxtTelefono";
-            this.mtxtTelefono.Size = new System.Drawing.Size(87, 23);
+            this.mtxtTelefono.Size = new System.Drawing.Size(78, 23);
             this.mtxtTelefono.TabIndex = 9;
             // 
             // lblMail

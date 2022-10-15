@@ -237,7 +237,7 @@
             this.Controls.Add(this.dgvMaterial);
             this.Controls.Add(this.lblMateriales);
             this.Name = "FrmConsultarMaterial";
-            this.Text = "ABMC Materiales";
+            this.Text = "Consultar Materiales";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).EndInit();
             this.ResumeLayout(false);

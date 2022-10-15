@@ -11,6 +11,7 @@ using TPI.datos;
 using TPI.dominio;
 using TPI.Servicios;
 using System.Text.RegularExpressions;
+using System.Net.Mail;
 
 namespace TPI.formularios.Proveedores
 {
@@ -28,6 +29,19 @@ namespace TPI.formularios.Proveedores
             gestor = new GestorProveedores();
         }
 
+        static bool validarEmail(string email)
+        {
+            try
+            {
+                new MailAddress(email);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text.Equals(String.Empty))
@@ -36,18 +50,18 @@ namespace TPI.formularios.Proveedores
                 return;
             }
             
-            if (txtMail.Text.Equals(String.Empty))
+            if (!validarEmail(txtMail.Text))
             {
-                MessageBox.Show("Debe escribir el mail del proveedor", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe escribir el mail del proveedor correctamente", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+
             
             if (txtDireccion.Text.Equals(String.Empty))
             {
                 MessageBox.Show("Debe escribir la dirección del proveedor", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-
 
             oProveedor.Nombre = txtNombre.Text;
             oProveedor.Telefono = mtxtTelefono.Text;

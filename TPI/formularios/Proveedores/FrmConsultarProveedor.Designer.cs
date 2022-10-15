@@ -36,14 +36,14 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.dgvProveedor = new System.Windows.Forms.DataGridView();
-            this.lblProveedor = new System.Windows.Forms.Label();
-            this.chkActivo = new System.Windows.Forms.CheckBox();
             this.ColCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblProveedor = new System.Windows.Forms.Label();
+            this.chkActivo = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,26 +138,6 @@
             this.dgvProveedor.Size = new System.Drawing.Size(698, 254);
             this.dgvProveedor.TabIndex = 13;
             // 
-            // lblProveedor
-            // 
-            this.lblProveedor.AutoSize = true;
-            this.lblProveedor.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblProveedor.Location = new System.Drawing.Point(12, 9);
-            this.lblProveedor.Name = "lblProveedor";
-            this.lblProveedor.Size = new System.Drawing.Size(133, 32);
-            this.lblProveedor.TabIndex = 12;
-            this.lblProveedor.Text = "Proveedor";
-            // 
-            // chkActivo
-            // 
-            this.chkActivo.AutoSize = true;
-            this.chkActivo.Location = new System.Drawing.Point(399, 79);
-            this.chkActivo.Name = "chkActivo";
-            this.chkActivo.Size = new System.Drawing.Size(65, 19);
-            this.chkActivo.TabIndex = 21;
-            this.chkActivo.Text = "Activo?";
-            this.chkActivo.UseVisualStyleBackColor = true;
-            // 
             // ColCod
             // 
             this.ColCod.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -210,6 +190,26 @@
             this.ColActivo.ReadOnly = true;
             this.ColActivo.Width = 71;
             // 
+            // lblProveedor
+            // 
+            this.lblProveedor.AutoSize = true;
+            this.lblProveedor.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblProveedor.Location = new System.Drawing.Point(12, 9);
+            this.lblProveedor.Name = "lblProveedor";
+            this.lblProveedor.Size = new System.Drawing.Size(133, 32);
+            this.lblProveedor.TabIndex = 12;
+            this.lblProveedor.Text = "Proveedor";
+            // 
+            // chkActivo
+            // 
+            this.chkActivo.AutoSize = true;
+            this.chkActivo.Location = new System.Drawing.Point(399, 79);
+            this.chkActivo.Name = "chkActivo";
+            this.chkActivo.Size = new System.Drawing.Size(65, 19);
+            this.chkActivo.TabIndex = 21;
+            this.chkActivo.Text = "Activo?";
+            this.chkActivo.UseVisualStyleBackColor = true;
+            // 
             // FrmConsultarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -226,7 +226,7 @@
             this.Controls.Add(this.dgvProveedor);
             this.Controls.Add(this.lblProveedor);
             this.Name = "FrmConsultarProveedor";
-            this.Text = "FrmConsultarProveedor";
+            this.Text = "Consultar Proveedores";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

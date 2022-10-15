@@ -1,44 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TPI.dominio;
-using TPI.datos;
 
 namespace TPI.datos.DAO
 {
-    public class MaterialDAO : IMaterialDAO
-    {   
-        public int Create(Material mat)
+    public class HerramientaDAO : IHerramientaDAO
+    {
+        public int Create(Herramienta her)
         {
             string activo = "S";
             List<Parametro> parametros = new List<Parametro>();
-            parametros.Add(new Parametro("@Nombre", mat.Nombre));
-            parametros.Add(new Parametro("@Cantidad", mat.Cantidad));
-            parametros.Add(new Parametro("@Unidad_Medida", mat.UnidadMedida));
-            parametros.Add(new Parametro("@Cod_Proveedor", mat.ProveedorMa));
-            parametros.Add(new Parametro("@Fecha_Ingreso", mat.FechaIngreso));    
+            parametros.Add(new Parametro("@Cod_Prov", her.Codigo_Proveedor));
+            parametros.Add(new Parametro("@Marca", her.Marca));
+            parametros.Add(new Parametro("@Modelo", her.Modelo));
+            parametros.Add(new Parametro("@Vida_Util", her.Vida_Util));
             parametros.Add(new Parametro("@Activo", activo));
 
-            string insert = "INSERT INTO t_Materiales VALUES ('" + mat.Nombre + "'," + mat.Cantidad + ",'" + mat.UnidadMedida + "'," + mat.ProveedorMa + ",'" + mat.FechaIngreso + "','" + activo + "')";
+            string insert = "INSERT INTO t_Herramientas VALUES (" + her.Codigo_Proveedor + ",'" + her.Marca + "','" + her.Modelo + "'," + her.Vida_Util + ",'" + activo + "')";
 
             int res = HelperDB.GetInstance().EjecutarSQL(insert, parametros);
             return res;
         }
 
-
-        public List<Material> GetByFilter(string nombre, bool activo)
+        public List<Herramienta> GetByFilter(string marca, bool activo)
         {
-            List<Material> list = new List<Material>();
+            List<Herramienta> list = new List<Herramienta>();
 
-            string query = "SELECT * FROM t_Materiales WHERE 1=1";
+            string query = "SELECT * FROM t_Herramientas WHERE 1=1";
 
-            if (!string.IsNullOrEmpty(nombre))
+            if (!string.IsNullOrEmpty(marca))
             {
-                query += " AND Nombre Like '%" + nombre + "%'";
+                query += " AND Marca_Herramienta Like '%" + marca + "%'";
             }
             if (activo)
             {
@@ -50,25 +46,23 @@ namespace TPI.datos.DAO
             }
 
             List<Parametro> parametros = new List<Parametro>();
-            parametros.Add(new Parametro("@Nombre", nombre));
+            parametros.Add(new Parametro("@Marca", marca));
             parametros.Add(new Parametro("@Activo", activo));
 
             DataTable resultado = HelperDB.GetInstance().ConsultaSQL(query, parametros);
 
             foreach (DataRow row in resultado.Rows)
             {
-                Material aux = new Material();
-                aux.Nombre = row["Nombre"].ToString();
-                aux.Codigo = int.Parse(row["Codigo_Material"].ToString());
-                aux.UnidadMedida = row["Unidad_Medida"].ToString();
-                aux.Cantidad = float.Parse(row["Cantidad"].ToString());
-                aux.FechaIngreso = row["Fecha_Ingreso"].ToString();
+                Herramienta aux = new Herramienta();
+                aux.Codigo = int.Parse(row["Cod_Herramienta"].ToString());
+                aux.Codigo_Proveedor = int.Parse(row["Cod_Proveedor"].ToString());
+                aux.Marca = row["Marca_Herramienta"].ToString();
+                aux.Modelo = row["Modelo_Herramienta"].ToString();
+                aux.Vida_Util = int.Parse(row["Vida_Util"].ToString());
                 aux.Activo = row["Activo"].ToString().Equals("S");
-                aux.ProveedorMa = int.Parse(row["Cod_Proveedor"].ToString());
-                list.Add(aux);                            
-
+                list.Add(aux);
             }
-
+            
             return list;
         }
 
@@ -86,8 +80,7 @@ namespace TPI.datos.DAO
             {
                 return true;
             }
-            
-        }
 
+        }
     }
 }

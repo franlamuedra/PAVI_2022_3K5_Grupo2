@@ -88,13 +88,13 @@
             this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
             this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.herramientasToolStripMenuItem.Text = "Herramientas";
-            this.herramientasToolStripMenuItem.Click += new System.EventHandler(this.herramientasToolStripMenuItem_Click);
             // 
             // consultarProToolStripMenuItem
             // 
             this.consultarProToolStripMenuItem.Name = "consultarProToolStripMenuItem";
             this.consultarProToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.consultarProToolStripMenuItem.Text = "Consultar herramientas";
+            this.consultarProToolStripMenuItem.Click += new System.EventHandler(this.consultarProToolStripMenuItem_Click);
             // 
             // proveedoresToolStripMenuItem
             // 

@@ -25,19 +25,14 @@ CREATE TABLE t_Proveedores(
 GO
 
 CREATE TABLE t_Herramientas(
-	Marca_Herramienta nvarchar (50) NOT NULL,
-	Modelo_Herramienta nvarchar (80) NOT NULL,
-	Cod_Tipo_Herramienta nvarchar (50) NULL,
+	Cod_Herramienta int identity (1,1) primary key,
 	Cod_Proveedor int NULL,
+	Marca_Herramienta nvarchar (50) NOT NULL,
+	Modelo_Herramienta nvarchar (80) NOT NULL,	
 	Vida_Util int NULL,
 	Activo varchar (1) NOT NULL,
- CONSTRAINT fk_t_Herramientas FOREIGN KEY (Cod_Proveedor) REFERENCES t_Proveedores (Cod_Proveedor),
- CONSTRAINT [PK_Herramientas] PRIMARY KEY CLUSTERED 
-(
-	[Marca_Herramienta] ASC,
-	[Modelo_Herramienta] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
+	CONSTRAINT fk_t_Herramientas FOREIGN KEY (Cod_Proveedor) REFERENCES t_Proveedores (Cod_Proveedor)
+)
 GO
 
 CREATE TABLE t_Materiales(

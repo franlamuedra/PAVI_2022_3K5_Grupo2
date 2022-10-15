@@ -10,6 +10,6 @@ namespace TPI.datos.DAO
     {
         List<Material> GetByFilter(string nombre, bool activo);
         int Create(Material mat);
-        
+        bool ValidateProv(int cod);     
     }
 }

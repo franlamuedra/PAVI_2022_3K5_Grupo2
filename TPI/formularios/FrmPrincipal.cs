@@ -1,4 +1,5 @@
 using TPI.formularios;
+using TPI.formularios.Herramientas;
 using TPI.formularios.Proveedores;
 
 namespace TPI
@@ -16,19 +17,7 @@ namespace TPI
             FrmLogin login = new FrmLogin();
             login.ShowDialog();
  
-        }
-
-        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Clase sin implementar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            return;
-        }
-
-        private void herramientasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Clase sin implementar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            return;
-        }
+        }       
 
         private void consultarMaterialesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -40,12 +29,15 @@ namespace TPI
             new FrmConsultarProveedor().ShowDialog();
         }
 
+        private void consultarProToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmConsultarHerramienta().ShowDialog();
+        }
+
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("App Ferreteria Industrial V1.0", "PAVI2022", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Dispose();
         }
 
-        
     }
 }

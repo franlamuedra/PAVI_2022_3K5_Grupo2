@@ -60,6 +60,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(89, 83);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(249, 23);
             this.txtPassword.TabIndex = 9;
             // 
@@ -106,7 +107,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(397, 225);
             this.Name = "FrmLogin";
-            this.Text = "Inicio de Sesión";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

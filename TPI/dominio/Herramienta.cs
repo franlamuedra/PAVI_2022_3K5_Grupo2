@@ -6,20 +6,18 @@ using System.Threading.Tasks;
 
 namespace TPI.dominio
 {
-    internal class Herramienta
+    public class Herramienta
     {
         public string Marca { get; set; }
         public string Modelo { get; set; }
-        public Tipo_Herramienta Tipo { get; set; }
-        public Proveedor Proveedor { get; set; }
+        public int Codigo { get; set; }
+        public int Codigo_Proveedor { get; set; }
         public int Vida_Util { get; set; }
-        public Herramienta(string marca, string mod, Tipo_Herramienta tipo, Proveedor prov, int vid)
+        public bool Activo { get; set; }
+        
+        public Herramienta()
         {
-            Marca = marca;
-            Modelo = mod;
-            Tipo = tipo;
-            Proveedor = prov;
-            Vida_Util = vid;
+
         }
     }
 
