@@ -9,10 +9,11 @@ namespace TPI.datos.DAO
 {
     public interface IMantenimientoDAO
     {
-        List<Herramienta> ObtenerHerramientas();
+        List<Herramienta> GetHerramientas();
         bool Create(Mantenimiento oMantenimiento);
         bool Update(Mantenimiento oMantenimiento);
         bool Delete(int nro);
+        List<Mantenimiento> GetMantenimientoByFilter(string fecha, string empl);
 
     }
 }

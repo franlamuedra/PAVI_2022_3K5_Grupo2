@@ -41,7 +41,7 @@ CREATE TABLE t_Materiales(
 	Cantidad float NULL,
 	Unidad_Medida nvarchar (100) NULL,
 	Cod_Proveedor int,
-	Fecha_Ingreso nvarchar (100) NULL,
+	Fecha_Ingreso nvarchar (100),
 	Activo varchar (1) NOT NULL,
 	CONSTRAINT fk_t_Materiales FOREIGN KEY (Cod_Proveedor) REFERENCES t_Proveedores (Cod_Proveedor)
 )
@@ -50,11 +50,24 @@ GO
 CREATE TABLE t_Mantenimientos(
 	Numero_Mantenimiento int identity (1,1) primary key,
 	Codigo_Herramienta int NOT NULL,
-	Fecha nvarchar (100) NOT NULL,
+	Fecha nvarchar (100),
 	Nombre_Empleado nvarchar (100) NOT NULL,
 	Cambio nvarchar (100) NULL,
 	CONSTRAINT fk_t_Mantenimientos FOREIGN KEY (Codigo_Herramienta) REFERENCES t_Herramientas (Cod_Herramienta)
 )
+GO
+
+CREATE TABLE t_Detalles_Mantenimiento(
+	Numero_Mantenimiento int NOT NULL,
+	Numero_Detalle int NOT NULL,
+	Codigo_Herramienta int NOT NULL,
+	Cantidad int NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	Numero_Mantenimiento ASC,
+	Numero_Detalle ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
 GO
 
 CREATE PROCEDURE SP_Consultar_Herramientas
@@ -81,13 +94,47 @@ GO
 
 CREATE PROCEDURE SP_Modificar_Mantenimiento
 	@cod int,
+	@fec nvarchar (100),
 	@nom nvarchar (100),
 	@cambio nvarchar (100),
 	@num_man int OUTPUT
 AS
 BEGIN
-	UPDATE t_Mantenimientos SET Codigo_Herramienta = @cod, Nombre_Empleado = @nom, Cambio = @cambio
+	UPDATE t_Mantenimientos SET Codigo_Herramienta = @cod, Fecha = @fec, Nombre_Empleado = @nom, Cambio = @cambio
 	WHERE Numero_Mantenimiento = @num_man;
+
+	DELETE t_Detalles_Mantenimiento WHERE Numero_Mantenimiento = @num_man;
 END
 GO
+
+CREATE PROCEDURE SP_Insert_Detalle
+	@num_man int,
+	@detalle int, 
+	@cod_herramienta int, 
+	@cantidad int
+AS
+BEGIN
+	INSERT INTO t_Detalles_Mantenimiento(Numero_Mantenimiento, Numero_Detalle, Codigo_Herramienta, Cantidad)
+    VALUES (@num_man, @detalle, @cod_herramienta, @cantidad);
+END
+GO
+
+CREATE PROCEDURE SP_Eliminar_Mantenimiento 
+	@num_man int
+AS
+BEGIN
+	DELETE t_Mantenimientos	WHERE Numero_Mantenimiento = @num_man;
+END
+GO
+
+CREATE PROCEDURE SP_Consultar_Mantenimientos
+	@fec nvarchar (100),
+	@empl nvarchar (100)
+AS
+BEGIN
+	SELECT *
+	FROM t_Mantenimientos WHERE (Fecha = @fec) AND Nombre_Empleado LIKE ('%' + @empl + '%');
+END
+GO
+
 	

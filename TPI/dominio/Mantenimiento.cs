@@ -14,6 +14,8 @@ namespace TPI.dominio
         public string Nombre_Empleado { get; set; }
         public string Cambio { get; set; }
 
+        public List<DetalleMantenimiento> Detalle { get; set; }
+
         public Mantenimiento()
         {
 

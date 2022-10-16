@@ -20,35 +20,6 @@ C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\TPI\obj\Debug\net6.0-windows\TP
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\TPI\obj\Debug\net6.0-windows\ref\TPI.dll
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\TPI\obj\Debug\net6.0-windows\TPI.FrmMateriales.resources
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\TPI\obj\Debug\net6.0-windows\TPI.FrmAlta.resources
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.csproj.AssemblyReference.cache
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmBase.resources
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmPrincipal.resources
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmAltaMaterial.resources
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmConsultarMaterial.resources
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.Properties.Resources.resources
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.csproj.GenerateResource.cache
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.AssemblyInfoInputs.cache
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.AssemblyInfo.cs
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.csproj.CoreCompileInputs.cache
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.dll
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\refint\TPI.dll
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.pdb
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\TPI.exe
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\TPI.deps.json
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\TPI.runtimeconfig.json
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\TPI.dll
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\TPI.pdb
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.genruntimeconfig.cache
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\ref\TPI.dll
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.csproj.CopyComplete
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.FrmLogin.resources
 C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\TPI.exe
 C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\TPI.deps.json
 C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\TPI.runtimeconfig.json
@@ -80,8 +51,37 @@ C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022
 C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.pdb
 C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.genruntimeconfig.cache
 C:\Users\funes\OneDrive\Escritorio\Cosas Fran\Facu Fran\2022\Pav1\PPAI\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\ref\TPI.dll
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Proveedores.FrmConsultarProveedor.resources
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Proveedores.FrmAltaProveedor.resources
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\TPI.exe
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\TPI.deps.json
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\TPI.runtimeconfig.json
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\TPI.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\TPI.pdb
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.csproj.AssemblyReference.cache
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmBase.resources
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.FrmLogin.resources
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmPrincipal.resources
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Herramientas.FrmAltaHerramienta.resources
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Herramientas.FrmConsultarHerramienta.resources
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmAltaMaterial.resources
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmConsultarMaterial.resources
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Proveedores.FrmAltaProveedor.resources
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Proveedores.FrmConsultarProveedor.resources
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Transacciones.FrmMantenimiento.resources
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.Properties.Resources.resources
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.csproj.GenerateResource.cache
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.AssemblyInfoInputs.cache
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.AssemblyInfo.cs
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.csproj.CoreCompileInputs.cache
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.csproj.CopyComplete
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\refint\TPI.dll
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.pdb
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.genruntimeconfig.cache
+C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\ref\TPI.dll
