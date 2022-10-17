@@ -80,11 +80,15 @@ namespace TPI.formularios
             try
             {
 
+<<<<<<< HEAD:TPI/formularios/Login.cs
 <<<<<<< HEAD:TPI/formularios/FrmLogin.cs
                 String consultaSql = string.Concat(" SELECT * FROM Usuarios WHERE Usuario =  '", oUsuario, "'");           
 =======
                 String consultaSql = string.Concat(" SELECT * ", "   FROM Usuarios ", "  WHERE Usuario =  '", oUsuario, "'");
 >>>>>>> b6f97d272f579db03cfdf9ec4453fefc9f92980b:TPI/formularios/Login.cs
+=======
+                String consultaSql = string.Concat(" SELECT * FROM t_Usuarios WHERE Usuario =  '", oUsuario, "'");           
+>>>>>>> 9189e919af9a401a47fb1e550190d7c25fdaf5f1:TPI/formularios/FrmLogin.cs
                 DataTable res = HelperDB.GetInstance().ConsultaSQL(consultaSql);
 
                 if (res.Rows.Count >= 1)
@@ -93,6 +97,15 @@ namespace TPI.formularios
                     {
                         usuarioValido = true;
                     }
+
+                    else 
+                    {
+                        MessageBox.Show("Contraseña incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else 
+                {
+                    MessageBox.Show("Debe ingresar usuario y contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

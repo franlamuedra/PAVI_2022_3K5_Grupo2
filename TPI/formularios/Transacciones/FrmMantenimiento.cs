@@ -10,8 +10,9 @@ using System.Windows.Forms;
 using TPI.datos.DAO;
 using TPI.dominio;
 
-namespace TPI
+namespace TPI.formularios.Transacciones
 {
+<<<<<<< HEAD:TPI/formularios/Empleados/FrmEmpleados.cs
     public partial class frmEmpleados : Form
     {
         public frmEmpleados()
@@ -97,5 +98,13 @@ namespace TPI
             
         }
 
+=======
+    public partial class FrmMantenimiento : Form
+    {
+        public FrmMantenimiento()
+        {
+            InitializeComponent();
+        }
+>>>>>>> 9189e919af9a401a47fb1e550190d7c25fdaf5f1:TPI/formularios/Transacciones/FrmMantenimiento.cs
     }
 }

@@ -32,7 +32,7 @@ namespace TPI
             if (fila != null)
             {
                 new FrmAltaMaterial(2, Mapper(fila)).ShowDialog();
-                this.btnConsultar_Click(null, null); // falta agregar boton
+                this.btnConsultar_Click(null, null);
 
             }
         }
@@ -46,8 +46,7 @@ namespace TPI
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
-        {
-            // Dictionary<string, object> parametros = new Dictionary<String, object>();
+        {            
             GestorMateriales gestor = new GestorMateriales();
             List<Material> lista = gestor.ConsultarMaterialFiltro(txtNombre.Text, chkActivo.Checked);
             dgvMaterial.Rows.Clear();
