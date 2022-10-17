@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using TPI.datos;
@@ -17,7 +18,7 @@ namespace TPI.Servicios
             dao = new MaterialDAO();
         }
 
-       public List<Material> ConsultarMaterialFiltro(String nombre, bool activo)
+        public List<Material> ConsultarMaterialFiltro(String nombre, bool activo)
         {
             List<Material> lista = dao.GetByFilter(nombre, activo);
             return lista;
@@ -26,6 +27,11 @@ namespace TPI.Servicios
         public int CrearMaterial(Material oMaterial)
         {
             return dao.Create(oMaterial);
+        }
+
+        public bool ValidarProveedor(int cod)
+        {
+            return dao.ValidateProv(cod);
         }
     }
 }

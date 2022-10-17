@@ -33,19 +33,25 @@ namespace TPI
         {
             if (txtNombre.Text.Equals(String.Empty))
             {
-                MessageBox.Show("Debe escribir el nombre del material", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe ingresar el nombre del material", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             if (cboUnidadMedida.Text.Equals(String.Empty))
             {
-                MessageBox.Show("Debe elegir la unidad de Medida", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe seleccionar la unidad de medida", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             } 
 
-            if (nudProveedor.Value.Equals(String.Empty))
+            if (!gestor.ValidarProveedor((int)nudProveedor.Value))
             {
-                MessageBox.Show("Debe elegir la unidad de Medida", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe ingresar un proveedor válido", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (mtxtFechaIngreso.Text.Equals(String.Empty))
+            {
+                MessageBox.Show("Debe ingresar la fecha de ingreso", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -53,7 +59,7 @@ namespace TPI
             oMaterial.Cantidad = (float)nudCantidad.Value;
             oMaterial.UnidadMedida = cboUnidadMedida.Text;
             oMaterial.ProveedorMa = (int)nudProveedor.Value;
-            oMaterial.FechaIngreso = txtFechaIngreso.Text;
+            oMaterial.FechaIngreso = mtxtFechaIngreso.Text;
             oMaterial.Activo = true;
 
             if (accion == 1)
@@ -84,7 +90,7 @@ namespace TPI
                 lista.Add(new Parametro("@fecha", oMaterial.FechaIngreso));
                 lista.Add(new Parametro("@proveedor", oMaterial.ProveedorMa));
 
-                string update = "UPDATE Materiales SET Nombre = @nombre, Cantidad = @cantidad, Unidad_Medida = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha WHERE Codigo_Material = @codigo";
+                string update = "UPDATE t_Materiales SET Nombre = @nombre, Cantidad = @cantidad, Unidad_Medida = @unidad, Cod_Proveedor = @proveedor, Fecha_Ingreso = @fecha WHERE Codigo_Material = @codigo";
 
                 int res = new HelperDB().EjecutarSQL(update, lista);
 
@@ -106,7 +112,7 @@ namespace TPI
                 List<Parametro> lst = new List<Parametro>();
                 lst.Add(new Parametro("@cod", oMaterial.Codigo));
 
-                string delete = "UPDATE Materiales SET activo = 'N' WHERE Codigo_Material = @cod";
+                string delete = "UPDATE t_Materiales SET activo = 'N' WHERE Codigo_Material = @cod";
 
                 int res = new HelperDB().EjecutarSQL(delete, lst);
                 if (res == 1)
@@ -135,7 +141,7 @@ namespace TPI
                 nudCantidad.Value = (decimal)oMaterial.Cantidad;
                 cboUnidadMedida.Text = oMaterial.UnidadMedida;
                 nudProveedor.Value = oMaterial.ProveedorMa;
-                txtFechaIngreso.Text = oMaterial.FechaIngreso;
+                mtxtFechaIngreso.Text = oMaterial.FechaIngreso;
                 
                 if (accion == 2)
                 {
@@ -150,6 +156,7 @@ namespace TPI
                 
             }
         }
+<<<<<<< HEAD
 
         private void txtDate_ValueChanged(object sender, EventArgs e)
         {
@@ -170,6 +177,8 @@ namespace TPI
    //SelectedIndex: establece el índice que especifica el elemento seleccionado actualmente.
    cbo.SelectedIndex = -1;
 }*/
+=======
+>>>>>>> 9189e919af9a401a47fb1e550190d7c25fdaf5f1
 
     }
 }

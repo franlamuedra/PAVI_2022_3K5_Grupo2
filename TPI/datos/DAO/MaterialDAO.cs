@@ -23,7 +23,7 @@ namespace TPI.datos.DAO
             parametros.Add(new Parametro("@Fecha_Ingreso", mat.FechaIngreso));    
             parametros.Add(new Parametro("@Activo", activo));
 
-            string insert = "INSERT INTO Materiales VALUES ('" + mat.Nombre + "'," + mat.Cantidad + ",'" + mat.UnidadMedida + "'," + mat.ProveedorMa + ",'" + mat.FechaIngreso + "','" + activo + "')";
+            string insert = "INSERT INTO t_Materiales VALUES ('" + mat.Nombre + "'," + mat.Cantidad + ",'" + mat.UnidadMedida + "'," + mat.ProveedorMa + ",'" + mat.FechaIngreso + "','" + activo + "')";
 
             int res = HelperDB.GetInstance().EjecutarSQL(insert, parametros);
             return res;
@@ -34,13 +34,12 @@ namespace TPI.datos.DAO
         {
             List<Material> list = new List<Material>();
 
-            string query = "SELECT * FROM Materiales WHERE 1=1";
+            string query = "SELECT * FROM t_Materiales WHERE 1=1";
 
             if (!string.IsNullOrEmpty(nombre))
             {
                 query += " AND Nombre Like '%" + nombre + "%'";
             }
-
             if (activo)
             {
                 query += " AND Activo = 'S'";
@@ -71,6 +70,23 @@ namespace TPI.datos.DAO
             }
 
             return list;
+        }
+
+        public bool ValidateProv(int cod)
+        {
+            string query = "SELECT * FROM t_Proveedores WHERE Cod_Proveedor = " + cod + "";
+            List<Parametro> parametros = new List<Parametro>();
+            parametros.Add(new Parametro("@Codigo", cod));
+            DataTable resultado = HelperDB.GetInstance().ConsultaSQL(query, parametros);
+            if (resultado.Rows.Count < 1)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+            
         }
 
     }
