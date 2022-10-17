@@ -10,19 +10,16 @@ namespace TPI.dominio
     {
         public int Codigo { get; set; }
         public string Nombre { get; set; }
+        public string Apellido { get; set; }
         public int Telefono { get; set; }
         public string Mail { get; set; }
         public string Direccion { get; set; }
 
-        public Proveedor()
+        public Proveedor(int codigo, string nom, string ap, int tel, string mail, string direccion)
         {
-
-        }
-
-        public Proveedor(int cod, string nom, int tel, string mail, string direccion)
-        {
-            Codigo = cod;
+            Codigo = codigo;
             Nombre = nom;
+            Apellido = ap;
             Telefono = tel;
             Mail = mail;
             Direccion = direccion;
