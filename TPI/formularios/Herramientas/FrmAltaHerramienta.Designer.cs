@@ -55,23 +55,26 @@
             this.grbHerramienta.Controls.Add(this.lblModelo);
             this.grbHerramienta.Controls.Add(this.txtMarca);
             this.grbHerramienta.Controls.Add(this.lblMarca);
-            this.grbHerramienta.Location = new System.Drawing.Point(12, 12);
+            this.grbHerramienta.Location = new System.Drawing.Point(18, 14);
+            this.grbHerramienta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grbHerramienta.Name = "grbHerramienta";
-            this.grbHerramienta.Size = new System.Drawing.Size(290, 148);
+            this.grbHerramienta.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbHerramienta.Size = new System.Drawing.Size(414, 177);
             this.grbHerramienta.TabIndex = 0;
             this.grbHerramienta.TabStop = false;
             this.grbHerramienta.Text = "Herramienta";
             // 
             // nudVida
             // 
-            this.nudVida.Location = new System.Drawing.Point(75, 108);
+            this.nudVida.Location = new System.Drawing.Point(108, 130);
+            this.nudVida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudVida.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.nudVida.Name = "nudVida";
-            this.nudVida.Size = new System.Drawing.Size(201, 23);
+            this.nudVida.Size = new System.Drawing.Size(288, 25);
             this.nudVida.TabIndex = 9;
             this.nudVida.Value = new decimal(new int[] {
             1,
@@ -81,14 +84,15 @@
             // 
             // nudProveedor
             // 
-            this.nudProveedor.Location = new System.Drawing.Point(75, 79);
+            this.nudProveedor.Location = new System.Drawing.Point(108, 94);
+            this.nudProveedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudProveedor.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.nudProveedor.Name = "nudProveedor";
-            this.nudProveedor.Size = new System.Drawing.Size(201, 23);
+            this.nudProveedor.Size = new System.Drawing.Size(288, 25);
             this.nudProveedor.TabIndex = 8;
             this.nudProveedor.Value = new decimal(new int[] {
             1,
@@ -99,58 +103,65 @@
             // lblVida
             // 
             this.lblVida.AutoSize = true;
-            this.lblVida.Location = new System.Drawing.Point(18, 110);
+            this.lblVida.Location = new System.Drawing.Point(26, 132);
+            this.lblVida.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVida.Name = "lblVida";
-            this.lblVida.Size = new System.Drawing.Size(51, 15);
+            this.lblVida.Size = new System.Drawing.Size(75, 18);
             this.lblVida.TabIndex = 6;
             this.lblVida.Text = "Vida Útil";
             // 
             // lblProveedor
             // 
             this.lblProveedor.AutoSize = true;
-            this.lblProveedor.Location = new System.Drawing.Point(8, 81);
+            this.lblProveedor.Location = new System.Drawing.Point(11, 97);
+            this.lblProveedor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProveedor.Name = "lblProveedor";
-            this.lblProveedor.Size = new System.Drawing.Size(61, 15);
+            this.lblProveedor.Size = new System.Drawing.Size(84, 18);
             this.lblProveedor.TabIndex = 4;
             this.lblProveedor.Text = "Proveedor";
             // 
             // txtModelo
             // 
-            this.txtModelo.Location = new System.Drawing.Point(75, 49);
+            this.txtModelo.Location = new System.Drawing.Point(108, 58);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(201, 23);
+            this.txtModelo.Size = new System.Drawing.Size(285, 25);
             this.txtModelo.TabIndex = 3;
             // 
             // lblModelo
             // 
             this.lblModelo.AutoSize = true;
-            this.lblModelo.Location = new System.Drawing.Point(21, 52);
+            this.lblModelo.Location = new System.Drawing.Point(30, 62);
+            this.lblModelo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblModelo.Name = "lblModelo";
-            this.lblModelo.Size = new System.Drawing.Size(48, 15);
+            this.lblModelo.Size = new System.Drawing.Size(66, 18);
             this.lblModelo.TabIndex = 2;
             this.lblModelo.Text = "Modelo";
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(75, 20);
+            this.txtMarca.Location = new System.Drawing.Point(108, 24);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(201, 23);
+            this.txtMarca.Size = new System.Drawing.Size(285, 25);
             this.txtMarca.TabIndex = 1;
             // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(29, 23);
+            this.lblMarca.Location = new System.Drawing.Point(41, 28);
+            this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(40, 15);
+            this.lblMarca.Size = new System.Drawing.Size(52, 18);
             this.lblMarca.TabIndex = 0;
             this.lblMarca.Text = "Marca";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(227, 191);
+            this.btnCancelar.Location = new System.Drawing.Point(324, 230);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(108, 28);
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -158,9 +169,10 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(146, 191);
+            this.btnAceptar.Location = new System.Drawing.Point(209, 230);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(108, 28);
             this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -168,12 +180,15 @@
             // 
             // FrmAltaHerramienta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 226);
+            this.BackColor = System.Drawing.Color.BurlyWood;
+            this.ClientSize = new System.Drawing.Size(451, 271);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.grbHerramienta);
+            this.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmAltaHerramienta";
             this.Text = "Registrar Herramienta";
             this.Load += new System.EventHandler(this.FrmAltaHerramienta_Load);

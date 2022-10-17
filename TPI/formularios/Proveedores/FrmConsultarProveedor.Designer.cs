@@ -49,20 +49,22 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSalir.Location = new System.Drawing.Point(628, 423);
+            this.btnSalir.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSalir.Location = new System.Drawing.Point(898, 508);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(82, 38);
+            this.btnSalir.Size = new System.Drawing.Size(118, 46);
             this.btnSalir.TabIndex = 20;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnConsultar.Location = new System.Drawing.Point(614, 77);
+            this.btnConsultar.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnConsultar.Location = new System.Drawing.Point(878, 93);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(96, 33);
+            this.btnConsultar.Size = new System.Drawing.Size(138, 40);
             this.btnConsultar.TabIndex = 19;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -70,10 +72,11 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEditar.Location = new System.Drawing.Point(100, 423);
+            this.btnEditar.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEditar.Location = new System.Drawing.Point(142, 508);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(82, 38);
+            this.btnEditar.Size = new System.Drawing.Size(118, 46);
             this.btnEditar.TabIndex = 18;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -81,10 +84,11 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEliminar.Location = new System.Drawing.Point(188, 423);
+            this.btnEliminar.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEliminar.Location = new System.Drawing.Point(269, 508);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(82, 38);
+            this.btnEliminar.Size = new System.Drawing.Size(118, 46);
             this.btnEliminar.TabIndex = 17;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -92,10 +96,11 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAgregar.Location = new System.Drawing.Point(12, 423);
+            this.btnAgregar.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAgregar.Location = new System.Drawing.Point(18, 508);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(82, 38);
+            this.btnAgregar.Size = new System.Drawing.Size(118, 46);
             this.btnAgregar.TabIndex = 16;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -104,18 +109,20 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNombre.Location = new System.Drawing.Point(86, 74);
+            this.txtNombre.Location = new System.Drawing.Point(122, 89);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(307, 29);
+            this.txtNombre.Size = new System.Drawing.Size(436, 34);
             this.txtNombre.TabIndex = 15;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNombre.Location = new System.Drawing.Point(12, 77);
+            this.lblNombre.Font = new System.Drawing.Font("Maiandra GD", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNombre.Location = new System.Drawing.Point(18, 93);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(68, 21);
+            this.lblNombre.Size = new System.Drawing.Size(76, 20);
             this.lblNombre.TabIndex = 14;
             this.lblNombre.Text = "Nombre";
             // 
@@ -131,11 +138,13 @@
             this.ColMail,
             this.ColDireccion,
             this.ColActivo});
-            this.dgvProveedor.Location = new System.Drawing.Point(12, 142);
+            this.dgvProveedor.Location = new System.Drawing.Point(18, 170);
+            this.dgvProveedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvProveedor.Name = "dgvProveedor";
             this.dgvProveedor.ReadOnly = true;
+            this.dgvProveedor.RowHeadersWidth = 51;
             this.dgvProveedor.RowTemplate.Height = 25;
-            this.dgvProveedor.Size = new System.Drawing.Size(698, 254);
+            this.dgvProveedor.Size = new System.Drawing.Size(998, 305);
             this.dgvProveedor.TabIndex = 13;
             // 
             // ColCod
@@ -143,33 +152,37 @@
             this.ColCod.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColCod.DataPropertyName = "Cod_Proveedor";
             this.ColCod.HeaderText = "Código";
+            this.ColCod.MinimumWidth = 6;
             this.ColCod.Name = "ColCod";
             this.ColCod.ReadOnly = true;
-            this.ColCod.Width = 71;
+            this.ColCod.Width = 92;
             // 
             // ColNombre
             // 
             this.ColNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColNombre.DataPropertyName = "Nombre";
             this.ColNombre.HeaderText = "Nombre";
+            this.ColNombre.MinimumWidth = 6;
             this.ColNombre.Name = "ColNombre";
             this.ColNombre.ReadOnly = true;
-            this.ColNombre.Width = 76;
+            this.ColNombre.Width = 97;
             // 
             // ColTelefono
             // 
             this.ColTelefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColTelefono.DataPropertyName = "Telefono";
             this.ColTelefono.HeaderText = "Teléfono";
+            this.ColTelefono.MinimumWidth = 6;
             this.ColTelefono.Name = "ColTelefono";
             this.ColTelefono.ReadOnly = true;
-            this.ColTelefono.Width = 77;
+            this.ColTelefono.Width = 103;
             // 
             // ColMail
             // 
             this.ColMail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColMail.DataPropertyName = "Mail";
             this.ColMail.HeaderText = "Mail";
+            this.ColMail.MinimumWidth = 6;
             this.ColMail.Name = "ColMail";
             this.ColMail.ReadOnly = true;
             // 
@@ -178,6 +191,7 @@
             this.ColDireccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColDireccion.DataPropertyName = "Direccion";
             this.ColDireccion.HeaderText = "Dirección";
+            this.ColDireccion.MinimumWidth = 6;
             this.ColDireccion.Name = "ColDireccion";
             this.ColDireccion.ReadOnly = true;
             // 
@@ -186,35 +200,39 @@
             this.ColActivo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColActivo.DataPropertyName = "Activo";
             this.ColActivo.HeaderText = "Activo?";
+            this.ColActivo.MinimumWidth = 6;
             this.ColActivo.Name = "ColActivo";
             this.ColActivo.ReadOnly = true;
-            this.ColActivo.Width = 71;
+            this.ColActivo.Width = 92;
             // 
             // lblProveedor
             // 
             this.lblProveedor.AutoSize = true;
-            this.lblProveedor.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblProveedor.Location = new System.Drawing.Point(12, 9);
+            this.lblProveedor.Font = new System.Drawing.Font("Maiandra GD", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblProveedor.Location = new System.Drawing.Point(18, 11);
+            this.lblProveedor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProveedor.Name = "lblProveedor";
-            this.lblProveedor.Size = new System.Drawing.Size(133, 32);
+            this.lblProveedor.Size = new System.Drawing.Size(125, 27);
             this.lblProveedor.TabIndex = 12;
             this.lblProveedor.Text = "Proveedor";
             // 
             // chkActivo
             // 
             this.chkActivo.AutoSize = true;
-            this.chkActivo.Location = new System.Drawing.Point(399, 79);
+            this.chkActivo.Location = new System.Drawing.Point(570, 94);
+            this.chkActivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkActivo.Name = "chkActivo";
-            this.chkActivo.Size = new System.Drawing.Size(65, 19);
+            this.chkActivo.Size = new System.Drawing.Size(85, 22);
             this.chkActivo.TabIndex = 21;
             this.chkActivo.Text = "Activo?";
             this.chkActivo.UseVisualStyleBackColor = true;
             // 
             // FrmConsultarProveedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 473);
+            this.BackColor = System.Drawing.Color.BurlyWood;
+            this.ClientSize = new System.Drawing.Size(1031, 568);
             this.Controls.Add(this.chkActivo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnConsultar);
@@ -225,6 +243,8 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dgvProveedor);
             this.Controls.Add(this.lblProveedor);
+            this.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmConsultarProveedor";
             this.Text = "Consultar Proveedores";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).EndInit();
