@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmSoporte = new System.Windows.Forms.ToolStripMenuItem();
             this.materialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,12 +42,13 @@
             this.tsmReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAyuda = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Peru;
+            this.menuStrip1.BackColor = System.Drawing.Color.SandyBrown;
             this.menuStrip1.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -67,7 +70,7 @@
             this.herramientasToolStripMenuItem,
             this.proveedoresToolStripMenuItem});
             this.tsmSoporte.Name = "tsmSoporte";
-            this.tsmSoporte.Size = new System.Drawing.Size(79, 22);
+            this.tsmSoporte.Size = new System.Drawing.Size(79, 24);
             this.tsmSoporte.Text = "Soporte";
             // 
             // materialesToolStripMenuItem
@@ -118,13 +121,13 @@
             // tsmOperaciones
             // 
             this.tsmOperaciones.Name = "tsmOperaciones";
-            this.tsmOperaciones.Size = new System.Drawing.Size(113, 22);
+            this.tsmOperaciones.Size = new System.Drawing.Size(113, 24);
             this.tsmOperaciones.Text = "Operaciones";
             // 
             // tsmReportes
             // 
             this.tsmReportes.Name = "tsmReportes";
-            this.tsmReportes.Size = new System.Drawing.Size(87, 22);
+            this.tsmReportes.Size = new System.Drawing.Size(87, 24);
             this.tsmReportes.Text = "Reportes";
             // 
             // tsmAyuda
@@ -132,7 +135,7 @@
             this.tsmAyuda.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.acercaDeToolStripMenuItem});
             this.tsmAyuda.Name = "tsmAyuda";
-            this.tsmAyuda.Size = new System.Drawing.Size(69, 22);
+            this.tsmAyuda.Size = new System.Drawing.Size(69, 24);
             this.tsmAyuda.Text = "Ayuda";
             // 
             // acercaDeToolStripMenuItem
@@ -142,16 +145,24 @@
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.BurlyWood;
+            this.BackColor = System.Drawing.Color.Chocolate;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1004, 476);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Maiandra GD", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(542, 321);
             this.Name = "FrmPrincipal";
             this.Text = "Ferreteria Industrial";
@@ -177,5 +188,6 @@
         private ToolStripMenuItem consultarProToolStripMenuItem;
         private ToolStripMenuItem proveedoresToolStripMenuItem;
         private ToolStripMenuItem consultarProveedoresToolStripMenuItem;
+        private ImageList imageList1;
     }
 }

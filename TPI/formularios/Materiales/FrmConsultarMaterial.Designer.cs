@@ -37,9 +37,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.dgvMaterial = new System.Windows.Forms.DataGridView();
-            this.lblMateriales = new System.Windows.Forms.Label();
-            this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.chkActivo = new System.Windows.Forms.CheckBox();
             this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,15 +44,18 @@
             this.ColFec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblMateriales = new System.Windows.Forms.Label();
+            this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chkActivo = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
-            this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSalir.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSalir.Location = new System.Drawing.Point(898, 511);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(118, 46);
             this.btnSalir.TabIndex = 20;
@@ -67,7 +67,7 @@
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnConsultar.Location = new System.Drawing.Point(888, 94);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(128, 40);
             this.btnConsultar.TabIndex = 19;
@@ -77,9 +77,9 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEditar.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEditar.Location = new System.Drawing.Point(134, 511);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(118, 46);
             this.btnEditar.TabIndex = 18;
@@ -89,9 +89,9 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEliminar.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Location = new System.Drawing.Point(260, 511);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(118, 46);
             this.btnEliminar.TabIndex = 17;
@@ -101,9 +101,9 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAgregar.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAgregar.Location = new System.Drawing.Point(10, 511);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(118, 46);
             this.btnAgregar.TabIndex = 16;
@@ -115,7 +115,7 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNombre.Location = new System.Drawing.Point(122, 86);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(412, 34);
             this.txtNombre.TabIndex = 15;
@@ -145,39 +145,13 @@
             this.ColProveedor,
             this.ColActivo});
             this.dgvMaterial.Location = new System.Drawing.Point(18, 168);
-            this.dgvMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMaterial.Name = "dgvMaterial";
             this.dgvMaterial.ReadOnly = true;
             this.dgvMaterial.RowHeadersWidth = 51;
             this.dgvMaterial.RowTemplate.Height = 25;
             this.dgvMaterial.Size = new System.Drawing.Size(998, 309);
             this.dgvMaterial.TabIndex = 13;
-            // 
-            // lblMateriales
-            // 
-            this.lblMateriales.AutoSize = true;
-            this.lblMateriales.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMateriales.Location = new System.Drawing.Point(18, 11);
-            this.lblMateriales.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMateriales.Name = "lblMateriales";
-            this.lblMateriales.Size = new System.Drawing.Size(166, 41);
-            this.lblMateriales.TabIndex = 12;
-            this.lblMateriales.Text = "Materiales";
-            // 
-            // materialBindingSource
-            // 
-            this.materialBindingSource.DataSource = typeof(TPI.Material);
-            // 
-            // chkActivo
-            // 
-            this.chkActivo.AutoSize = true;
-            this.chkActivo.Location = new System.Drawing.Point(544, 94);
-            this.chkActivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.chkActivo.Name = "chkActivo";
-            this.chkActivo.Size = new System.Drawing.Size(85, 22);
-            this.chkActivo.TabIndex = 21;
-            this.chkActivo.Text = "Activo?";
-            this.chkActivo.UseVisualStyleBackColor = true;
             // 
             // ColNombre
             // 
@@ -242,6 +216,32 @@
             this.ColActivo.ReadOnly = true;
             this.ColActivo.Width = 125;
             // 
+            // lblMateriales
+            // 
+            this.lblMateriales.AutoSize = true;
+            this.lblMateriales.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMateriales.Location = new System.Drawing.Point(18, 11);
+            this.lblMateriales.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMateriales.Name = "lblMateriales";
+            this.lblMateriales.Size = new System.Drawing.Size(166, 41);
+            this.lblMateriales.TabIndex = 12;
+            this.lblMateriales.Text = "Materiales";
+            // 
+            // materialBindingSource
+            // 
+            this.materialBindingSource.DataSource = typeof(TPI.Material);
+            // 
+            // chkActivo
+            // 
+            this.chkActivo.AutoSize = true;
+            this.chkActivo.Location = new System.Drawing.Point(544, 94);
+            this.chkActivo.Margin = new System.Windows.Forms.Padding(4);
+            this.chkActivo.Name = "chkActivo";
+            this.chkActivo.Size = new System.Drawing.Size(85, 22);
+            this.chkActivo.TabIndex = 21;
+            this.chkActivo.Text = "Activo?";
+            this.chkActivo.UseVisualStyleBackColor = true;
+            // 
             // FrmConsultarMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -259,7 +259,7 @@
             this.Controls.Add(this.dgvMaterial);
             this.Controls.Add(this.lblMateriales);
             this.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmConsultarMaterial";
             this.Text = "Consultar Materiales";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).EndInit();

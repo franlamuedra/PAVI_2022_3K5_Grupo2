@@ -42,6 +42,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.grbMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudProveedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
@@ -237,5 +238,6 @@
         private NumericUpDown nudProveedor;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private MaskedTextBox mtxtFechaIngreso;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }
