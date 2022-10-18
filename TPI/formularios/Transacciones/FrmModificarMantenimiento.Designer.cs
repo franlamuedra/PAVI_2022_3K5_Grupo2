@@ -31,7 +31,6 @@
             this.lblMantenimiento = new System.Windows.Forms.Label();
             this.lblEmpleado = new System.Windows.Forms.Label();
             this.lblCambios = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.dgvDetalles = new System.Windows.Forms.DataGridView();
             this.ColHer = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +42,6 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,15 +73,6 @@
             this.lblCambios.TabIndex = 2;
             this.lblCambios.Text = "Cambios";
             // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(39, 100);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(42, 15);
-            this.lblFecha.TabIndex = 3;
-            this.lblFecha.Text = "Fecha";
-            // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
@@ -112,6 +101,7 @@
             // 
             // ColHer
             // 
+            this.ColHer.DataPropertyName = "ColHer";
             this.ColHer.HeaderText = "Herramienta";
             this.ColHer.Name = "ColHer";
             this.ColHer.ReadOnly = true;
@@ -182,20 +172,12 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(89, 97);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(179, 22);
-            this.txtFecha.TabIndex = 14;
-            // 
             // FrmModificarMantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.ClientSize = new System.Drawing.Size(653, 412);
-            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAgregar);
@@ -204,7 +186,6 @@
             this.Controls.Add(this.txtEmpleado);
             this.Controls.Add(this.dgvDetalles);
             this.Controls.Add(this.lblCodigo);
-            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblCambios);
             this.Controls.Add(this.lblEmpleado);
             this.Controls.Add(this.lblMantenimiento);
@@ -223,7 +204,6 @@
         private Label lblMantenimiento;
         private Label lblEmpleado;
         private Label lblCambios;
-        private Label lblFecha;
         private Label lblCodigo;
         private DataGridView dgvDetalles;
         private TextBox txtEmpleado;
@@ -235,6 +215,5 @@
         private DataGridViewTextBoxColumn ColHer;
         private DataGridViewTextBoxColumn ColCam;
         private DataGridViewTextBoxColumn ColAcc;
-        private TextBox txtFecha;
     }
 }

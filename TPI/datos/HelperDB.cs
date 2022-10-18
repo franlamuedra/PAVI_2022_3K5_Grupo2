@@ -113,6 +113,46 @@ namespace TPI.datos
 
             return (int)pOut.Value;
         }
+
+        public int EjecutarSQLSP(string sp, List<Parametro> values)
+        {
+            int afectadas = 0;
+            SqlTransaction t = null;
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cnn.Open();
+                t = cnn.BeginTransaction();
+                cmd.Connection = cnn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = sp;
+                cmd.Transaction = t;
+
+                if (values != null)
+                {
+                    foreach (Parametro param in values)
+                    {
+                        cmd.Parameters.AddWithValue(param.Nombre, param.Valor);
+                    }
+                }
+
+                afectadas = cmd.ExecuteNonQuery();
+                t.Commit();
+            }
+            catch (SqlException)
+            {
+                if (t != null) { t.Rollback(); }
+            }
+            finally
+            {
+                if (cnn != null && cnn.State == ConnectionState.Open)
+                    cnn.Close();
+
+            }
+
+            return afectadas;
+        }
     }
     
 

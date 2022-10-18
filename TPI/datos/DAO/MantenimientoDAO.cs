@@ -108,6 +108,7 @@ namespace TPI.datos.DAO
                 cmd.Connection = cnn;
                 cmd.Transaction = t;
                 cmd.CommandText = "SP_Modificar_Mantenimiento";
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@nom", oMantenimiento.Nombre_Empleado);
                 cmd.Parameters.AddWithValue("@num_man", oMantenimiento.Numero_Mantenimiento);
                 cmd.ExecuteNonQuery();
@@ -118,8 +119,9 @@ namespace TPI.datos.DAO
                 {
                     cmdDetalle = new SqlCommand("SP_Insert_Detalle", cnn, t);
                     cmdDetalle.CommandType = CommandType.StoredProcedure;
-                    cmdDetalle.Parameters.AddWithValue("@num_man", oMantenimiento.Numero_Mantenimiento);
+                    cmdDetalle.Parameters.AddWithValue("@num_man", oMantenimiento.Numero_Mantenimiento);                  
                     cmdDetalle.Parameters.AddWithValue("@detalle", detalleNro);
+                    cmdDetalle.Parameters.AddWithValue("cod_herramienta", item.Herramienta.Codigo);
                     cmdDetalle.Parameters.AddWithValue("@cambios", item.Cambios);
                     cmdDetalle.ExecuteNonQuery();
 
@@ -150,7 +152,7 @@ namespace TPI.datos.DAO
             string sp = "SP_Eliminar_Mantenimiento";
             List<Parametro> lst = new List<Parametro>();
             lst.Add(new Parametro("@num_man", nro));
-            int afectadas = HelperDB.GetInstance().EjecutarSQL(sp, lst);
+            int afectadas = HelperDB.GetInstance().EjecutarSQLSP(sp, lst);
             return afectadas > 0;
         }
         public List<Mantenimiento> GetMantenimientoByFilter(DateTime desde, DateTime hasta, string empl)

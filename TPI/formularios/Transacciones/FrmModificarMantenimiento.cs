@@ -54,7 +54,7 @@ namespace TPI.formularios.Transacciones
 
             foreach (DataGridViewRow row in dgvDetalles.Rows)
             {
-                if (row.Cells["colCod"].Value.ToString().Equals(cboHerramientas.Text))
+                if (row.Cells["colHer"].Value.ToString().Equals(cboHerramientas.Text))
                 {
                     MessageBox.Show("Herramienta: " + cboHerramientas.Text + " ya se encuentra como detalle", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
@@ -91,10 +91,8 @@ namespace TPI.formularios.Transacciones
                     primero = false;
                 }
                 int codHerramienta = int.Parse(fila["Codigo_Herramienta"].ToString());
-                string marca = fila["Marca_Herramienta"].ToString();
-                string modelo = fila["Modelo_Herramienta"].ToString();
 
-                Herramienta oHerramienta = new Herramienta(codHerramienta, marca, modelo);
+                Herramienta oHerramienta = new Herramienta(codHerramienta);
                 string cambio = fila["Cambios"].ToString();
                 DetalleMantenimiento detalle = new DetalleMantenimiento(oHerramienta, cambio);
                 oMantenimiento.AgregarDetalle(detalle);
