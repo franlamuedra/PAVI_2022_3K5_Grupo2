@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmSoporte = new System.Windows.Forms.ToolStripMenuItem();
             this.materialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,13 +40,15 @@
             this.consultarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmOperaciones = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarPresupuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoMantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAyuda = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.nuevoMantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -137,6 +140,13 @@
             this.consultarPresupuestosToolStripMenuItem.Text = "Consultar mantenimientos";
             this.consultarPresupuestosToolStripMenuItem.Click += new System.EventHandler(this.consultarPresupuestosToolStripMenuItem_Click);
             // 
+            // nuevoMantenimientosToolStripMenuItem
+            // 
+            this.nuevoMantenimientosToolStripMenuItem.Name = "nuevoMantenimientosToolStripMenuItem";
+            this.nuevoMantenimientosToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.nuevoMantenimientosToolStripMenuItem.Text = "Nuevo Mantenimientos";
+            this.nuevoMantenimientosToolStripMenuItem.Click += new System.EventHandler(this.nuevoMantenimientosToolStripMenuItem_Click);
+            // 
             // tsmReportes
             // 
             this.tsmReportes.Name = "tsmReportes";
@@ -172,12 +182,15 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // nuevoMantenimientosToolStripMenuItem
+            // pictureBox1
             // 
-            this.nuevoMantenimientosToolStripMenuItem.Name = "nuevoMantenimientosToolStripMenuItem";
-            this.nuevoMantenimientosToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
-            this.nuevoMantenimientosToolStripMenuItem.Text = "Nuevo Mantenimientos";
-            this.nuevoMantenimientosToolStripMenuItem.Click += new System.EventHandler(this.nuevoMantenimientosToolStripMenuItem_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(875, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(117, 91);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmPrincipal
             // 
@@ -186,6 +199,7 @@
             this.BackColor = System.Drawing.Color.Chocolate;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1004, 476);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Maiandra GD", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.MainMenuStrip = this.menuStrip1;
@@ -196,6 +210,7 @@
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +234,6 @@
         private ToolStripMenuItem tsmUsuario;
         private ToolStripMenuItem consultarPresupuestosToolStripMenuItem;
         private ToolStripMenuItem nuevoMantenimientosToolStripMenuItem;
+        private PictureBox pictureBox1;
     }
 }

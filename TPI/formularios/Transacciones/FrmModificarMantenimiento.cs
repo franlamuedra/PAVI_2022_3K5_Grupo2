@@ -87,7 +87,6 @@ namespace TPI.formularios.Transacciones
                     oMantenimiento.Nombre_Empleado = fila["Nombre_Empleado"].ToString();
                     oMantenimiento.Fecha = DateTime.Parse(fila["fecha"].ToString());
                     txtEmpleado.Text = oMantenimiento.Nombre_Empleado;
-                    txtFecha.Text = oMantenimiento.Fecha.ToString("dd/MM/yyyy");
                     primero = false;
                 }
                 int codHerramienta = int.Parse(fila["Codigo_Herramienta"].ToString());
