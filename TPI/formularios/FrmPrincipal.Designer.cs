@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmSoporte = new System.Windows.Forms.ToolStripMenuItem();
             this.materialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,10 +38,13 @@
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmOperaciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarPresupuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAyuda = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.nuevoMantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,11 +57,12 @@
             this.tsmSoporte,
             this.tsmOperaciones,
             this.tsmReportes,
-            this.tsmAyuda});
+            this.tsmAyuda,
+            this.tsmUsuario});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1004, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1004, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,7 +73,7 @@
             this.herramientasToolStripMenuItem,
             this.proveedoresToolStripMenuItem});
             this.tsmSoporte.Name = "tsmSoporte";
-            this.tsmSoporte.Size = new System.Drawing.Size(79, 24);
+            this.tsmSoporte.Size = new System.Drawing.Size(66, 19);
             this.tsmSoporte.Text = "Soporte";
             // 
             // materialesToolStripMenuItem
@@ -78,13 +81,13 @@
             this.materialesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultarMaterialesToolStripMenuItem});
             this.materialesToolStripMenuItem.Name = "materialesToolStripMenuItem";
-            this.materialesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.materialesToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.materialesToolStripMenuItem.Text = "Materiales";
             // 
             // consultarMaterialesToolStripMenuItem
             // 
             this.consultarMaterialesToolStripMenuItem.Name = "consultarMaterialesToolStripMenuItem";
-            this.consultarMaterialesToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.consultarMaterialesToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.consultarMaterialesToolStripMenuItem.Text = "Consultar materiales";
             this.consultarMaterialesToolStripMenuItem.Click += new System.EventHandler(this.consultarMaterialesToolStripMenuItem_Click);
             // 
@@ -93,13 +96,13 @@
             this.herramientasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultarProToolStripMenuItem});
             this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
-            this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.herramientasToolStripMenuItem.Text = "Herramientas";
             // 
             // consultarProToolStripMenuItem
             // 
             this.consultarProToolStripMenuItem.Name = "consultarProToolStripMenuItem";
-            this.consultarProToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.consultarProToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.consultarProToolStripMenuItem.Text = "Consultar herramientas";
             this.consultarProToolStripMenuItem.Click += new System.EventHandler(this.consultarProToolStripMenuItem_Click);
             // 
@@ -108,26 +111,36 @@
             this.proveedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultarProveedoresToolStripMenuItem});
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             // 
             // consultarProveedoresToolStripMenuItem
             // 
             this.consultarProveedoresToolStripMenuItem.Name = "consultarProveedoresToolStripMenuItem";
-            this.consultarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.consultarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.consultarProveedoresToolStripMenuItem.Text = "Consultar proveedores";
             this.consultarProveedoresToolStripMenuItem.Click += new System.EventHandler(this.consultarProveedoresToolStripMenuItem_Click);
             // 
             // tsmOperaciones
             // 
+            this.tsmOperaciones.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarPresupuestosToolStripMenuItem,
+            this.nuevoMantenimientosToolStripMenuItem});
             this.tsmOperaciones.Name = "tsmOperaciones";
-            this.tsmOperaciones.Size = new System.Drawing.Size(113, 24);
+            this.tsmOperaciones.Size = new System.Drawing.Size(95, 19);
             this.tsmOperaciones.Text = "Operaciones";
+            // 
+            // consultarPresupuestosToolStripMenuItem
+            // 
+            this.consultarPresupuestosToolStripMenuItem.Name = "consultarPresupuestosToolStripMenuItem";
+            this.consultarPresupuestosToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.consultarPresupuestosToolStripMenuItem.Text = "Consultar mantenimientos";
+            this.consultarPresupuestosToolStripMenuItem.Click += new System.EventHandler(this.consultarPresupuestosToolStripMenuItem_Click);
             // 
             // tsmReportes
             // 
             this.tsmReportes.Name = "tsmReportes";
-            this.tsmReportes.Size = new System.Drawing.Size(87, 24);
+            this.tsmReportes.Size = new System.Drawing.Size(73, 19);
             this.tsmReportes.Text = "Reportes";
             // 
             // tsmAyuda
@@ -135,15 +148,23 @@
             this.tsmAyuda.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.acercaDeToolStripMenuItem});
             this.tsmAyuda.Name = "tsmAyuda";
-            this.tsmAyuda.Size = new System.Drawing.Size(69, 24);
+            this.tsmAyuda.Size = new System.Drawing.Size(58, 19);
             this.tsmAyuda.Text = "Ayuda";
             // 
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
+            // 
+            // tsmUsuario
+            // 
+            this.tsmUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tsmUsuario.Name = "tsmUsuario";
+            this.tsmUsuario.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tsmUsuario.Size = new System.Drawing.Size(66, 19);
+            this.tsmUsuario.Text = "Usuario";
             // 
             // imageList1
             // 
@@ -151,12 +172,18 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // nuevoMantenimientosToolStripMenuItem
+            // 
+            this.nuevoMantenimientosToolStripMenuItem.Name = "nuevoMantenimientosToolStripMenuItem";
+            this.nuevoMantenimientosToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.nuevoMantenimientosToolStripMenuItem.Text = "Nuevo Mantenimientos";
+            this.nuevoMantenimientosToolStripMenuItem.Click += new System.EventHandler(this.nuevoMantenimientosToolStripMenuItem_Click);
+            // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Chocolate;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1004, 476);
             this.Controls.Add(this.menuStrip1);
@@ -189,5 +216,8 @@
         private ToolStripMenuItem proveedoresToolStripMenuItem;
         private ToolStripMenuItem consultarProveedoresToolStripMenuItem;
         private ImageList imageList1;
+        private ToolStripMenuItem tsmUsuario;
+        private ToolStripMenuItem consultarPresupuestosToolStripMenuItem;
+        private ToolStripMenuItem nuevoMantenimientosToolStripMenuItem;
     }
 }

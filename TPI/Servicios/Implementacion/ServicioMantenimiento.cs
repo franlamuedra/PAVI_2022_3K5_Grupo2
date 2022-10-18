@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TPI.datos.DAO;
 using TPI.dominio;
+using TPI.Servicios.Interfaz;
 
-namespace TPI.Servicios
+namespace TPI.Servicios.Implementacion
 {
-    public class GestorPresupuestos
+    public class ServicioMantenimiento : IServicioMantenimiento
     {
         private IMantenimientoDAO dao;
 
-        public GestorPresupuestos()
+        public ServicioMantenimiento()
         {
             dao = new MantenimientoDAO();
         }
@@ -38,9 +39,19 @@ namespace TPI.Servicios
             return dao.GetHerramientas();
         }
 
-        public List<Mantenimiento> ObtenerMantenimientos(string fecha, string empl)
+        public List<Mantenimiento> ObtenerMantenimientos(DateTime desde, DateTime hasta, string empl)
         {
-            return dao.GetMantenimientoByFilter(fecha, empl);
+            return dao.GetMantenimientoByFilter(desde, hasta, empl);
+        }
+
+        public int ProximoMantenimiento()
+        {
+            return dao.NextMantenimiento();
+        }
+
+        public Mantenimiento ObtenerMantenimientoPorNro(int nro) 
+        {
+            return dao.GetMantenimientoPorNro(nro);
         }
     }
 }

@@ -13,7 +13,9 @@ namespace TPI.datos.DAO
         bool Create(Mantenimiento oMantenimiento);
         bool Update(Mantenimiento oMantenimiento);
         bool Delete(int nro);
-        List<Mantenimiento> GetMantenimientoByFilter(string fecha, string empl);
+        List<Mantenimiento> GetMantenimientoByFilter(DateTime desde, DateTime hasta, string empl);
+        int NextMantenimiento();
+        Mantenimiento GetMantenimientoPorNro(int nro);
 
     }
 }

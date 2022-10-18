@@ -9,12 +9,12 @@ namespace TPI.dominio
     public class DetalleMantenimiento
     {
         public Herramienta Herramienta { get; set; }
-        public int Cantidad { get; set; }
+        public string Cambios { get; set; }
         
-        public DetalleMantenimiento(Herramienta h, int cant)
+        public DetalleMantenimiento(Herramienta h, string cam)
         {
             Herramienta = h;
-            Cantidad = cant;
+            Cambios = cam;
         }
     }
 }

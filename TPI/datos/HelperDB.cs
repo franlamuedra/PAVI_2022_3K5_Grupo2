@@ -55,7 +55,6 @@ namespace TPI.datos
         }
 
         public int EjecutarSQL(string strSql, List<Parametro> lst)
-
         {
             int rafc = 0;
             SqlCommand cmd = new SqlCommand();
@@ -77,6 +76,7 @@ namespace TPI.datos
         public DataTable ConsultaSQLSP(string sp, List<Parametro> values)
         {
             DataTable dt = new DataTable();
+
             cnn.Open();
             SqlCommand cmd = new SqlCommand(sp, cnn);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -96,6 +96,22 @@ namespace TPI.datos
         public SqlConnection GetConnection()
         {
             return this.cnn;
+        }
+
+        public int ConsultaEscalarSQL(string spNombre, string pOutNombre)
+        {
+            cnn.Open();
+            SqlCommand cmd = new SqlCommand(spNombre, cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlParameter pOut = new SqlParameter();
+            pOut.ParameterName = pOutNombre;
+            pOut.DbType = DbType.Int32;
+            pOut.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(pOut);
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+
+            return (int)pOut.Value;
         }
     }
     

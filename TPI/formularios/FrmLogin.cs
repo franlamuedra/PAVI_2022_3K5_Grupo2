@@ -82,5 +82,10 @@ namespace TPI.formularios
             this.CenterToParent();
         }
 
+        public string DevolverUsuario()
+        {
+            return txtUsuario.Text;
+        }
+
     }
 }
