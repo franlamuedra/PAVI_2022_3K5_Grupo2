@@ -69,14 +69,14 @@
             // 
             this.dtpHasta.Location = new System.Drawing.Point(368, 28);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(228, 22);
+            this.dtpHasta.Size = new System.Drawing.Size(228, 25);
             this.dtpHasta.TabIndex = 8;
             // 
             // dtpDesde
             // 
             this.dtpDesde.Location = new System.Drawing.Point(83, 28);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(228, 22);
+            this.dtpDesde.Size = new System.Drawing.Size(228, 25);
             this.dtpDesde.TabIndex = 7;
             // 
             // lblHasta
@@ -84,7 +84,7 @@
             this.lblHasta.AutoSize = true;
             this.lblHasta.Location = new System.Drawing.Point(319, 34);
             this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(42, 15);
+            this.lblHasta.Size = new System.Drawing.Size(49, 18);
             this.lblHasta.TabIndex = 6;
             this.lblHasta.Text = "Hasta";
             // 
@@ -100,9 +100,9 @@
             // 
             // txtEmpleado
             // 
-            this.txtEmpleado.Location = new System.Drawing.Point(82, 69);
+            this.txtEmpleado.Location = new System.Drawing.Point(92, 65);
             this.txtEmpleado.Name = "txtEmpleado";
-            this.txtEmpleado.Size = new System.Drawing.Size(225, 22);
+            this.txtEmpleado.Size = new System.Drawing.Size(225, 25);
             this.txtEmpleado.TabIndex = 3;
             // 
             // lblEmpleado
@@ -110,7 +110,7 @@
             this.lblEmpleado.AutoSize = true;
             this.lblEmpleado.Location = new System.Drawing.Point(7, 72);
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(67, 15);
+            this.lblEmpleado.Size = new System.Drawing.Size(82, 18);
             this.lblEmpleado.TabIndex = 2;
             this.lblEmpleado.Text = "Empleado";
             // 
@@ -119,7 +119,7 @@
             this.lblDesde.AutoSize = true;
             this.lblDesde.Location = new System.Drawing.Point(32, 34);
             this.lblDesde.Name = "lblDesde";
-            this.lblDesde.Size = new System.Drawing.Size(44, 15);
+            this.lblDesde.Size = new System.Drawing.Size(52, 18);
             this.lblDesde.TabIndex = 1;
             this.lblDesde.Text = "Desde";
             // 
@@ -136,6 +136,7 @@
             this.dgvMantenimiento.Location = new System.Drawing.Point(14, 116);
             this.dgvMantenimiento.Name = "dgvMantenimiento";
             this.dgvMantenimiento.ReadOnly = true;
+            this.dgvMantenimiento.RowHeadersWidth = 51;
             this.dgvMantenimiento.RowTemplate.Height = 25;
             this.dgvMantenimiento.Size = new System.Drawing.Size(747, 215);
             this.dgvMantenimiento.TabIndex = 1;
@@ -145,6 +146,7 @@
             // ColNum
             // 
             this.ColNum.HeaderText = "Mantenimiento #";
+            this.ColNum.MinimumWidth = 6;
             this.ColNum.Name = "ColNum";
             this.ColNum.ReadOnly = true;
             this.ColNum.Width = 130;
@@ -153,24 +155,28 @@
             // 
             this.ColFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColFecha.HeaderText = "Fecha";
+            this.ColFecha.MinimumWidth = 6;
             this.ColFecha.Name = "ColFecha";
             this.ColFecha.ReadOnly = true;
-            this.ColFecha.Width = 67;
+            this.ColFecha.Width = 78;
             // 
             // ColEmpleado
             // 
             this.ColEmpleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColEmpleado.HeaderText = "Empleado";
+            this.ColEmpleado.MinimumWidth = 6;
             this.ColEmpleado.Name = "ColEmpleado";
             this.ColEmpleado.ReadOnly = true;
             // 
             // ColDetalle
             // 
             this.ColDetalle.HeaderText = "Detalle";
+            this.ColDetalle.MinimumWidth = 6;
             this.ColDetalle.Name = "ColDetalle";
             this.ColDetalle.ReadOnly = true;
             this.ColDetalle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ColDetalle.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColDetalle.Width = 125;
             // 
             // btnEditar
             // 
@@ -204,7 +210,7 @@
             // 
             // FrmConsultarMantenimientos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.ClientSize = new System.Drawing.Size(775, 368);

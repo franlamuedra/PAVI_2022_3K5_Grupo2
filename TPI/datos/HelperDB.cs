@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TPI.dominio;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -153,6 +154,39 @@ namespace TPI.datos
 
             return afectadas;
         }
+
+       public Herramienta ObtenerHerramientaPorId(string id)
+       {    
+            Herramienta her = new Herramienta();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                
+                string consulta = "SELECT * FROM t_Herramientas WHERE Cod_Herramienta LIKE @id";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cnn.Open();
+                cmd.Connection = cnn;
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.Read())
+                {
+                    her.Marca = dr["Marca_Herramienta"].ToString();
+                    her.Modelo = dr["Modelo_Herramienta"].ToString();
+
+                }
+                cnn.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return her;
+       }
     }
     
 

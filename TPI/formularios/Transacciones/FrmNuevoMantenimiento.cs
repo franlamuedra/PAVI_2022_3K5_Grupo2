@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TPI.datos;
 using TPI.dominio;
 using TPI.Servicios;
 using TPI.Servicios.Interfaz;
@@ -127,5 +128,17 @@ namespace TPI.formularios.Transacciones
                 MessageBox.Show("ERROR. No se pudo registrar el mantenimiento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void cboHerramientas_SelectedIndexChanged(object sender, EventArgs e)
+        {   
+            if (cboHerramientas.SelectedValue != null)
+            {
+                string id = cboHerramientas.SelectedValue.ToString();
+                Herramienta herramienta = HelperDB.GetInstance().ObtenerHerramientaPorId(id);
+                txtModelo.Text = herramienta.Modelo;
+                txtMarca.Text = herramienta.Marca;
+            }
+        }
+
     }
 }

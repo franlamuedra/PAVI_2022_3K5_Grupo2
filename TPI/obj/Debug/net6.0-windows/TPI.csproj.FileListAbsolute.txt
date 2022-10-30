@@ -105,7 +105,6 @@ C:\repositories\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmAl
 C:\repositories\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmConsultarMaterial.resources
 C:\repositories\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Proveedores.FrmAltaProveedor.resources
 C:\repositories\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Proveedores.FrmConsultarProveedor.resources
-C:\repositories\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Transacciones.FrmMantenimiento.resources
 C:\repositories\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.Properties.Resources.resources
 C:\repositories\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.csproj.GenerateResource.cache
 C:\repositories\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.GeneratedMSBuildEditorConfig.editorconfig
@@ -122,3 +121,7 @@ C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\De
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Transacciones.FrmNuevoMantenimiento.resources
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Transacciones.FrmModificarMantenimiento.resources
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Transacciones.FrmDetallesMantenimiento.resources
+C:\repositories\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Transacciones.FrmConsultarMantenimientos.resources
+C:\repositories\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Transacciones.FrmDetallesMantenimiento.resources
+C:\repositories\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Transacciones.FrmModificarMantenimiento.resources
+C:\repositories\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Transacciones.FrmNuevoMantenimiento.resources
