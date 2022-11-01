@@ -40,12 +40,14 @@
     <Compile Update="formularios\Transacciones\FrmNuevoMantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Reportes\ReporteMantenimientos.cs">
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Reportes\FrmReporteMantenimento.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Update="Reportes\DataSet1.xsd">
+    <None Update="Reportes\DSListado.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

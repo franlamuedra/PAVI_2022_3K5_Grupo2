@@ -187,6 +187,42 @@ namespace TPI.datos
             }
             return her;
        }
+        public DataTable ObtenerMantenimientos()
+        {            
+            Herramienta her = new Herramienta();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "select h.Cod_Herramienta as 'Cod Herramienta' , h.Marca_Herramienta as 'Marca Herramienta', h.Modelo_Herramienta as 'Modelo Herramienta',d.Cambios, m.Fecha " +
+                    "from t_Herramientas h " +
+                    "inner join t_Detalles_Mantenimiento d on h.Cod_Herramienta = d.Codigo_Herramienta" +
+                    "inner join t_Mantenimientos m on d.Numero_Mantenimiento = m.Numero_Mantenimiento";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cnn.Open();
+                cmd.Connection = cnn;
+
+                DataTable dt = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                return dt;
+                cnn.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                cnn.Close();
+            }
+        }
     }
     
 

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSListado" targetNamespace="http://tempuri.org/DSListado.xsd" xmlns:mstns="http://tempuri.org/DSListado.xsd" xmlns="http://tempuri.org/DSListado.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=DEBORAH\SQLEXPRESS;Initial Catalog=Ferreteria_Industrial;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="deborah\sqlexpress.Ferreteria_Industrial.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="deborah\sqlexpress.Ferreteria_Industrial.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT h.Cod_Herramienta, h.Marca_Herramienta, h.Modelo_Herramienta, d.Cambios, m.Fecha
+FROM     t_Herramientas AS h INNER JOIN
+                  t_Detalles_Mantenimiento AS d ON h.Cod_Herramienta = d.Codigo_Herramienta INNER JOIN
+                  t_Mantenimientos AS m ON d.Numero_Mantenimiento = m.Numero_Mantenimiento</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Cod_Herramienta" DataSetColumn="Cod_Herramienta" />
+              <Mapping SourceColumn="Marca_Herramienta" DataSetColumn="Marca_Herramienta" />
+              <Mapping SourceColumn="Modelo_Herramienta" DataSetColumn="Modelo_Herramienta" />
+              <Mapping SourceColumn="Cambios" DataSetColumn="Cambios" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSListado" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DSListado" msprop:Generator_DataSetName="DSListado">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cod_Herramienta" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Cod_Herramienta" msprop:Generator_ColumnPropNameInTable="Cod_HerramientaColumn" msprop:Generator_ColumnVarNameInTable="columnCod_Herramienta" msprop:Generator_UserColumnName="Cod_Herramienta" type="xs:int" />
+              <xs:element name="Marca_Herramienta" msprop:Generator_ColumnPropNameInRow="Marca_Herramienta" msprop:Generator_ColumnPropNameInTable="Marca_HerramientaColumn" msprop:Generator_ColumnVarNameInTable="columnMarca_Herramienta" msprop:Generator_UserColumnName="Marca_Herramienta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modelo_Herramienta" msprop:Generator_ColumnPropNameInRow="Modelo_Herramienta" msprop:Generator_ColumnPropNameInTable="Modelo_HerramientaColumn" msprop:Generator_ColumnVarNameInTable="columnModelo_Herramienta" msprop:Generator_UserColumnName="Modelo_Herramienta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cambios" msprop:Generator_ColumnPropNameInRow="Cambios" msprop:Generator_ColumnPropNameInTable="CambiosColumn" msprop:Generator_ColumnVarNameInTable="columnCambios" msprop:Generator_UserColumnName="Cambios">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:Cod_Herramienta" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
