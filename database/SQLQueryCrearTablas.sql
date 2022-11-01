@@ -26,3 +26,9 @@ INSERT INTO t_Detalles_Mantenimiento (Numero_Mantenimiento, Numero_Detalle, Codi
 INSERT INTO t_Detalles_Mantenimiento (Numero_Mantenimiento, Numero_Detalle, Codigo_Herramienta, Cambios) VALUES (4, 2, 3, 'reparacion')
 INSERT INTO t_Detalles_Mantenimiento (Numero_Mantenimiento, Numero_Detalle, Codigo_Herramienta, Cambios) VALUES (5, 3, 4, 'reparacion')
 GO*/
+
+INSERT INTO t_Alquileres (Fecha_Entrega, Fecha_Devolucion, Direccion) VALUES (CAST(0x80420B00 AS Date), CAST(0x80420B10 AS Date), 'pUE 345')
+INSERT INTO t_Alquileres (Fecha_Entrega, Fecha_Devolucion, Direccion) VALUES (CAST(0x80420B00 AS Date), CAST(0x80420B10 AS Date), 'rE 345')
+
+INSERT INTO t_Detalles_Alquiler(Numero_Alquiler, Numero_Detalle, Codigo_Herramienta) VALUES (1, 1, 1)
+INSERT INTO t_Detalles_Alquiler(Numero_Alquiler, Numero_Detalle, Codigo_Herramienta) VALUES (2, 2, 2)

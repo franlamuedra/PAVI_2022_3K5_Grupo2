@@ -55,9 +55,9 @@ namespace TPI.Servicios.Implementacion
             return dao.GetMantenimientoPorNro(nro);
         }
 
-        public DataTable ObtenerReporteHerramientas(string marca)
+        public DataTable ObtenerReporteHerramientas(string modelo)
         {
-            return dao.GetReport(marca);
+            return dao.GetReport(modelo);
         }
     }
 }

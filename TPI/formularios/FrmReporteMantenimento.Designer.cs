@@ -32,6 +32,7 @@
             this.cboModelo = new System.Windows.Forms.ComboBox();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
             // label1
@@ -74,12 +75,21 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // reportViewer2
+            // 
+            this.reportViewer2.Location = new System.Drawing.Point(12, 75);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.ServerReport.BearerToken = null;
+            this.reportViewer2.Size = new System.Drawing.Size(676, 246);
+            this.reportViewer2.TabIndex = 6;
+            // 
             // FrmReporteMantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.ClientSize = new System.Drawing.Size(700, 382);
+            this.Controls.Add(this.reportViewer2);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.cboModelo);
@@ -101,5 +111,6 @@
         private Button btnSalir;
         private Microsoft.Reporting.WinForms.ReportViewer rvReporte;
         private Button button1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
     }
 }

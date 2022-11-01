@@ -10,9 +10,6 @@
     <Compile Update="formularios\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="formularios\FrmRep.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="formularios\FrmReporteMantenimento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -34,13 +31,25 @@
     <Compile Update="formularios\Proveedores\FrmConsultarProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="formularios\Transacciones\FrmConsultarAlquileres.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="formularios\Transacciones\FrmConsultarMantenimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="formularios\Transacciones\FrmDetallesAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="formularios\Transacciones\FrmDetallesMantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="formularios\Transacciones\FrmModificarAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="formularios\Transacciones\FrmModificarMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="formularios\Transacciones\FrmNuevoAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="formularios\Transacciones\FrmNuevoMantenimiento.cs">

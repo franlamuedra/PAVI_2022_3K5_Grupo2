@@ -36,13 +36,19 @@ namespace TPI.Reportes
        private void btnGenerar_Click(object sender, EventArgs e)
        {
             DataTable dt = servicio.ObtenerReporteHerramientas(cboModelo.SelectedValue.ToString());
-            rvReporte.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", dt));
-            rvReporte.RefreshReport();
-       }
+            reportViewer2.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet2", dt));
+            reportViewer2.RefreshReport();
+        }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        /*private void FrmReporteMantenimientos_Load(object sender, EventArgs e)
+        {
+            reportViewer2.LocalReport.ReportEmbeddedResource = "TPI.Reporte.rptHerramientas.rdlc";
+            reportViewer2.Refresh();
+        }*/
     }
 }

@@ -49,6 +49,8 @@
             this.tsmUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.consultarAlquileresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoAlqulerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -130,7 +132,9 @@
             // 
             this.tsmOperaciones.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultarPresupuestosToolStripMenuItem,
-            this.nuevoMantenimientosToolStripMenuItem});
+            this.nuevoMantenimientosToolStripMenuItem,
+            this.consultarAlquileresToolStripMenuItem,
+            this.nuevoAlqulerToolStripMenuItem});
             this.tsmOperaciones.Name = "tsmOperaciones";
             this.tsmOperaciones.Size = new System.Drawing.Size(95, 19);
             this.tsmOperaciones.Text = "Operaciones";
@@ -210,6 +214,20 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // consultarAlquileresToolStripMenuItem
+            // 
+            this.consultarAlquileresToolStripMenuItem.Name = "consultarAlquileresToolStripMenuItem";
+            this.consultarAlquileresToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.consultarAlquileresToolStripMenuItem.Text = "Consultar Alquileres";
+            this.consultarAlquileresToolStripMenuItem.Click += new System.EventHandler(this.consultarAlquileresToolStripMenuItem_Click);
+            // 
+            // nuevoAlqulerToolStripMenuItem
+            // 
+            this.nuevoAlqulerToolStripMenuItem.Name = "nuevoAlqulerToolStripMenuItem";
+            this.nuevoAlqulerToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.nuevoAlqulerToolStripMenuItem.Text = "Nuevo Alquler";
+            this.nuevoAlqulerToolStripMenuItem.Click += new System.EventHandler(this.nuevoAlqulerToolStripMenuItem_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -255,5 +273,7 @@
         private PictureBox pictureBox1;
         private ToolStripMenuItem reporteDeMantenimientoToolStripMenuItem;
         private ToolStripMenuItem reporteDeHerramientasToolStripMenuItem;
+        private ToolStripMenuItem consultarAlquileresToolStripMenuItem;
+        private ToolStripMenuItem nuevoAlqulerToolStripMenuItem;
     }
 }

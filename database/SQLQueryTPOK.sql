@@ -58,6 +58,14 @@ CREATE TABLE t_Mantenimientos(
 )
 GO
 
+CREATE TABLE t_Alquileres (
+	Numero_Alquiler int identity (1, 1) primary key,
+	Fecha_Entrega date NOT NULL,
+	Fecha_Devolucion date NOT NULL,
+	Direccion nvarchar (100),
+)
+GO	
+
 CREATE TABLE t_Detalles_Mantenimiento(
 	Numero_Mantenimiento int NOT NULL,
 	Numero_Detalle int NOT NULL,
@@ -158,4 +166,119 @@ BEGIN
 	AND t.Numero_Mantenimiento = @num_man;
 END
 GO
-	
+
+CREATE PROCEDURE SP_Reporte_Mantenimientos
+	@modelo nvarchar (100)
+AS
+BEGIN
+	SELECT t2.Cod_Herramienta as herramienta
+	FROM t_Detalles_Mantenimiento t, t_Herramientas t2, t_Mantenimientos t3
+	WHERE t.Codigo_Herramienta = t2.Cod_Herramienta
+	AND t.Numero_Mantenimiento = t3.Numero_Mantenimiento
+	AND t2.Modelo_Herramienta = @modelo
+	GROUP BY t2.Cod_Herramienta;
+END
+GO
+
+CREATE PROCEDURE SP_Insertar_Alquiler
+	@dir Nvarchar (100),
+	@num_alq int OUTPUT
+AS
+BEGIN
+	INSERT INTO t_Alquileres(Numero_Alquiler, Fecha_Entrega, Fecha_Devolucion, Direccion) 
+	VALUES (@num_alq, GETDATE(), GETDATE(), @dir);
+	SET @num_alq = SCOPE_IDENTITY();
+END
+GO
+
+CREATE TABLE t_Detalles_Alquiler(
+	Numero_Alquiler int NOT NULL,
+	Numero_Detalle int NOT NULL,
+	Codigo_Herramienta int NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	Numero_Alquiler ASC,
+	Numero_Detalle ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+CREATE PROCEDURE SP_Modificar_Alquiler
+	@dir nvarchar (100),
+	@num_alq int OUTPUT
+AS
+BEGIN
+	UPDATE t_Alquileres SET Direccion = @dir
+	WHERE Numero_Alquiler = @num_alq;
+
+	DELETE t_Detalles_Alquiler WHERE Numero_Alquiler = @num_alq;
+END
+GO
+
+CREATE PROCEDURE SP_Eliminar_Alquiler
+	@num_alq int
+AS
+BEGIN
+	DELETE t_Alquileres	WHERE Numero_Alquiler = @num_alq;
+END
+GO
+
+CREATE PROCEDURE SP_Insert_Detalle2
+	@num_alq int,
+	@detalle int, 
+	@cod_herramienta int
+AS
+BEGIN
+	INSERT INTO t_Detalles_Alquiler(Numero_Alquiler, Numero_Detalle, Codigo_Herramienta)
+    VALUES (@num_alq, @detalle, @cod_herramienta);
+END
+GO
+
+CREATE PROCEDURE SP_Consultar_Alquileres
+	@desde Datetime,
+	@hasta Datetime
+AS
+BEGIN
+	SELECT *
+	FROM t_Alquileres
+	WHERE (@desde is null OR Fecha_Entrega >= @desde)
+	AND (@hasta is null OR Fecha_Entrega <= @hasta);
+END
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE SP_Proximo_Alquiler
+@next int OUTPUT
+AS
+BEGIN
+	SET @next = (SELECT MAX(Numero_Alquiler)+1 FROM t_Alquileres);
+END
+GO
+
+CREATE PROCEDURE SP_Consultar_Detalles_Alquiler
+	@num_alq int
+AS
+BEGIN
+	SELECT t.*, t2.Cod_Herramienta, t3.Direccion, t3.Fecha_Entrega
+	FROM t_Detalles_Alquiler t, t_Herramientas t2, t_Alquileres t3
+	WHERE t.Codigo_Herramienta = t2.Cod_Herramienta
+	AND t.Numero_Alquiler = t3.Numero_Alquiler
+	AND t.Numero_Alquiler = @num_alq;
+END
+GO
+
+CREATE PROCEDURE SP_Reporte_Alquileres
+	@marca nvarchar (100)
+AS
+BEGIN
+	SELECT t2.Cod_Herramienta as herramienta
+	FROM t_Detalles_Mantenimiento t, t_Herramientas t2, t_Mantenimientos t3
+	WHERE t.Codigo_Herramienta = t2.Cod_Herramienta
+	AND t.Numero_Mantenimiento = t3.Numero_Mantenimiento
+	AND t2.Marca_Herramienta = @marca
+	GROUP BY t2.Cod_Herramienta;
+END
+GO

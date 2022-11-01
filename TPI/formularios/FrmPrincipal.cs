@@ -10,10 +10,12 @@ namespace TPI
     public partial class FrmPrincipal : Form
     {
         private FabricaServicioMantenimiento fabrica;
-        public FrmPrincipal(FabricaServicioMantenimiento fabrica)
+        private FabricaServicioAlquiler fabricaA;
+        public FrmPrincipal(FabricaServicioMantenimiento fabrica, FabricaServicioAlquiler fabricaA)
         {
             InitializeComponent();
             this.fabrica = fabrica;
+            this.fabricaA = fabricaA;
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
@@ -58,6 +60,16 @@ namespace TPI
         private void reporteDeMantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FrmReporteMantenimientos(fabrica).ShowDialog();
+        }
+
+        private void consultarAlquileresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmConsultarAlquileres(fabricaA).ShowDialog();
+        }
+
+        private void nuevoAlqulerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmNuevoAlquiler(fabricaA).ShowDialog();
         }
     }
 }
