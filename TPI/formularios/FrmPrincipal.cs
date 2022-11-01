@@ -2,6 +2,7 @@ using TPI.formularios;
 using TPI.formularios.Herramientas;
 using TPI.formularios.Proveedores;
 using TPI.formularios.Transacciones;
+using TPI.Reportes;
 using TPI.Servicios;
 
 namespace TPI
@@ -52,6 +53,11 @@ namespace TPI
         private void nuevoMantenimientosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FrmNuevoMantenimiento(fabrica).ShowDialog();
+        }
+
+        private void reporteDeMantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmReporteMantenimientos(fabrica).ShowDialog();
         }
     }
 }

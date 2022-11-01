@@ -137,32 +137,24 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.ReportingServices.ReportViewerControl.Winforms/140.340.80": {
+      "Microsoft.ReportingServices.ReportViewerControl.Winforms/150.1537.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.SqlServer.Types": "14.0.0"
         },
         "compile": {
           "lib/net40/Microsoft.ReportViewer.Common.dll": {},
-          "lib/net40/Microsoft.ReportViewer.Common.resources.dll": {},
           "lib/net40/Microsoft.ReportViewer.DataVisualization.dll": {},
-          "lib/net40/Microsoft.ReportViewer.DataVisualization.resources.dll": {},
           "lib/net40/Microsoft.ReportViewer.Design.dll": {},
-          "lib/net40/Microsoft.ReportViewer.Design.resources.dll": {},
           "lib/net40/Microsoft.ReportViewer.ProcessingObjectModel.dll": {},
-          "lib/net40/Microsoft.ReportViewer.WinForms.dll": {},
-          "lib/net40/Microsoft.ReportViewer.WinForms.resources.dll": {}
+          "lib/net40/Microsoft.ReportViewer.WinForms.dll": {}
         },
         "runtime": {
           "lib/net40/Microsoft.ReportViewer.Common.dll": {},
-          "lib/net40/Microsoft.ReportViewer.Common.resources.dll": {},
           "lib/net40/Microsoft.ReportViewer.DataVisualization.dll": {},
-          "lib/net40/Microsoft.ReportViewer.DataVisualization.resources.dll": {},
           "lib/net40/Microsoft.ReportViewer.Design.dll": {},
-          "lib/net40/Microsoft.ReportViewer.Design.resources.dll": {},
           "lib/net40/Microsoft.ReportViewer.ProcessingObjectModel.dll": {},
-          "lib/net40/Microsoft.ReportViewer.WinForms.dll": {},
-          "lib/net40/Microsoft.ReportViewer.WinForms.resources.dll": {}
+          "lib/net40/Microsoft.ReportViewer.WinForms.dll": {}
         },
         "resource": {
           "lib/net40/de/Microsoft.ReportViewer.Common.resources.dll": {
@@ -284,30 +276,6 @@
           },
           "lib/net40/zh-CHT/Microsoft.ReportViewer.WinForms.resources.dll": {
             "locale": "zh-CHT"
-          },
-          "lib/net40/zh-HANS/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "zh-HANS"
-          },
-          "lib/net40/zh-HANS/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "zh-HANS"
-          },
-          "lib/net40/zh-HANS/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "zh-HANS"
-          },
-          "lib/net40/zh-HANS/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "zh-HANS"
-          },
-          "lib/net40/zh-HANT/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "zh-HANT"
-          },
-          "lib/net40/zh-HANT/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "zh-HANT"
-          },
-          "lib/net40/zh-HANT/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "zh-HANT"
-          },
-          "lib/net40/zh-HANT/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "zh-HANT"
           }
         }
       },
@@ -886,10 +854,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.ReportingServices.ReportViewerControl.Winforms/140.340.80": {
-      "sha512": "yCf56FW5i5HyIxIi8GY1sAdtDBlihjPO6x7XT4Ux7Trm4iuM8Qr/dyZmSylHslrRYzds5zNSN9yRCgTqvgiCsQ==",
+    "Microsoft.ReportingServices.ReportViewerControl.Winforms/150.1537.0": {
+      "sha512": "RhWcfNUq2TNkyJpQySznbTg9VD0EOqxF3du2rPz4FWsUF4Kcx3oEiREUOZpnPFl9YJmgneruWXTsKhmT6PYtoQ==",
       "type": "package",
-      "path": "microsoft.reportingservices.reportviewercontrol.winforms/140.340.80",
+      "path": "microsoft.reportingservices.reportviewercontrol.winforms/150.1537.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -942,17 +910,9 @@
         "lib/net40/zh-CHT/Microsoft.ReportViewer.DataVisualization.resources.dll",
         "lib/net40/zh-CHT/Microsoft.ReportViewer.Design.resources.dll",
         "lib/net40/zh-CHT/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/zh-HANS/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/zh-HANS/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/zh-HANS/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/zh-HANS/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/zh-HANT/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/zh-HANT/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/zh-HANT/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/zh-HANT/Microsoft.ReportViewer.WinForms.resources.dll",
         "license/License_ReportViewer.rtf",
         "license/ThirdPartyNotices_ReportViewer.txt",
-        "microsoft.reportingservices.reportviewercontrol.winforms.140.340.80.nupkg.sha512",
+        "microsoft.reportingservices.reportviewercontrol.winforms.150.1537.0.nupkg.sha512",
         "microsoft.reportingservices.reportviewercontrol.winforms.nuspec"
       ]
     },
@@ -1637,32 +1597,29 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "Microsoft.ReportingServices.ReportViewerControl.Winforms >= 140.340.80",
+      "Microsoft.ReportingServices.ReportViewerControl.Winforms >= 150.1537.0",
       "ReportViewerCore.WinForms >= 15.1.17",
       "System.Data.SqlClient >= 4.8.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
-    "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages": {},
+    "C:\\Users\\lauta\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repositories\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj",
+      "projectUniqueName": "C:\\Users\\lauta\\Escritorio\\Facultadovich\\2do\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj",
       "projectName": "TPI",
-      "projectPath": "C:\\repositories\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\repositories\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\obj\\",
+      "projectPath": "C:\\Users\\lauta\\Escritorio\\Facultadovich\\2do\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj",
+      "packagesPath": "C:\\Users\\lauta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lauta\\Escritorio\\Facultadovich\\2do\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+        "C:\\Users\\lauta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1671,8 +1628,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1693,7 +1648,7 @@
         "dependencies": {
           "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
             "target": "Package",
-            "version": "[140.340.80, )"
+            "version": "[150.1537.0, )"
           },
           "ReportViewerCore.WinForms": {
             "target": "Package",
@@ -1732,7 +1687,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Microsoft.ReportingServices.ReportViewerControl.Winforms 140.340.80 depends on Microsoft.SqlServer.Types (>= 14.0.0) but Microsoft.SqlServer.Types 14.0.0 was not found. An approximate best match of Microsoft.SqlServer.Types 14.0.314.76 was resolved.",
+      "message": "Microsoft.ReportingServices.ReportViewerControl.Winforms 150.1537.0 depende de Microsoft.SqlServer.Types (>= 14.0.0), pero no se encontró Microsoft.SqlServer.Types 14.0.0. Se resolvió una mejor coincidencia aproximada de Microsoft.SqlServer.Types 14.0.314.76.",
       "libraryId": "Microsoft.SqlServer.Types",
       "targetGraphs": [
         "net6.0-windows7.0"
@@ -1742,7 +1697,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.ReportingServices.ReportViewerControl.Winforms 140.340.80' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Microsoft.ReportingServices.ReportViewerControl.Winforms 150.1537.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0-windows7.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Microsoft.ReportingServices.ReportViewerControl.Winforms",
       "targetGraphs": [
         "net6.0-windows7.0"
@@ -1752,7 +1707,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.SqlServer.Types 14.0.314.76' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Microsoft.SqlServer.Types 14.0.314.76\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0-windows7.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Microsoft.SqlServer.Types",
       "targetGraphs": [
         "net6.0-windows7.0"

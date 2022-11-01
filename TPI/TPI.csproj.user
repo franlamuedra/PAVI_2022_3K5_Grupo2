@@ -10,6 +10,12 @@
     <Compile Update="formularios\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="formularios\FrmRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="formularios\FrmReporteMantenimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="formularios\Herramientas\FrmAltaHerramienta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -42,12 +48,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Reportes\FrmReporteMantenimento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Update="Reportes\DSListado.xsd">
+    <None Update="Reporte\dsReporte.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

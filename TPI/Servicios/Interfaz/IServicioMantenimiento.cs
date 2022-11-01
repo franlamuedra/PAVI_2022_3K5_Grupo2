@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace TPI.Servicios.Interfaz
         bool ModificarMantenimiento(Mantenimiento oMantenimiento);
         bool EliminarMantenimiento(int nro);
         Mantenimiento ObtenerMantenimientoPorNro(int nro);
+        
+        DataTable ObtenerReporteHerramientas(string marca);
 
     }
 }

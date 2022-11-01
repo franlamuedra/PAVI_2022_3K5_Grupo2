@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repositories\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj": {}
+    "C:\\Users\\lauta\\Escritorio\\Facultadovich\\2do\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj": {}
   },
   "projects": {
-    "C:\\repositories\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj": {
+    "C:\\Users\\lauta\\Escritorio\\Facultadovich\\2do\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repositories\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj",
+        "projectUniqueName": "C:\\Users\\lauta\\Escritorio\\Facultadovich\\2do\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj",
         "projectName": "TPI",
-        "projectPath": "C:\\repositories\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\repositories\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\obj\\",
+        "projectPath": "C:\\Users\\lauta\\Escritorio\\Facultadovich\\2do\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj",
+        "packagesPath": "C:\\Users\\lauta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lauta\\Escritorio\\Facultadovich\\2do\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Users\\lauta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -28,8 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -50,7 +46,7 @@
           "dependencies": {
             "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
               "target": "Package",
-              "version": "[140.340.80, )"
+              "version": "[150.1537.0, )"
             },
             "ReportViewerCore.WinForms": {
               "target": "Package",

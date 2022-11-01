@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using TPI.dominio;
@@ -209,6 +210,15 @@ namespace TPI.datos.DAO
                 oMantenimiento.AgregarDetalle(detalle);
             }
             return oMantenimiento;
+        }
+
+        public DataTable GetReport(string modelo)
+        {
+            string sp = "SP_Reporte_Mantenimientos";
+            List<Parametro> lst = new List<Parametro>();
+            lst.Add(new Parametro("@modelo", modelo));
+            DataTable dt = HelperDB.GetInstance().ConsultaSQLSP(sp, lst);
+            return dt;
         }
     }
 }

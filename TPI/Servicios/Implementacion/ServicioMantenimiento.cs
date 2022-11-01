@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,6 +53,11 @@ namespace TPI.Servicios.Implementacion
         public Mantenimiento ObtenerMantenimientoPorNro(int nro) 
         {
             return dao.GetMantenimientoPorNro(nro);
+        }
+
+        public DataTable ObtenerReporteHerramientas(string marca)
+        {
+            return dao.GetReport(marca);
         }
     }
 }
