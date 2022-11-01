@@ -1,35 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repositories\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj": {}
+    "C:\\Users\\User\\Desktop\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj": {}
   },
   "projects": {
-    "C:\\repositories\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj": {
+    "C:\\Users\\User\\Desktop\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repositories\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj",
         "projectName": "TPI",
-        "projectPath": "C:\\repositories\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\repositories\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\PAVI_2022_3K5_Grupo2\\TPI\\TPI.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\PAVI_2022_3K5_Grupo2\\TPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,13 +40,17 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
+              "target": "Package",
+              "version": "[140.340.80, )"
+            },
             "ReportViewerCore.WinForms": {
               "target": "Package",
               "version": "[15.1.17, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
-              "version": "[4.8.3, )"
+              "version": "[4.8.4, )"
             }
           },
           "imports": [
@@ -63,8 +59,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -76,7 +71,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

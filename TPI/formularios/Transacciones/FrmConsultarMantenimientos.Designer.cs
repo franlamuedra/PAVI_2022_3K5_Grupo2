@@ -44,6 +44,8 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.grbFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMantenimiento)).BeginInit();
             this.SuspendLayout();
@@ -69,14 +71,14 @@
             // 
             this.dtpHasta.Location = new System.Drawing.Point(368, 28);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(228, 25);
+            this.dtpHasta.Size = new System.Drawing.Size(228, 22);
             this.dtpHasta.TabIndex = 8;
             // 
             // dtpDesde
             // 
             this.dtpDesde.Location = new System.Drawing.Point(83, 28);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(228, 25);
+            this.dtpDesde.Size = new System.Drawing.Size(228, 22);
             this.dtpDesde.TabIndex = 7;
             // 
             // lblHasta
@@ -84,7 +86,7 @@
             this.lblHasta.AutoSize = true;
             this.lblHasta.Location = new System.Drawing.Point(319, 34);
             this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(49, 18);
+            this.lblHasta.Size = new System.Drawing.Size(42, 15);
             this.lblHasta.TabIndex = 6;
             this.lblHasta.Text = "Hasta";
             // 
@@ -102,7 +104,7 @@
             // 
             this.txtEmpleado.Location = new System.Drawing.Point(92, 65);
             this.txtEmpleado.Name = "txtEmpleado";
-            this.txtEmpleado.Size = new System.Drawing.Size(225, 25);
+            this.txtEmpleado.Size = new System.Drawing.Size(225, 22);
             this.txtEmpleado.TabIndex = 3;
             // 
             // lblEmpleado
@@ -110,7 +112,7 @@
             this.lblEmpleado.AutoSize = true;
             this.lblEmpleado.Location = new System.Drawing.Point(7, 72);
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(82, 18);
+            this.lblEmpleado.Size = new System.Drawing.Size(67, 15);
             this.lblEmpleado.TabIndex = 2;
             this.lblEmpleado.Text = "Empleado";
             // 
@@ -119,7 +121,7 @@
             this.lblDesde.AutoSize = true;
             this.lblDesde.Location = new System.Drawing.Point(32, 34);
             this.lblDesde.Name = "lblDesde";
-            this.lblDesde.Size = new System.Drawing.Size(52, 18);
+            this.lblDesde.Size = new System.Drawing.Size(44, 15);
             this.lblDesde.TabIndex = 1;
             this.lblDesde.Text = "Desde";
             // 
@@ -158,7 +160,7 @@
             this.ColFecha.MinimumWidth = 6;
             this.ColFecha.Name = "ColFecha";
             this.ColFecha.ReadOnly = true;
-            this.ColFecha.Width = 78;
+            this.ColFecha.Width = 67;
             // 
             // ColEmpleado
             // 
@@ -208,12 +210,27 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(198, 337);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(75, 23);
+            this.btnImprimir.TabIndex = 9;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.Imprimir);
+            // 
             // FrmConsultarMantenimientos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
-            this.ClientSize = new System.Drawing.Size(775, 368);
+            this.ClientSize = new System.Drawing.Size(776, 369);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnEditar);
@@ -248,5 +265,7 @@
         private DataGridViewTextBoxColumn ColFecha;
         private DataGridViewTextBoxColumn ColEmpleado;
         private DataGridViewButtonColumn ColDetalle;
+        private Button btnImprimir;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

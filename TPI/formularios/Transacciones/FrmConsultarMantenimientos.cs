@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -97,6 +98,32 @@ namespace TPI.formularios.Transacciones
         {
             dtpDesde.Value = DateTime.Now;
             dtpHasta.Value = DateTime.Now.AddDays(7);
+        }
+
+        private void Imprimir(object sender, PrintPageEventArgs e)
+        {
+            Font font = new Font("Arial", 14);
+            int ancho = 300;
+            int y = 20;
+
+            List<Mantenimiento> lst = servicio.ObtenerMantenimientos(dtpDesde.Value, dtpHasta.Value, txtEmpleado.Text);
+            
+            e.Graphics.DrawString("---- Mantenimientos -----", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            foreach (Mantenimiento mant in lst)
+            {
+                e.Graphics.DrawString("Mantenimiento #" + mant.Numero_Mantenimiento, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("Fecha: " + mant.Fecha.ToString("dd/MM/yyyy"), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("Empleado: " + mant.Nombre_Empleado, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            }
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            printDocument1 = new PrintDocument();
+            PrinterSettings ps = new PrinterSettings();
+            printDocument1.PrinterSettings = ps;
+            printDocument1.PrintPage += Imprimir;
+            printDocument1.Print();
         }
     }
 }

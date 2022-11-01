@@ -1,5 +1,4 @@
-﻿using Microsoft.Reporting.WinForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,12 +16,5 @@ namespace TPI.Reportes
         {
             InitializeComponent();
         }
-
-        private void reportViewer1_Load(object sender, EventArgs e)
-        {
-            this.reportViewer1.RefreshReport();
-        }
-
-        
     }
 }

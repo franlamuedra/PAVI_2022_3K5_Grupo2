@@ -36,6 +36,8 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.mtxtFecha = new System.Windows.Forms.MaskedTextBox();
             this.txtEmpleado = new System.Windows.Forms.TextBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,12 +113,27 @@
             this.txtEmpleado.Size = new System.Drawing.Size(206, 22);
             this.txtEmpleado.TabIndex = 5;
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(34, 290);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(75, 23);
+            this.btnImprimir.TabIndex = 6;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.Imprimir);
+            // 
             // FrmDetallesMantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.ClientSize = new System.Drawing.Size(655, 320);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.txtEmpleado);
             this.Controls.Add(this.mtxtFecha);
             this.Controls.Add(this.btnCerrar);
@@ -143,5 +160,7 @@
         private Button btnCerrar;
         private MaskedTextBox mtxtFecha;
         private TextBox txtEmpleado;
+        private Button btnImprimir;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
