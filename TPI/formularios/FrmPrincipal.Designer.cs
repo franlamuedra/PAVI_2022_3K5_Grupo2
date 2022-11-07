@@ -41,6 +41,8 @@
             this.tsmOperaciones = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarPresupuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoMantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarAlquileresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoAlqulerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeMantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeHerramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,8 +51,6 @@
             this.tsmUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.consultarAlquileresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoAlqulerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -153,6 +153,20 @@
             this.nuevoMantenimientosToolStripMenuItem.Text = "Nuevo Mantenimientos";
             this.nuevoMantenimientosToolStripMenuItem.Click += new System.EventHandler(this.nuevoMantenimientosToolStripMenuItem_Click);
             // 
+            // consultarAlquileresToolStripMenuItem
+            // 
+            this.consultarAlquileresToolStripMenuItem.Name = "consultarAlquileresToolStripMenuItem";
+            this.consultarAlquileresToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.consultarAlquileresToolStripMenuItem.Text = "Consultar Alquileres";
+            this.consultarAlquileresToolStripMenuItem.Click += new System.EventHandler(this.consultarAlquileresToolStripMenuItem_Click);
+            // 
+            // nuevoAlqulerToolStripMenuItem
+            // 
+            this.nuevoAlqulerToolStripMenuItem.Name = "nuevoAlqulerToolStripMenuItem";
+            this.nuevoAlqulerToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.nuevoAlqulerToolStripMenuItem.Text = "Nuevo Alquler";
+            this.nuevoAlqulerToolStripMenuItem.Click += new System.EventHandler(this.nuevoAlqulerToolStripMenuItem_Click);
+            // 
             // tsmReportes
             // 
             this.tsmReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -174,6 +188,7 @@
             this.reporteDeHerramientasToolStripMenuItem.Name = "reporteDeHerramientasToolStripMenuItem";
             this.reporteDeHerramientasToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.reporteDeHerramientasToolStripMenuItem.Text = "Reporte de Herramientas ";
+            this.reporteDeHerramientasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeHerramientasToolStripMenuItem_Click);
             // 
             // tsmAyuda
             // 
@@ -213,20 +228,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(117, 91);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // consultarAlquileresToolStripMenuItem
-            // 
-            this.consultarAlquileresToolStripMenuItem.Name = "consultarAlquileresToolStripMenuItem";
-            this.consultarAlquileresToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
-            this.consultarAlquileresToolStripMenuItem.Text = "Consultar Alquileres";
-            this.consultarAlquileresToolStripMenuItem.Click += new System.EventHandler(this.consultarAlquileresToolStripMenuItem_Click);
-            // 
-            // nuevoAlqulerToolStripMenuItem
-            // 
-            this.nuevoAlqulerToolStripMenuItem.Name = "nuevoAlqulerToolStripMenuItem";
-            this.nuevoAlqulerToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
-            this.nuevoAlqulerToolStripMenuItem.Text = "Nuevo Alquler";
-            this.nuevoAlqulerToolStripMenuItem.Click += new System.EventHandler(this.nuevoAlqulerToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 

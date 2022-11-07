@@ -11,6 +11,9 @@
     <Compile Update="formularios\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="formularios\FrmReporteAlquileres.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="formularios\FrmReporteMantenimento.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -258,7 +258,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -406,7 +405,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet2</DataSetName>
             <Top>0.44662cm</Top>
-            <Left>3.51704cm</Left>
+            <Left>3.51705cm</Left>
             <Height>1.2cm</Height>
             <Width>12.5cm</Width>
             <Style>
@@ -419,7 +418,7 @@
         <Height>3.29017in</Height>
         <Style />
       </Body>
-      <Width>7.77926in</Width>
+      <Width>7.77927in</Width>
       <Page>
         <PageHeader>
           <Height>2.54cm</Height>
@@ -498,7 +497,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox8</rd:DefaultName>
               <Top>0.34078cm</Top>
-              <Left>15.84537cm</Left>
+              <Left>15.84538cm</Left>
               <Height>0.6cm</Height>
               <Width>3.66417cm</Width>
               <Style>

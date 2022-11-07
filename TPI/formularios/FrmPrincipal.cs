@@ -62,6 +62,11 @@ namespace TPI
             new FrmReporteMantenimientos(fabrica).ShowDialog();
         }
 
+        private void reporteDeHerramientasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmReporteAlquileres(fabricaA).ShowDialog();
+        }
+
         private void consultarAlquileresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FrmConsultarAlquileres(fabricaA).ShowDialog();

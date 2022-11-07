@@ -431,3 +431,4 @@ C:\Users\User\Desktop\PAV\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\refi
 C:\Users\User\Desktop\PAV\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.pdb
 C:\Users\User\Desktop\PAV\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.genruntimeconfig.cache
 C:\Users\User\Desktop\PAV\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\ref\TPI.dll
+C:\Users\User\Desktop\PAV\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.FrmReporteAlquileres.resources
