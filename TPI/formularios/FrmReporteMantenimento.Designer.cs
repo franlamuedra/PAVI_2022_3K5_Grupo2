@@ -57,6 +57,7 @@
             // 
             // btnGenerar
             // 
+            this.btnGenerar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenerar.Location = new System.Drawing.Point(613, 12);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(75, 23);
@@ -67,6 +68,7 @@
             // 
             // btnSalir
             // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.Location = new System.Drawing.Point(613, 353);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
@@ -77,11 +79,17 @@
             // 
             // reportViewer2
             // 
+            this.reportViewer2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "rptHerramientas.rdlc";
+            this.reportViewer2.LocalReport.ReportPath = "C:\\Users\\User\\Desktop\\PAV\\PAVI_2022_3K5_Grupo2\\TPI\\Reporte\\rptHerramientas.rdlc";
             this.reportViewer2.Location = new System.Drawing.Point(12, 75);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
             this.reportViewer2.Size = new System.Drawing.Size(676, 246);
             this.reportViewer2.TabIndex = 6;
+            this.reportViewer2.Load += new System.EventHandler(this.reportViewer2_Load);
             // 
             // FrmReporteMantenimientos
             // 

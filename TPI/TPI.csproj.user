@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
   <ItemGroup>
     <Compile Update="formularios\base\FrmBase.cs">
       <SubType>Form</SubType>
@@ -19,16 +20,25 @@
     <Compile Update="formularios\Herramientas\FrmConsultarHerramienta.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="formularios\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="formularios\Materiales\FrmAltaMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="formularios\Materiales\FrmConsultarMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="formularios\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="formularios\Proveedores\FrmAltaProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="formularios\Proveedores\FrmConsultarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="formularios\Proveedores\frmProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="formularios\Transacciones\FrmConsultarAlquileres.cs">
@@ -43,6 +53,9 @@
     <Compile Update="formularios\Transacciones\FrmDetallesMantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="formularios\Transacciones\FrmMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="formularios\Transacciones\FrmModificarAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,10 +68,5 @@
     <Compile Update="formularios\Transacciones\FrmNuevoMantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Update="Reporte\dsReporte.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
 </Project>
