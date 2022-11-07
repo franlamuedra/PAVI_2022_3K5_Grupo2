@@ -37,8 +37,15 @@ namespace TPI.Reportes
 
        private void btnGenerar_Click(object sender, EventArgs e)
        {
-            DataTable dt = servicio.ObtenerReporteHerramientas(cboModelo.SelectedValue.ToString());
-            reportViewer2.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet2", dt));
+            //DataTable dt = servicio.ObtenerReporteHerramientas(cboModelo.SelectedValue.ToString());
+
+            DataTable dt = HelperDB.GetInstance().ConsultaSQL("SELECT        t_Mantenimientos.Numero_Mantenimiento, t_Mantenimientos.Fecha, t_Detalles_Mantenimiento.Cambios, t_Herramientas.Cod_Herramienta, t_Herramientas.Marca_Herramienta " +
+                         "FROM            t_Detalles_Mantenimiento JOIN " +
+                         "t_Mantenimientos ON t_Detalles_Mantenimiento.Numero_Mantenimiento = t_Mantenimientos.Numero_Mantenimiento JOIN " +
+                         "t_Herramientas ON t_Detalles_Mantenimiento.Codigo_Herramienta = t_Herramientas.Cod_Herramienta  WHERE t_Herramientas.Modelo_Herramienta = '" + cboModelo.SelectedValue.ToString() + "'");
+
+            reportViewer2.LocalReport.DataSources.Clear();
+            reportViewer2.LocalReport.DataSources.Add(new ReportDataSource("DataSet2", dt));
             reportViewer2.RefreshReport();
         }
 
@@ -59,6 +66,11 @@ namespace TPI.Reportes
             reportViewer2.LocalReport.DataSources.Clear();
             reportViewer2.LocalReport.DataSources.Add(new ReportDataSource("DataSet2", dt));
             reportViewer2.RefreshReport();*/
+        }
+
+        private void FrmReporteMantenimientos_Load(object sender, EventArgs e)
+        {
+            this.reportViewer2.RefreshReport();
         }
 
         /*private void FrmReporteMantenimientos_Load(object sender, EventArgs e)

@@ -105,6 +105,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmReporteMantenimientos";
             this.Text = "Reporte Mantenimientos";
+            this.Load += new System.EventHandler(this.FrmReporteMantenimientos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
