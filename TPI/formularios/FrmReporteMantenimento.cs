@@ -39,10 +39,12 @@ namespace TPI.Reportes
        {
             //DataTable dt = servicio.ObtenerReporteHerramientas(cboModelo.SelectedValue.ToString());
 
-            DataTable dt = HelperDB.GetInstance().ConsultaSQL("SELECT        t_Mantenimientos.Numero_Mantenimiento, t_Mantenimientos.Fecha, t_Detalles_Mantenimiento.Cambios, t_Herramientas.Cod_Herramienta, t_Herramientas.Marca_Herramienta " +
-                         "FROM            t_Detalles_Mantenimiento JOIN " +
-                         "t_Mantenimientos ON t_Detalles_Mantenimiento.Numero_Mantenimiento = t_Mantenimientos.Numero_Mantenimiento JOIN " +
-                         "t_Herramientas ON t_Detalles_Mantenimiento.Codigo_Herramienta = t_Herramientas.Cod_Herramienta  WHERE t_Herramientas.Modelo_Herramienta = '" + cboModelo.SelectedValue.ToString() + "'");
+            DataTable dt = HelperDB.GetInstance().ConsultaSQL(
+                "SELECT t_Mantenimientos.Numero_Mantenimiento, t_Mantenimientos.Fecha, t_Detalles_Mantenimiento.Cambios, t_Herramientas.Cod_Herramienta, t_Herramientas.Marca_Herramienta " +
+                "FROM t_Detalles_Mantenimiento " +
+                "JOIN t_Mantenimientos ON t_Detalles_Mantenimiento.Numero_Mantenimiento = t_Mantenimientos.Numero_Mantenimiento " +
+                "JOIN t_Herramientas ON t_Detalles_Mantenimiento.Codigo_Herramienta = t_Herramientas.Cod_Herramienta " +
+                "WHERE t_Herramientas.Modelo_Herramienta = '" + cboModelo.SelectedValue.ToString() + "'");
 
             reportViewer2.LocalReport.DataSources.Clear();
             reportViewer2.LocalReport.DataSources.Add(new ReportDataSource("DataSet2", dt));
@@ -54,29 +56,11 @@ namespace TPI.Reportes
             this.Close();
         }
 
-        private void reportViewer2_Load(object sender, EventArgs e)
-        {
-            /*SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Ferreteria_Industrial;Integrated Security=True;");
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("Select Numero_Mantenimiento,Fecha,Nombre_Empleado From t_Mantenimientos");
-            DataTable dt = new DataTable();
-            dt.Load(cmd.ExecuteReader());
-            conn.Close();
-
-            reportViewer2.LocalReport.DataSources.Clear();
-            reportViewer2.LocalReport.DataSources.Add(new ReportDataSource("DataSet2", dt));
-            reportViewer2.RefreshReport();*/
-        }
-
         private void FrmReporteMantenimientos_Load(object sender, EventArgs e)
         {
             this.reportViewer2.RefreshReport();
         }
 
-        /*private void FrmReporteMantenimientos_Load(object sender, EventArgs e)
-        {
-            reportViewer2.LocalReport.ReportEmbeddedResource = "TPI.Reporte.rptHerramientas.rdlc";
-            reportViewer2.Refresh();
-        }*/
+
     }
 }

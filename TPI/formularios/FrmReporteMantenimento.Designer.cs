@@ -58,7 +58,7 @@
             // btnGenerar
             // 
             this.btnGenerar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGenerar.Location = new System.Drawing.Point(613, 12);
+            this.btnGenerar.Location = new System.Drawing.Point(699, 12);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(75, 23);
             this.btnGenerar.TabIndex = 4;
@@ -69,7 +69,7 @@
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(613, 353);
+            this.btnSalir.Location = new System.Drawing.Point(699, 410);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 5;
@@ -83,20 +83,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "rptHerramientas.rdlc";
-            this.reportViewer2.LocalReport.ReportPath = "C:\\Users\\User\\Desktop\\PAV\\PAVI_2022_3K5_Grupo2\\TPI\\Reporte\\rptHerramientas.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(12, 75);
+            this.reportViewer2.LocalReport.ReportPath = "C:\\Users\\lauta\\Escritorio\\Facultadovich\\2do\\PAV1\\PAVI_2022_3K5_Grupo2\\TPI\\Reporte" +
+    "\\rptHerramientas.rdlc";
+            this.reportViewer2.Location = new System.Drawing.Point(12, 58);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(676, 246);
+            this.reportViewer2.Size = new System.Drawing.Size(762, 336);
             this.reportViewer2.TabIndex = 6;
-            this.reportViewer2.Load += new System.EventHandler(this.reportViewer2_Load);
             // 
             // FrmReporteMantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
-            this.ClientSize = new System.Drawing.Size(700, 382);
+            this.ClientSize = new System.Drawing.Size(786, 439);
             this.Controls.Add(this.reportViewer2);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGenerar);
@@ -113,12 +113,10 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private Label label1;
         private ComboBox cboModelo;
         private Button btnGenerar;
         private Button btnSalir;
-        private Microsoft.Reporting.WinForms.ReportViewer rvReporte;
         private Button button1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
     }

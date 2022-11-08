@@ -98,5 +98,10 @@ namespace TPI.formularios.Transacciones
             dtpDesde.Value = DateTime.Now;
             dtpHasta.Value = DateTime.Now.AddDays(7);
         }
+
+        private void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

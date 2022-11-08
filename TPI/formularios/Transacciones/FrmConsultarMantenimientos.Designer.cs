@@ -37,13 +37,13 @@
             this.lblEmpleado = new System.Windows.Forms.Label();
             this.lblDesde = new System.Windows.Forms.Label();
             this.dgvMantenimiento = new System.Windows.Forms.DataGridView();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDetalle = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnBorrar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.grbFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMantenimiento)).BeginInit();
             this.SuspendLayout();
@@ -69,22 +69,22 @@
             // 
             this.dtpHasta.Location = new System.Drawing.Point(368, 28);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(228, 25);
+            this.dtpHasta.Size = new System.Drawing.Size(228, 22);
             this.dtpHasta.TabIndex = 8;
             // 
             // dtpDesde
             // 
-            this.dtpDesde.Location = new System.Drawing.Point(83, 28);
+            this.dtpDesde.Location = new System.Drawing.Point(79, 28);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(228, 25);
+            this.dtpDesde.Size = new System.Drawing.Size(228, 22);
             this.dtpDesde.TabIndex = 7;
             // 
             // lblHasta
             // 
             this.lblHasta.AutoSize = true;
-            this.lblHasta.Location = new System.Drawing.Point(319, 34);
+            this.lblHasta.Location = new System.Drawing.Point(320, 34);
             this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(49, 18);
+            this.lblHasta.Size = new System.Drawing.Size(42, 15);
             this.lblHasta.TabIndex = 6;
             this.lblHasta.Text = "Hasta";
             // 
@@ -100,17 +100,17 @@
             // 
             // txtEmpleado
             // 
-            this.txtEmpleado.Location = new System.Drawing.Point(92, 65);
+            this.txtEmpleado.Location = new System.Drawing.Point(79, 62);
             this.txtEmpleado.Name = "txtEmpleado";
-            this.txtEmpleado.Size = new System.Drawing.Size(225, 25);
+            this.txtEmpleado.Size = new System.Drawing.Size(225, 22);
             this.txtEmpleado.TabIndex = 3;
             // 
             // lblEmpleado
             // 
             this.lblEmpleado.AutoSize = true;
-            this.lblEmpleado.Location = new System.Drawing.Point(7, 72);
+            this.lblEmpleado.Location = new System.Drawing.Point(9, 65);
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(82, 18);
+            this.lblEmpleado.Size = new System.Drawing.Size(67, 15);
             this.lblEmpleado.TabIndex = 2;
             this.lblEmpleado.Text = "Empleado";
             // 
@@ -119,7 +119,7 @@
             this.lblDesde.AutoSize = true;
             this.lblDesde.Location = new System.Drawing.Point(32, 34);
             this.lblDesde.Name = "lblDesde";
-            this.lblDesde.Size = new System.Drawing.Size(52, 18);
+            this.lblDesde.Size = new System.Drawing.Size(44, 15);
             this.lblDesde.TabIndex = 1;
             this.lblDesde.Text = "Desde";
             // 
@@ -142,41 +142,6 @@
             this.dgvMantenimiento.TabIndex = 1;
             this.dgvMantenimiento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMantenimiento_CellContentClick);
             this.dgvMantenimiento.Click += new System.EventHandler(this.dgvMantenimiento_Click);
-            // 
-            // ColNum
-            // 
-            this.ColNum.HeaderText = "Mantenimiento #";
-            this.ColNum.MinimumWidth = 6;
-            this.ColNum.Name = "ColNum";
-            this.ColNum.ReadOnly = true;
-            this.ColNum.Width = 130;
-            // 
-            // ColFecha
-            // 
-            this.ColFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColFecha.HeaderText = "Fecha";
-            this.ColFecha.MinimumWidth = 6;
-            this.ColFecha.Name = "ColFecha";
-            this.ColFecha.ReadOnly = true;
-            this.ColFecha.Width = 78;
-            // 
-            // ColEmpleado
-            // 
-            this.ColEmpleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColEmpleado.HeaderText = "Empleado";
-            this.ColEmpleado.MinimumWidth = 6;
-            this.ColEmpleado.Name = "ColEmpleado";
-            this.ColEmpleado.ReadOnly = true;
-            // 
-            // ColDetalle
-            // 
-            this.ColDetalle.HeaderText = "Detalle";
-            this.ColDetalle.MinimumWidth = 6;
-            this.ColDetalle.Name = "ColDetalle";
-            this.ColDetalle.ReadOnly = true;
-            this.ColDetalle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColDetalle.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColDetalle.Width = 125;
             // 
             // btnEditar
             // 
@@ -208,9 +173,46 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // ColNum
+            // 
+            this.ColNum.HeaderText = "Mantenimiento #";
+            this.ColNum.MinimumWidth = 6;
+            this.ColNum.Name = "ColNum";
+            this.ColNum.ReadOnly = true;
+            this.ColNum.Width = 130;
+            // 
+            // ColFecha
+            // 
+            this.ColFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColFecha.HeaderText = "Fecha";
+            this.ColFecha.MinimumWidth = 6;
+            this.ColFecha.Name = "ColFecha";
+            this.ColFecha.ReadOnly = true;
+            this.ColFecha.Width = 67;
+            // 
+            // ColEmpleado
+            // 
+            this.ColEmpleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColEmpleado.HeaderText = "Empleado";
+            this.ColEmpleado.MinimumWidth = 6;
+            this.ColEmpleado.Name = "ColEmpleado";
+            this.ColEmpleado.ReadOnly = true;
+            // 
+            // ColDetalle
+            // 
+            this.ColDetalle.HeaderText = "Acciones";
+            this.ColDetalle.MinimumWidth = 6;
+            this.ColDetalle.Name = "ColDetalle";
+            this.ColDetalle.ReadOnly = true;
+            this.ColDetalle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColDetalle.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColDetalle.Text = "Ver Detalle";
+            this.ColDetalle.UseColumnTextForButtonValue = true;
+            this.ColDetalle.Width = 125;
+            // 
             // FrmConsultarMantenimientos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.ClientSize = new System.Drawing.Size(775, 368);
