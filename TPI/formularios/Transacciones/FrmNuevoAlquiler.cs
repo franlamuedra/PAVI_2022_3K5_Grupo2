@@ -47,9 +47,9 @@ namespace TPI.formularios.Transacciones
         {
             int next = servicio.ProximoAlquiler();
             if (next > 0)
-                label1.Text = "Mantenimiento N: " + next.ToString();
+                label1.Text = "Alquiler N: " + next.ToString();
             else
-                MessageBox.Show("Error de datos. No se puede obtener num de mantenimiento ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error de datos. No se puede obtener num de alquiler ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -98,7 +98,7 @@ namespace TPI.formularios.Transacciones
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
+            if (txtDireccion.Text == "")
             {
                 MessageBox.Show("Debe ingresar una direccion", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -114,7 +114,9 @@ namespace TPI.formularios.Transacciones
 
         private void GuardarAlquiler()
         {
-            nuevo.Direccion = textBox1.Text;
+            nuevo.Fecha_Entrega = Convert.ToDateTime(dtpEnt.Text);
+            nuevo.Fecha_Devolucion = Convert.ToDateTime(dtpDev.Text);
+            nuevo.Direccion = txtDireccion.Text;
 
             if (servicio.CrearAlquiler(nuevo))
             {

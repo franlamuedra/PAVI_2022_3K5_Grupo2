@@ -124,6 +124,9 @@
             this.Controls.Add(this.lblEmpleado);
             this.Controls.Add(this.lblFecha);
             this.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(671, 359);
+            this.MinimumSize = new System.Drawing.Size(671, 359);
             this.Name = "FrmDetallesMantenimiento";
             this.Text = "Mantenimiento N";
             this.Load += new System.EventHandler(this.FrmDetallesMantenimiento_Load);

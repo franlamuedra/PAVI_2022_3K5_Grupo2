@@ -47,7 +47,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 21);
+            this.label1.Location = new System.Drawing.Point(14, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 25);
             this.label1.TabIndex = 0;
@@ -55,9 +55,9 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(535, 109);
+            this.btnAgregar.Location = new System.Drawing.Point(611, 109);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(86, 23);
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -72,11 +72,11 @@
             this.ColHer,
             this.ColDir,
             this.ColAcc});
-            this.dgvDetalle.Location = new System.Drawing.Point(12, 135);
+            this.dgvDetalle.Location = new System.Drawing.Point(14, 135);
             this.dgvDetalle.Name = "dgvDetalle";
             this.dgvDetalle.ReadOnly = true;
             this.dgvDetalle.RowTemplate.Height = 25;
-            this.dgvDetalle.Size = new System.Drawing.Size(598, 187);
+            this.dgvDetalle.Size = new System.Drawing.Size(683, 187);
             this.dgvDetalle.TabIndex = 8;
             this.dgvDetalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalle_CellContentClick);
             // 
@@ -103,9 +103,9 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(535, 344);
+            this.btnCancelar.Location = new System.Drawing.Point(611, 344);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(86, 23);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -113,9 +113,9 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(454, 344);
+            this.btnAceptar.Location = new System.Drawing.Point(519, 344);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(86, 23);
             this.btnAceptar.TabIndex = 10;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -124,41 +124,42 @@
             // lblD
             // 
             this.lblD.AutoSize = true;
-            this.lblD.Location = new System.Drawing.Point(51, 109);
+            this.lblD.Location = new System.Drawing.Point(58, 109);
             this.lblD.Name = "lblD";
-            this.lblD.Size = new System.Drawing.Size(57, 15);
+            this.lblD.Size = new System.Drawing.Size(65, 15);
             this.lblD.TabIndex = 1;
             this.lblD.Text = "Direccion";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 80);
+            this.label3.Location = new System.Drawing.Point(40, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 15);
+            this.label3.Size = new System.Drawing.Size(84, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Herramienta";
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(114, 106);
+            this.txtDireccion.Location = new System.Drawing.Point(130, 106);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(236, 23);
+            this.txtDireccion.Size = new System.Drawing.Size(269, 22);
             this.txtDireccion.TabIndex = 6;
             // 
             // cboHerramientas
             // 
             this.cboHerramientas.FormattingEnabled = true;
-            this.cboHerramientas.Location = new System.Drawing.Point(114, 77);
+            this.cboHerramientas.Location = new System.Drawing.Point(130, 77);
             this.cboHerramientas.Name = "cboHerramientas";
-            this.cboHerramientas.Size = new System.Drawing.Size(121, 23);
+            this.cboHerramientas.Size = new System.Drawing.Size(138, 23);
             this.cboHerramientas.TabIndex = 11;
             // 
             // FrmModificarAlquiler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 376);
+            this.BackColor = System.Drawing.Color.BurlyWood;
+            this.ClientSize = new System.Drawing.Size(710, 376);
             this.Controls.Add(this.cboHerramientas);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);
@@ -168,6 +169,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblD);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(726, 415);
+            this.MinimumSize = new System.Drawing.Size(726, 415);
             this.Name = "FrmModificarAlquiler";
             this.Text = "Modificar Alquiler";
             this.Load += new System.EventHandler(this.FrmModificarAlquiler_Load);

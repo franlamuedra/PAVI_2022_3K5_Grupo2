@@ -93,6 +93,7 @@ namespace TPI.datos.DAO
                 mant.Numero_Alquiler = int.Parse(row["Numero_Alquiler"].ToString());
                 mant.Fecha_Entrega = DateTime.Parse(row["Fecha_Entrega"].ToString());
                 mant.Fecha_Devolucion = DateTime.Parse(row["Fecha_Devolucion"].ToString());
+                mant.Direccion = row["Direccion"].ToString();
                 mants.Add(mant);
             }
 
@@ -164,7 +165,8 @@ namespace TPI.datos.DAO
         public int NextAlquiler()
         {
             string sp = "SP_Proximo_Alquiler";
-            return HelperDB.GetInstance().ConsultaEscalarSQL(sp, "@next");
+            return HelperDB.GetInstance().ConsultaEscalarSQL(sp, "@next");    
+            
         }
 
         public bool Update(Alquiler oAlquiler)

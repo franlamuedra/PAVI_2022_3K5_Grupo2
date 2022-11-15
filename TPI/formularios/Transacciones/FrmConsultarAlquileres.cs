@@ -29,13 +29,13 @@ namespace TPI.formularios.Transacciones
         {
             dgvAlquiler.Rows.Clear();
             List<Alquiler> lst = servicio.ObtenerAlquileres(dtpDesde.Value, dtpHasta.Value);
-            foreach (Alquiler mant in lst)
+            foreach (Alquiler alq in lst)
             {
                 dgvAlquiler.Rows.Add(new object[] {
-                    mant.Numero_Alquiler,
-                    mant.Fecha_Entrega.ToString("dd/MM/yyyy"),
-                    mant.Fecha_Devolucion.ToString("dd/MM/yyyy"),
-                    mant.Direccion});
+                    alq.Numero_Alquiler,
+                    alq.Fecha_Entrega.ToString("dd/MM/yyyy"),
+                    alq.Fecha_Devolucion.ToString("dd/MM/yyyy"),
+                    alq.Direccion});
             }
         }
 

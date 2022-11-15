@@ -58,13 +58,13 @@ CREATE TABLE t_Mantenimientos(
 )
 GO
 
-CREATE TABLE t_Alquileres (
+CREATE TABLE t_Alquileres(
 	Numero_Alquiler int identity (1, 1) primary key,
 	Fecha_Entrega date NOT NULL,
 	Fecha_Devolucion date NOT NULL,
-	Direccion nvarchar (100),
+	Direccion nvarchar (100) NOT NULL
 )
-GO	
+GO
 
 CREATE TABLE t_Detalles_Mantenimiento(
 	Numero_Mantenimiento int NOT NULL,
@@ -74,6 +74,18 @@ CREATE TABLE t_Detalles_Mantenimiento(
 PRIMARY KEY CLUSTERED 
 (
 	Numero_Mantenimiento ASC,
+	Numero_Detalle ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+CREATE TABLE t_Detalles_Alquiler(
+	Numero_Alquiler int NOT NULL,
+	Numero_Detalle int NOT NULL,
+	Codigo_Herramienta int NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	Numero_Alquiler ASC,
 	Numero_Detalle ASC
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
@@ -94,6 +106,17 @@ BEGIN
 	INSERT INTO t_Mantenimientos (Fecha, Nombre_Empleado) 
 	VALUES (GETDATE(), @nom);
 	SET @num_man = SCOPE_IDENTITY();
+END
+GO
+
+CREATE PROCEDURE SP_Insertar_Alquiler
+	@dir Nvarchar (100),
+	@num_alq int OUTPUT
+AS
+BEGIN
+	INSERT INTO t_Alquileres(Fecha_Entrega, Fecha_Devolucion, Direccion) 
+	VALUES (GETDATE(), GETDATE(), @dir);
+	SET @num_alq = SCOPE_IDENTITY();
 END
 GO
 
@@ -180,28 +203,9 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE SP_Insertar_Alquiler
-	@dir Nvarchar (100),
-	@num_alq int OUTPUT
-AS
-BEGIN
-	INSERT INTO t_Alquileres(Numero_Alquiler, Fecha_Entrega, Fecha_Devolucion, Direccion) 
-	VALUES (@num_alq, GETDATE(), GETDATE(), @dir);
-	SET @num_alq = SCOPE_IDENTITY();
-END
-GO
 
-CREATE TABLE t_Detalles_Alquiler(
-	Numero_Alquiler int NOT NULL,
-	Numero_Detalle int NOT NULL,
-	Codigo_Herramienta int NOT NULL,
-PRIMARY KEY CLUSTERED 
-(
-	Numero_Alquiler ASC,
-	Numero_Detalle ASC
-)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
+
+
 
 CREATE PROCEDURE SP_Modificar_Alquiler
 	@dir nvarchar (100),

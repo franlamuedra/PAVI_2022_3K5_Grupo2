@@ -37,13 +37,13 @@
             this.lblEmpleado = new System.Windows.Forms.Label();
             this.lblDesde = new System.Windows.Forms.Label();
             this.dgvMantenimiento = new System.Windows.Forms.DataGridView();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnBorrar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDetalle = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.grbFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMantenimiento)).BeginInit();
             this.SuspendLayout();
@@ -134,6 +134,8 @@
             this.ColEmpleado,
             this.ColDetalle});
             this.dgvMantenimiento.Location = new System.Drawing.Point(14, 116);
+            this.dgvMantenimiento.MaximumSize = new System.Drawing.Size(747, 215);
+            this.dgvMantenimiento.MinimumSize = new System.Drawing.Size(747, 215);
             this.dgvMantenimiento.Name = "dgvMantenimiento";
             this.dgvMantenimiento.ReadOnly = true;
             this.dgvMantenimiento.RowHeadersWidth = 51;
@@ -142,36 +144,6 @@
             this.dgvMantenimiento.TabIndex = 1;
             this.dgvMantenimiento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMantenimiento_CellContentClick);
             this.dgvMantenimiento.Click += new System.EventHandler(this.dgvMantenimiento_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(14, 337);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(86, 23);
-            this.btnEditar.TabIndex = 6;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.brnEditar_Click);
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.Location = new System.Drawing.Point(106, 337);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(86, 23);
-            this.btnBorrar.TabIndex = 7;
-            this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
-            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(672, 337);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(89, 23);
-            this.btnSalir.TabIndex = 8;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // ColNum
             // 
@@ -210,6 +182,36 @@
             this.ColDetalle.UseColumnTextForButtonValue = true;
             this.ColDetalle.Width = 125;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(14, 337);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(86, 23);
+            this.btnEditar.TabIndex = 6;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.brnEditar_Click);
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Location = new System.Drawing.Point(106, 337);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(86, 23);
+            this.btnBorrar.TabIndex = 7;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(672, 337);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(89, 23);
+            this.btnSalir.TabIndex = 8;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // FrmConsultarMantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -222,6 +224,9 @@
             this.Controls.Add(this.dgvMantenimiento);
             this.Controls.Add(this.grbFiltros);
             this.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(791, 407);
+            this.MinimumSize = new System.Drawing.Size(791, 407);
             this.Name = "FrmConsultarMantenimientos";
             this.Text = "Consultar Mantenimientos";
             this.Load += new System.EventHandler(this.FrmConsultarMantenimientos_Load);
