@@ -2,7 +2,6 @@
 
 GRUPO N2
 
--Funes Francisco Javier - 73037
 -Stefan Lautaro Julian - 92520
 -Lamuedra Francisco - 78576
 -Maier Sananez Deborah - 94089
