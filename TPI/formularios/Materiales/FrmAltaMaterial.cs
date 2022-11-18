@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TPI.datos;
 using TPI.formularios;
-using System.Security.Cryptography.X509Certificates;
 
 namespace TPI
 {
@@ -41,7 +40,7 @@ namespace TPI
             {
                 MessageBox.Show("Debe seleccionar la unidad de medida", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
-            } 
+            }
 
             if (!gestor.ValidarProveedor((int)nudProveedor.Value))
             {
@@ -156,29 +155,6 @@ namespace TPI
                 
             }
         }
-<<<<<<< HEAD
-
-        private void txtDate_ValueChanged(object sender, EventArgs e)
-        {
-            DateTime fecha = txtFechaIngreso.Value;
-            lblEntryDate.Text = fecha.ToString();
-        }
-
-        
-
-        /*private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
-{
-   // Datasource: establece el origen de datos de este objeto.
-   cbo.DataSource = source;
-   // DisplayMember: establece la propiedad que se va a mostrar para este ListControl.
-   cbo.DisplayMember = display;
-   // ValueMember: establece la ruta de acceso de la propiedad que se utilizará como valor real para los elementos de ListControl.
-   cbo.ValueMember = value;
-   //SelectedIndex: establece el índice que especifica el elemento seleccionado actualmente.
-   cbo.SelectedIndex = -1;
-}*/
-=======
->>>>>>> 9189e919af9a401a47fb1e550190d7c25fdaf5f1
 
     }
 }

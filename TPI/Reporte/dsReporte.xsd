@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReporte" targetNamespace="http://tempuri.org/dsReporte.xsd" xmlns:mstns="http://tempuri.org/dsReporte.xsd" xmlns="http://tempuri.org/dsReporte.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=.\SQLEXPRESS;Initial Catalog=Ferreteria_Industrial;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="artemisa\sqlexpress.Ferreteria_Industrial.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtReporteTableAdapter" GeneratorDataComponentClassName="dtReporteTableAdapter" Name="dtReporte" UserDataComponentName="dtReporteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="artemisa\sqlexpress.Ferreteria_Industrial.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        t_Mantenimientos.Numero_Mantenimiento, t_Mantenimientos.Fecha, t_Detalles_Mantenimiento.Cambios, t_Herramientas.Cod_Herramienta, t_Herramientas.Marca_Herramienta
+FROM            t_Detalles_Mantenimiento INNER JOIN
+                         t_Mantenimientos ON t_Detalles_Mantenimiento.Numero_Mantenimiento = t_Mantenimientos.Numero_Mantenimiento CROSS JOIN
+                         t_Herramientas</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Numero_Mantenimiento" DataSetColumn="Numero_Mantenimiento" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="Cambios" DataSetColumn="Cambios" />
+              <Mapping SourceColumn="Cod_Herramienta" DataSetColumn="Cod_Herramienta" />
+              <Mapping SourceColumn="Marca_Herramienta" DataSetColumn="Marca_Herramienta" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="artemisa\sqlexpress.Ferreteria_Industrial.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        t_Alquileres.Numero_Alquiler, t_Alquileres.Fecha_Entrega, t_Alquileres.Fecha_Devolucion, t_Alquileres.Direccion, t_Detalles_Alquiler.Codigo_Herramienta, t_Herramientas.Marca_Herramienta, 
+                         t_Herramientas.Modelo_Herramienta
+FROM            t_Alquileres INNER JOIN
+                         t_Detalles_Alquiler ON t_Alquileres.Numero_Alquiler = t_Detalles_Alquiler.Numero_Alquiler INNER JOIN
+                         t_Herramientas ON t_Detalles_Alquiler.Codigo_Herramienta = t_Herramientas.Cod_Herramienta</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Numero_Alquiler" DataSetColumn="Numero_Alquiler" />
+              <Mapping SourceColumn="Fecha_Entrega" DataSetColumn="Fecha_Entrega" />
+              <Mapping SourceColumn="Fecha_Devolucion" DataSetColumn="Fecha_Devolucion" />
+              <Mapping SourceColumn="Direccion" DataSetColumn="Direccion" />
+              <Mapping SourceColumn="Codigo_Herramienta" DataSetColumn="Codigo_Herramienta" />
+              <Mapping SourceColumn="Marca_Herramienta" DataSetColumn="Marca_Herramienta" />
+              <Mapping SourceColumn="Modelo_Herramienta" DataSetColumn="Modelo_Herramienta" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReporte" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsReporte" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReporte">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtReporte" msprop:Generator_RowEvHandlerName="dtReporteRowChangeEventHandler" msprop:Generator_RowDeletedName="dtReporteRowDeleted" msprop:Generator_RowDeletingName="dtReporteRowDeleting" msprop:Generator_RowEvArgName="dtReporteRowChangeEvent" msprop:Generator_TablePropName="dtReporte" msprop:Generator_RowChangedName="dtReporteRowChanged" msprop:Generator_UserTableName="dtReporte" msprop:Generator_RowChangingName="dtReporteRowChanging" msprop:Generator_RowClassName="dtReporteRow" msprop:Generator_TableClassName="dtReporteDataTable" msprop:Generator_TableVarName="tabledtReporte">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Numero_Mantenimiento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="Numero_MantenimientoColumn" msprop:Generator_ColumnPropNameInRow="Numero_Mantenimiento" msprop:Generator_UserColumnName="Numero_Mantenimiento" msprop:Generator_ColumnVarNameInTable="columnNumero_Mantenimiento" type="xs:int" />
+              <xs:element name="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" type="xs:dateTime" />
+              <xs:element name="Cambios" msprop:Generator_ColumnPropNameInTable="CambiosColumn" msprop:Generator_ColumnPropNameInRow="Cambios" msprop:Generator_UserColumnName="Cambios" msprop:Generator_ColumnVarNameInTable="columnCambios">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cod_Herramienta" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="Cod_HerramientaColumn" msprop:Generator_ColumnPropNameInRow="Cod_Herramienta" msprop:Generator_UserColumnName="Cod_Herramienta" msprop:Generator_ColumnVarNameInTable="columnCod_Herramienta" type="xs:int" />
+              <xs:element name="Marca_Herramienta" msprop:Generator_ColumnPropNameInTable="Marca_HerramientaColumn" msprop:Generator_ColumnPropNameInRow="Marca_Herramienta" msprop:Generator_UserColumnName="Marca_Herramienta" msprop:Generator_ColumnVarNameInTable="columnMarca_Herramienta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Numero_Alquiler" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Numero_Alquiler" msprop:Generator_ColumnPropNameInTable="Numero_AlquilerColumn" msprop:Generator_ColumnPropNameInRow="Numero_Alquiler" msprop:Generator_ColumnVarNameInTable="columnNumero_Alquiler" type="xs:int" />
+              <xs:element name="Fecha_Entrega" msprop:Generator_UserColumnName="Fecha_Entrega" msprop:Generator_ColumnPropNameInTable="Fecha_EntregaColumn" msprop:Generator_ColumnPropNameInRow="Fecha_Entrega" msprop:Generator_ColumnVarNameInTable="columnFecha_Entrega" type="xs:dateTime" />
+              <xs:element name="Fecha_Devolucion" msprop:Generator_UserColumnName="Fecha_Devolucion" msprop:Generator_ColumnPropNameInTable="Fecha_DevolucionColumn" msprop:Generator_ColumnPropNameInRow="Fecha_Devolucion" msprop:Generator_ColumnVarNameInTable="columnFecha_Devolucion" type="xs:dateTime" />
+              <xs:element name="Direccion" msprop:Generator_UserColumnName="Direccion" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_ColumnVarNameInTable="columnDireccion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Codigo_Herramienta" msprop:Generator_UserColumnName="Codigo_Herramienta" msprop:Generator_ColumnPropNameInTable="Codigo_HerramientaColumn" msprop:Generator_ColumnPropNameInRow="Codigo_Herramienta" msprop:Generator_ColumnVarNameInTable="columnCodigo_Herramienta" type="xs:int" />
+              <xs:element name="Marca_Herramienta" msprop:Generator_UserColumnName="Marca_Herramienta" msprop:Generator_ColumnPropNameInTable="Marca_HerramientaColumn" msprop:Generator_ColumnPropNameInRow="Marca_Herramienta" msprop:Generator_ColumnVarNameInTable="columnMarca_Herramienta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modelo_Herramienta" msprop:Generator_UserColumnName="Modelo_Herramienta" msprop:Generator_ColumnPropNameInTable="Modelo_HerramientaColumn" msprop:Generator_ColumnPropNameInRow="Modelo_Herramienta" msprop:Generator_ColumnVarNameInTable="columnModelo_Herramienta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:Numero_Alquiler" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

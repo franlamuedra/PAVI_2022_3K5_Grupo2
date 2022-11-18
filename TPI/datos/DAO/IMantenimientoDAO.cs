@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,10 @@ namespace TPI.datos.DAO
         bool Create(Mantenimiento oMantenimiento);
         bool Update(Mantenimiento oMantenimiento);
         bool Delete(int nro);
-        List<Mantenimiento> GetMantenimientoByFilter(string fecha, string empl);
+        List<Mantenimiento> GetMantenimientoByFilter(DateTime desde, DateTime hasta, string empl);
+        int NextMantenimiento();
+        Mantenimiento GetMantenimientoPorNro(int nro);
+        DataTable GetReport(string modelo);
 
     }
 }

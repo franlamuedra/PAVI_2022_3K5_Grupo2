@@ -19,6 +19,32 @@ namespace TPI.dominio
         {
 
         }
+
+        public Herramienta(int codigo, string marca, string modelo)
+        {
+            Codigo = codigo;
+            Marca = marca;
+            Modelo = modelo;
+            Activo = true;
+        }
+        
+        public Herramienta(int codigo)
+        {
+            Codigo = codigo;
+            Activo = true;
+        }
+
+
+
+        public Herramienta(int codigo, string marca, string modelo, int vida, int codPro, bool activo)
+        {
+            Codigo = codigo;
+            Marca = marca;
+            Modelo = modelo;
+            Vida_Util = vida;
+            Codigo_Proveedor = codPro;
+            Activo = activo;
+        }
     }
 
 

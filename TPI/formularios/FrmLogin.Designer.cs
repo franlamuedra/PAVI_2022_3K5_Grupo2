@@ -39,7 +39,7 @@
             // btnIngresar
             // 
             this.btnIngresar.Location = new System.Drawing.Point(304, 181);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(108, 28);
             this.btnIngresar.TabIndex = 11;
@@ -50,7 +50,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(420, 181);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(108, 28);
             this.btnCancelar.TabIndex = 10;
@@ -61,18 +61,18 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(128, 100);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(354, 25);
+            this.txtPassword.Size = new System.Drawing.Size(354, 22);
             this.txtPassword.TabIndex = 9;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(128, 54);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(354, 25);
+            this.txtUsuario.Size = new System.Drawing.Size(354, 22);
             this.txtUsuario.TabIndex = 8;
             // 
             // lblPassword
@@ -81,7 +81,7 @@
             this.lblPassword.Location = new System.Drawing.Point(22, 104);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(89, 18);
+            this.lblPassword.Size = new System.Drawing.Size(76, 15);
             this.lblPassword.TabIndex = 7;
             this.lblPassword.Text = "Contraseña";
             // 
@@ -91,18 +91,18 @@
             this.lblUsuario.Location = new System.Drawing.Point(51, 58);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(64, 18);
+            this.lblUsuario.Size = new System.Drawing.Size(54, 15);
             this.lblUsuario.TabIndex = 6;
             this.lblUsuario.Text = "Usuario";
             // 
             // FrmLogin
             // 
             this.AcceptButton = this.btnIngresar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(541, 213);
+            this.ClientSize = new System.Drawing.Size(543, 221);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtPassword);
@@ -110,13 +110,15 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsuario);
             this.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(559, 260);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(559, 260);
             this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
