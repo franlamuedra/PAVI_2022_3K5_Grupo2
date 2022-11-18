@@ -116,6 +116,7 @@
             // 
             this.txtMarca.Location = new System.Drawing.Point(106, 185);
             this.txtMarca.Name = "txtMarca";
+            this.txtMarca.ReadOnly = true;
             this.txtMarca.Size = new System.Drawing.Size(241, 22);
             this.txtMarca.TabIndex = 9;
             // 
@@ -141,6 +142,7 @@
             // 
             this.txtModelo.Location = new System.Drawing.Point(106, 216);
             this.txtModelo.Name = "txtModelo";
+            this.txtModelo.ReadOnly = true;
             this.txtModelo.Size = new System.Drawing.Size(241, 22);
             this.txtModelo.TabIndex = 12;
             // 
@@ -218,6 +220,7 @@
             this.dtpDev.Name = "dtpDev";
             this.dtpDev.Size = new System.Drawing.Size(241, 22);
             this.dtpDev.TabIndex = 18;
+            this.dtpDev.Value = new System.DateTime(2022, 11, 25, 4, 7, 0, 0);
             // 
             // FrmNuevoAlquiler
             // 

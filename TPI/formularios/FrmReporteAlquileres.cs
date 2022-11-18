@@ -31,10 +31,6 @@ namespace TPI.formularios
             cboModelo.DisplayMember = "Modelo";
             cboModelo.ValueMember = "Modelo";
 
-
-            /*cboMarca.DataSource = servicio.ObtenerHerramientas();
-            cboMarca.DisplayMember = "Marca";
-            cboMarca.ValueMember = "Marca";*/
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)

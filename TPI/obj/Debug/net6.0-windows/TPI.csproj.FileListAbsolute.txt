@@ -63,7 +63,6 @@ C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\De
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.csproj.AssemblyReference.cache
-C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmBase.resources
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.FrmLogin.resources
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.FrmPrincipal.resources
 C:\Users\lauta\Escritorio\Facultadovich\2do\PAV1\PAVI_2022_3K5_Grupo2\TPI\obj\Debug\net6.0-windows\TPI.formularios.Herramientas.FrmAltaHerramienta.resources

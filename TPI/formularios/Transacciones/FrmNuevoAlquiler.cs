@@ -54,15 +54,15 @@ namespace TPI.formularios.Transacciones
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (cboCodigo.Text.Equals(String.Empty))
+            if (txtDireccion.Text.Equals(String.Empty))
             {
-                MessageBox.Show("Debe seleccionar una herramienta", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe ingresar una direccion", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             if (cboCodigo.Text.Equals(String.Empty))
             {
-                MessageBox.Show("Debe ingresar los cambios", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe seleccionar una herramienta", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -114,7 +114,7 @@ namespace TPI.formularios.Transacciones
 
         private void GuardarAlquiler()
         {
-            nuevo.Fecha_Entrega = Convert.ToDateTime(dtpEnt.Text);
+            nuevo.Fecha_Entrega = Convert.ToDateTime(dtpEnt.Value);
             nuevo.Fecha_Devolucion = Convert.ToDateTime(dtpDev.Text);
             nuevo.Direccion = txtDireccion.Text;
 

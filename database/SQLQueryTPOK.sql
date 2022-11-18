@@ -203,10 +203,6 @@ BEGIN
 END
 GO
 
-
-
-
-
 CREATE PROCEDURE SP_Modificar_Alquiler
 	@dir nvarchar (100),
 	@num_alq int OUTPUT
